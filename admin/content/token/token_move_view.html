@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>토큰관리</span>
+                    <span data-depth2 hidden>토큰이동관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption hidden>토근이동관리 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>아이디(이메일)</th>
+                                            <td>abc123@naver.com</td>
+                                            <th>AccountID</th>
+                                            <td>a_1234567</td>
+                                        </tr>
+                                        <tr>
+                                            <th>TXID</th>
+                                            <td colspan="3">tx_ID_1234567</td>
+                                        </tr>
+                                        <tr>
+                                            <th>토큰명</th>
+                                            <td colspan="3">COSBALL</td>
+                                        </tr>
+                                        <tr>
+                                            <th>수량</th>
+                                            <td colspan="3">10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>수수료</th>
+                                            <td colspan="3">0</td>
+                                        </tr>
+                                        <tr>
+                                            <th>보낸 지갑주소</th>
+                                            <td colspan="3">
+                                                <a href="javascript:;">xAb5801a7D398351b8bE11C439e05C5</a>
+                                                <button type="button" class="btn btn-gray btn-sm ml-2">복사하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>받는 지갑주소</th>
+                                            <td colspan="3">
+                                                <div class="mb-2">
+                                                    <a href="javascript:;">xAb5801a7D398351b8bE11C439e05C5</a>
+                                                    <button type="button" class="btn btn-gray btn-sm ml-2">복사하기</button>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <span>
+                                                        <span class="badge bg-black">아이디(이메일)</span>
+                                                        <strong>abc123@naver.com</strong>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        <span class="badge bg-black">Account ID</span>
+                                                        <strong>a_1234567</strong>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>실행일시</th>
+                                            <td colspan="3">2020-01-01 10:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>상태</th>
+                                            <td colspan="3">성공</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

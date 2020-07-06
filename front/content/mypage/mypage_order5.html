@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/sub2.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+
+                    <div class="container lnb_wrap">
+                        <!-- lnb -->
+                        <div id="lnb">
+                            <h2>마이페이지</h2>
+                            <ul class="have_depth_2">
+                                <li class="depth_1">
+                                    <a href="#;">나의 쇼핑몰 이용내역</a>
+                                    <ul class="depth_2">
+                                        <li><a href="#;" class="on">주문 배송 현황</a></li>
+                                        <li><a href="#;">취소/반품 현황</a></li>
+                                        <li><a href="#;">교환 현황</a></li>
+                                        <li><a href="#;">장바구니</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth_1"><a href="#;">배송지관리</a></li>
+                                <li class="depth_1"><a href="#;">고객센터</a></li>
+                                <li class="depth_1"><a href="#;">이용약관</a></li>
+                                <li class="depth_1"><a href="#;">개인정보처리방침</a></li>
+                            </ul>
+                        </div>
+                        <!-- //lnb -->
+
+                        <section class="content-top-padding">
+                            <div class="title-area row align-items-end justify-content-between m-0">
+                                <h3 class="title col-auto p-0"><span>반품 신청</span></h3>
+
+                                <nav class="breadcrumb col-auto p-0">
+                                    <ol>
+                                        <li class="breadcrumb-item"><a href="#;">홈</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">마이페이지</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">주문 배송 현황</a> <i></i></li>
+                                        <li class="breadcrumb-item active">반품신청<i></i></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+
+                            <div class="partition-text-area">
+                                <ul>
+                                    <li>
+                                        <strong>주문 일시</strong>
+                                        <span class="text-gray">2020.06.05 16:00:00</span>
+                                    </li>
+                                    <li>
+                                        <strong>주문 번호</strong>
+                                        <span class="text-gray">1234567890</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="주문정보">
+                                        <caption class="sr-only">주문정보</caption>
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col class="col_btns">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">상품정보</th>
+                                                <th class="text-center">수량</th>
+                                                <th class="text-center">상품금액</th>
+                                                <th class="text-center">주문상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr class="bg-light">
+                                                <td colspan="5" class="text-right">
+                                                    <div class="my_total">
+                                                        <div>
+                                                            <strong class="mr-2 total_t">상품금액</strong>
+                                                            <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">300,000</strong></span>
+                                                        </div>
+                                                        <span class="plus"><img src="../../resources/images/icon-plus.svg" alt="+"></span>
+                                                        <div>
+                                                            <strong class="mr-2 total_t">배송비</strong>
+                                                            <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">2,500</strong></span>
+                                                        </div>
+                                                        <span class="sum"><img src="../../resources/images/icon-sum.svg" alt="="></span>
+                                                        <div class="total_line">
+                                                            <strong class="mr-2 total_t">주문합계</strong>
+                                                            <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type text-danger">302,500</strong></span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div class="my_picture">
+                                                        <span class="img"></span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-cleft">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><i class="currecy_unit mr-1 alt">KRW</i> <strong class="price_type">216,000</strong></td>
+                                                <td class="text-center" rowspan="3">배송완료</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-cleft">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><i class="currecy_unit mr-1 alt">KRW</i> <strong class="price_type">216,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-cleft">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center"><i class="currecy_unit mr-1 alt">KRW</i> <strong class="price_type">216,000</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">반품 정보</div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="반품 정보">
+                                        <caption>반품 정보</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>반품 사유</th>
+                                                <td>
+                                                    <div class="d-inline-block w-auto">
+                                                        <select class="custom-select">
+                                                            <option value="">단순변심</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>상세 사유</th>
+                                                <td>
+                                                    <div class="textarea-wrap">
+                                                        <div class="text">
+                                                            <textarea name="" id="" cols="" rows="3" title="내용 입력" class="form-control" placeholder="" value="문앞에 두고가세요." onkeyup="javascript:byteCheck(this,'100','#byteCount3')"></textarea>
+                                                        </div>
+                                                        <div class="byte">
+                                                            <small><span id="byteCount3">0</span> / 100자</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">환불 계좌 정보</div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="환불 계좌 정보">
+                                        <caption>환불 계좌 정보</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>은행선택</th>
+                                                <td>
+                                                    <div class="d-inline-block w-auto">
+                                                        <select class="custom-select">
+                                                            <option value="">국민은행</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>예금주</th>
+                                                <td>
+                                                    <div class="d-inline-block w-75">
+                                                        <input type="text" class="form-control" placeholder="예금주를 입력해주세요.">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>계좌번호</th>
+                                                <td>
+                                                    <div class="d-inline-block w-75">
+                                                        <input type="text" class="form-control" placeholder="계좌번호를 입력해주세요.">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="row align-items-top justify-content-between m-0">
+                                <div class="col-auto p-0 table-title">수거지 정보</div>
+                                <div class="col-auto p-0">
+                                    <button class="btn btn-sm btn-dark mb-2" data-toggle="modal" data-target="#collection_mod">수거지변경</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="수거지 정보">
+                                        <caption>수거지 정보</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>받는 분</th>
+                                                <td>홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th>주소</th>
+                                                <td>777777 <br>서울시 영등포구 양평동2가 37-3 투웨니퍼스트 1101호</td>
+                                            </tr>
+                                            <tr>
+                                                <th>휴대폰</th>
+                                                <td>010-1234-5678</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">환불 예정 내역</div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="환불 예정 내역">
+                                        <caption>환불 예정 내역</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>환불방법</th>
+                                                <td>현금환불</td>
+                                            </tr>
+                                            <tr>
+                                                <th>환불금액</th>
+                                                <td><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">216,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th>환불금액 차감내역</th>
+                                                <td><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">-5,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최종 환불금액</th>
+                                                <td><i class="currecy_unit mr-1">KRW</i> <strong class="price_type text-danger">214,500</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5 content-bottom-padding">
+                            <div class="btn-area">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-dark">목록으로</button>
+                                </div>
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary">반품신청</button>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 수거지변경 -->
+    <div class="modal" tabindex="-1" role="dialog" id="collection_mod" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">수거지변경</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-title">수거지정보</div>
+                    <table class="table" summary="수거지정보">
+                        <caption>수거지정보</caption>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                <td>
+                                    <input type="text" class="form-control d-inline-block w-50">
+                                    <small class="d-inline-block ml-1 text-gray"><span id="byteCount">0</span> / 25자</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                <td>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control w-50 mr-2" placeholder="" value="1234567">
+                                        <button class="btn btn-outline-dark">우편번호검색</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="서울시 영등포구 양평동 2가 37-3">
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="투웨이퍼스트 1104동">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                <td><input type="text" class="form-control w-50" value="01011112222"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer pt-0">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-dark btn-block" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">변경</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

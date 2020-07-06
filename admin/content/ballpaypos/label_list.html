@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>볼페이POS</span>
+                    <span data-depth2 hidden>라벨관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalLabel">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>라벨이름</th>
+                                        <th>관리</th>
+                                        <th>등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="text-left">1차 라벨 A</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1" data-toggle="modal" data-target="#modalLabel">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td class="text-left">1차 라벨 B</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="text-left">1차 라벨 B>2차 라벨 B-1</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="text-left">1차 라벨 C</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="text-left">1차 라벨 C>2차 라벨 C-1</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="text-left">등급</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="text-left">등급 >1등급</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="text-left">등급 >2등급</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">등급 >3등급</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">등급 >4등급</td>
+                                        <td>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">수정</button>
+                                            <button type="button" class="btn btn-gray btn-sm m-1">삭제</button>
+                                        </td>
+                                        <td>2020-01-0115:15:15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 라벨관리 -->
+    <div class="modal fade" id="modalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">라벨관리</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-right">
+                        <span class="text-danger">※</span> 필수입력항목
+                    </div>
+                    <div class="form-group">
+                        <label>라벨이름 <span class="text-danger">※</span></label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="highLabel" id="h1">
+                            <label for="h1" class="custom-control-label">상위 라벨 선택</label>
+                        </span>
+                        <div class="mt-2">
+                            <input type="text" class="form-control" disabled>
+                            <!--
+                            <select name="" id="" class="form-control">
+                                <option value="">프랜차이즈</option>
+                            </select>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

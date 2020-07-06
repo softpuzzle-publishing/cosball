@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="25px" viewBox="0 0 31 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>E055F240-ECCA-41BD-95D3-10170F35CF8C</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[LayerPopup]-배송지-수정-화면" transform="translate(-1249.000000, -229.000000)">
+            <g id="POPUP" transform="translate(0.000000, 0.000000)">
+                <g id="contents" transform="translate(610.000000, 200.000000)">
+                    <g id="top" transform="translate(0.000000, 26.000000)">
+                        <g id="Btn-/-btn_search_close" transform="translate(639.000000, 3.000000)">
+                            <g id="btn_search_close">
+                                <rect id="Rectangle" x="0" y="2.84217094e-14" width="31" height="25"></rect>
+                                <line x1="5" y1="2" x2="26.2132034" y2="23.2132034" id="Path-3" stroke="#000000" stroke-width="2"></line>
+                                <line x1="5" y1="2" x2="26.2132034" y2="23.2132034" id="Path-3" stroke="#000000" stroke-width="2" transform="translate(15.606602, 12.606602) scale(-1, 1) translate(-15.606602, -12.606602) "></line>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

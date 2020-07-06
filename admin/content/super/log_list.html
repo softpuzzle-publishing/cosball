@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>슈퍼관리자</span>
+                    <span data-depth2 hidden>로그관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>기간</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline ml-3">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row align-items-end">
+                                    <div class="col-md-6 form-group">
+                                        <label for="validationCustom04">접속 아이디</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>접속 아이디</th>
+                                        <th>접속메뉴</th>
+                                        <th>수행업무</th>
+                                        <th>접속일시</th>
+                                        <th>접속 IP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>admin@gmail.com</td>
+                                        <td>
+                                            <a href="#;">http://www.naver.com/fdsfdsfsdfdsfdfsdfsdfdsfdsfdsfdsfdsfdsfsdf</a>
+                                        </td>
+                                        <td>user:admin@cosball.io.loginuser:admin@cosball.io.login</td>
+                                        <td>2020-01-01 15:00:15</td>
+                                        <td>192.168.0.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>admin@gmail.com</td>
+                                        <td>
+                                            <a href="#;">http://www.naver.com/fdsfdsfsdfdsfdfsdfsdfdsfdsfdsfdsfdsfdsfsdf</a>
+                                        </td>
+                                        <td>user:admin@cosball.io.loginuser:admin@cosball.io.login</td>
+                                        <td>2020-01-01 15:00:15</td>
+                                        <td>192.168.0.1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between mt-2">
+                                <div class="col-auto form-group"></div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,2788 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>코즈볼 통합관리자</title>
+        <link rel="icon" href="resources/images/favicon-32.png" sizes="32x32">
+        <link rel="icon" href="resources/images/favicon-128.png" sizes="128x128">
+        <style type="text/css">
+            body{padding:20px;position:relative;}
+            *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NanumGothic';}
+            h1{margin-bottom:20px;font-size:20px;text-align: center;}
+            table{width:100%;border-collapse:collapse;margin: 0 auto;}
+            table th,
+            table td{border:1px solid #ccc;padding:4px 10px;word-break: keep-all}
+            table th{background:#643c91;color:#fff;padding:10px;font-size:14px;}
+            table td a{color:#7324ce;text-decoration:none;}
+            table td a:hover{text-decoration:underline;}
+            table tbody tr:hover{background-color: #fdecec;}
+            .noteTable{display: table;width: 100%;}
+            .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
+            .noteTable .note{display: table-cell;}
+            .center{text-align: center;}
+            .bg{background: #fff5f5;}
+            ul.float{position:absolute;right:20px;top:20px;}
+            ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
+            .end{background:#ffffcc;}
+            .ing{background:#f6b1a6;}
+            .list{text-align:center;padding:0 0 20px;}
+            .list a{text-decoration:none;margin:0 10px;}
+            .list a:hover{text-decoration:underline;}
+        </style>
+    </head>
+
+    <body>
+        <h1>코즈볼 통합관리자 PAGELIST</h1>
+        <table>
+            <colgroup>
+                <col style="width:6%">
+                <col style="width:10%">
+                <col style="width:16%">
+                <col style="width:10%">
+                <col>
+                <col style="width:10%">
+                <col style="width:15%">
+                <col style="width:6%">
+                <col style="width:6%">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Depth 1</th>
+                    <th>Depth 2</th>
+                    <th>Depth 3</th>
+                    <th>Depth 4</th>
+                    <th>File</th>
+                    <th>pageLink</th>
+                    <th>최초작업일</th>
+                    <th>수정일</th>
+                    <th></th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>유틸</td>
+                    <td>error</td>
+                    <td></td>
+                    <td></td>
+                    <td>/util/</td>
+                    <td><a target="_blank" href="content/util/error.html">error.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>로그인</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/login/</td>
+                    <td><a target="_blank" href="content/login/login.html">login.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Dashboard</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/dashboard/</td>
+                    <td><a target="_blank" href="content/dashboard/dashboard.html">dashboard.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">비밀번호변경, OTP설정</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>토큰관리</td>
+                    <td>홀더관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/token/</td>
+                    <td><a target="_blank" href="content/token/holder_list.html">holder_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/token/holder_view.html">holder_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>토큰이동관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/token/token_move_list.html">token_move_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/token/token_move_view.html">token_move_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>에어드랍관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/token/airdrop_list.html">airdrop_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/token/airdrop_view.html">airdrop_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>피부정보관리</td>
+                    <td>피부정보</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/skin/</td>
+                    <td><a target="_blank" href="content/skin/skin_list.html">skin_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/skin_view.html">skin_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td>설문관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/survey_list.html">survey_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/survey_view.html">survey_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>옵션관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/option_list.html">option_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>피부측정알고리즘관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/algorithm_list.html">algorithm_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>알고리즘관리</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/algorithm_view.html">algorithm_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">피부측정항목설정</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>옵션관리</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/skin/algorithm_view_option.html">algorithm_view_option.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note">옵션설정</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>볼페이pos</td>
+                    <td>추천인 리워드 설정관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/ballpaypos/</td>
+                    <td><a target="_blank" href="content/ballpaypos/reward_list.html">reward_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/reward_view.html">reward_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>판매처회원관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/member_list.html">member_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/member_view.html">member_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>판매처승인요청</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/approval_request_list.html">approval_request_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/approval_request_view.html">approval_request_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>라벨관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/label_list.html">label_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>초대코드관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/invite_code.html">invite_code.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>푸시발송관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/push_send_list.html">push_send_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>(발송완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/push_send_view.html">push_send_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>(발송전)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/push_send_view02.html">push_send_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/push_send_write.html">push_send_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>이메일발송관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/email_send_list.html">email_send_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/email_send_view.html">email_send_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>(발송전)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/email_send_view02.html">email_send_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/email_send_write.html">email_send_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>OS버전관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/os_version.html">os_version.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>정기점검관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/inspect_list.html">inspect_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/inspect_view.html">inspect_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>팝업관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/popup_list.html">popup_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/popup_view.html">popup_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>회원결제내역</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/pay_list.html">pay_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/pay_view.html">pay_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>회원취소/환불내역</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/cancel_refund_list.html">cancel_refund_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/cancel_refund_view.html">cancel_refund_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>볼페이할인설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/ballpay_discount_rate.html">ballpay_discount_rate.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>리워드설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/reward.html">reward.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>로또설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/lotto.html">lotto.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>교환수수료설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/exchange_charge.html">exchange_charge.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>환불기간설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/refund_period.html">refund_period.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>결제보안설정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/pay_security.html">pay_security.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>환율조정</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/ballpaypos/exchange_rate_adjust.html">exchange_rate_adjust.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>쇼핑몰관리</td>
+                    <td>회원관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/mall/</td>
+                    <td><a target="_blank" href="content/mall/member_list.html">member_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>회원관리</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/member_view.html">member_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>탈퇴회원</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/withdraw_view.html">withdraw_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>가입자수표시관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/subscriber_number.html">subscriber_number.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>퓨처드화면관리</td>
+                    <td>lsit</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/futurede_list.html">futurede_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/futurede_view.html">futurede_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>COSBALL For you 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/for_you_list.html">for_you_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>코즈볼패키지관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/package_list.html">package_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>제품관리</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/product_view.html">product_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>오프라인매장관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/offline_store_list.html">offline_store_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/offline_store_view.html">offline_store_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>검색창관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/search_box.html">search_box.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>주문/배송관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_shipping_list.html">order_shipping_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (입금대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view01.html">order_info_view01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view01_01.html">order_info_view01_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보 변경</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view01_01_write.html">order_info_view01_01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (결제완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view02.html">order_info_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view02_01.html">order_info_view02_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보 변경</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view02_01_write.html">order_info_view02_01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (상품준비중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view03.html">order_info_view03.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view03_01.html">order_info_view03_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보 변경</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view03_01_write.html">order_info_view03_01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (배송준비중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view04.html">order_info_view04.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view04_01.html">order_info_view04_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (배송중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view05.html">order_info_view05.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (배송완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view06.html">order_info_view06.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view06_01.html">order_info_view06_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>주문상세 (구매확정)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view07.html">order_info_view07.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>수령자 정보</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_info_view07_01.html">order_info_view07_01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>결제 중단/실패 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_abort_list.html">order_abort_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>실패상세</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_abort_view01.html">order_abort_view01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>실패상세 (주문자 정보)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_abort_view01_write.html">order_abort_view01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>취소 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_list.html">order_cancel_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view01.html">order_cancel_view01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view01_write.html">order_cancel_view01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불보류)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view02.html">order_cancel_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불보류2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view02_write.html">order_cancel_view02_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view03.html">order_cancel_view03.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불대기2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view03_write.html">order_cancel_view03_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불없음)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view04.html">order_cancel_view04.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불없음2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view04_write.html">order_cancel_view04_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view05.html">order_cancel_view05.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불완료2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_cancel_view05_write.html">order_cancel_view05_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>반품/환불 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_list.html">order_return_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view01.html">order_return_view01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view01_write.html">order_return_view01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (수거진행)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view02.html">order_return_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (수거진행2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view02_write.html">order_return_view02_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불보류)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view03.html">order_return_view03.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불보류2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view03_write.html">order_return_view03_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view04.html">order_return_view04.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불대기2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view04_write.html">order_return_view04_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view05.html">order_return_view05.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (환불완료2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_return_view05_write.html">order_return_view05_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>교환 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_list.html">order_change_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view01.html">order_change_view01.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (승인대기2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view01_write.html">order_change_view01_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (수거진행)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view02.html">order_change_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (수거진행2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view02_write.html">order_change_view02_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (상품준비중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view03.html">order_change_view03.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (상품준비중2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view03_write.html">order_change_view03_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송준비중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view04.html">order_change_view04.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송준비중2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view04_write.html">order_change_view04_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송중)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view05.html">order_change_view05.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송중2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view05_write.html">order_change_view05_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송완료)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view06.html">order_change_view06.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세 (배송완료2)</td>
+                    <td>view</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/order_change_view06_write.html">order_change_view06_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상품 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/product_management_list.html">product_management_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>상세/등록</td>
+                    <td>write</td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/product_management_write.html">product_management_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>배송비 관리</td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/shipping_charge.html">shipping_charge.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>상품카테고리 관리</td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/product_category.html">product_category.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>푸시발송 관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/push_send_list.html">push_send_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/push_send_view.html">push_send_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view (발송전)</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/push_send_view02.html">push_send_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/push_send_write.html">push_send_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>이메일발송관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/email_send_list.html">email_send_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/email_send_view.html">email_send_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view (발송전)</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/email_send_view02.html">email_send_view02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/email_send_write.html">email_send_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>OS버전관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/mall_os_version.html">mall_os_version.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>정기점검관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/inspect_list.html">inspect_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/inspect_view.html">inspect_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>팝업관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/popup_list.html">popup_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/popup_view.html">popup_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>프로모션관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/promotion_list.html">promotion_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/promotion_list02.html">promotion_list02.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/promotion_view.html">promotion_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mall/promotion_write.html">promotion_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>보안질문관리</td>
+                    <td></td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/security/</td>
+                    <td><a target="_blank" href="content/security/security_question_list.html">security_question_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/security/security_question_write.html">security_question_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>설정</td>
+                    <td>언어번역관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/setting/</td>
+                    <td><a target="_blank" href="content/setting/setting_language_list.html">setting_language_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>공지사항</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/setting/notice_list.html">notice_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>view</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/setting/notice_view.html">notice_view.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/setting/notice_write.html">notice_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>슈퍼관리자</td>
+                    <td>로그관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/super/</td>
+                    <td><a target="_blank" href="content/super/log_list.html">log_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>관리자관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/super/admin_list.html">admin_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/super/admin_write.html">admin_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>관리자역할관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/super/admin_role_list.html">admin_role_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>write</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/super/admin_role_write.html">admin_role_write.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>자금계정지갑관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/super/admin_wallet_list.html">admin_wallet_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>자동발송관리</td>
+                    <td>이메일관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/send/</td>
+                    <td><a target="_blank" href="content/send/mail_list.html">mail_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>푸시관리</td>
+                    <td>list</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/send/push_list.html">push_list.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

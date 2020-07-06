@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>코즈볼패키지관리</span>
+                    <span data-depth2 hidden>제품관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">기본설정저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="text-right mb-2">
+                            <span class="text-danger">※</span> 필수입력항목
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">기본설정</h3>
+                                <!-- accordion button -->
+                                <button type="button" class="btn btn-xs btn-info ml-2 btn_toggle_chk" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">접기</button>
+                                <!-- /accordion button -->
+                            </div>
+                            <div class="card-body collapse show" id="collapseOne">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>구성품코드 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-xs-auto m-1">
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCode">구성품코드 선택</button>
+                                                    </div>
+                                                    <div class="col-xs-auto m-1">
+                                                        <input type="text" class="form-control w-auto" value="XXX-XXXX-XXXX" disabled>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th>제품코드 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-xs-auto m-1">
+                                                        <input type="text" class="form-control" value="XXX-XXXX-XXXX" disabled>
+                                                    </div>
+                                                    <div class="col-xs-auto m-1">
+                                                        <i class="fas fa-info-circle text-danger"></i>
+                                                        <span>제품코드는 자동생성됩니다.</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>판매상태 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="form-inline">
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="sellState" id="sellState1" checked>
+                                                        <label for="sellState1" class="custom-control-label">판매중</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="sellState" id="sellState2">
+                                                        <label for="sellState2" class="custom-control-label">일시정지</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="sellState" id="sellState3">
+                                                        <label for="sellState3" class="custom-control-label">판매종료</label>
+                                                    </span>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <i class="fas fa-info-circle text-danger"></i>
+                                                    <span>일시정지 : 해당 제품을 일시적으로 판매중지하며, 코즈볼패키지 사용자 화면에서 해당 제품에 제외됩니다.</span>
+                                                </div>
+                                                <div class="mt-1">
+                                                    <i class="fas fa-info-circle text-danger"></i>
+                                                    <span>판매종료 : 해당 제품에 대해 판매종료가 되며, 추후 <span class="text-danger">판매상태를 변경할 수 없으며</span> 동일 제품을 다시 판매하고자 할 경우 제품을 다시 등록하여야하 합니다.</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제품재고 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="stock" id="stock1" checked>
+                                                            <label for="stock1" class="custom-control-label">무제한</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="stock" id="stock2">
+                                                            <label for="stock2" class="custom-control-label">수량</label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-auto mt-1 mb-1">
+                                                        <input type="text" class="form-control d-inline-block w-auto">
+                                                        <span class="d-inline-block">개</span>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <i class="fas fa-info-circle text-danger"></i>
+                                                        <span>수량을 <span class="text-danger">0</span> 개로 설정할 경우, 품절로 표시됩니다.</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제품가격 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-md-auto">
+                                                        <div class="mb-2"><b>PG 결제시</b></div>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">KRW</span>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <div class="mb-2"><b>볼페이 결제시</b></div>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">COSKRW</span>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>관리자 메모</th>
+                                            <td colspan="3">
+                                                <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">언어설정</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>언어 선택</th>
+                                            <td>
+                                                <select name="" id="" class="form-control d-inline-block w-auto ml-1">
+                                                    <option value="">한국어(KR)</option>
+                                                    <option value="">영어(EN)</option>
+                                                    <option value="">중국어(CN)</option>
+                                                    <option value="">일본어(JP)</option>
+                                                </select>
+                                                <button type="button" class="btn btn-info d-inline-block">저장</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">상세정보</h3>
+                                <!-- accordion button -->
+                                <button type="button" class="btn btn-xs btn-info ml-2 btn_toggle_chk" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">접기</button>
+                                <!-- /accordion button -->
+                                <span class="m-1 force_block">
+                                    <i class="fas fa-info-circle text-danger"></i>
+                                    <span>코즈볼 패키지는 모든 언어의 설명을 입력해야합니다.</span>
+                                </span>
+
+                            </div>
+                            <div class="card-body collapse show" id="collapseTwo">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>제품명 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" placeholder="제품명이 표시 또는 입력됩니다.">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>요약설명 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" placeholder="요약설명이 표시 또는 입력됩니다.">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>주의사항 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" placeholder="주의사항이 표시 또는 입력됩니다.">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>태그입력 <span class="text-danger">※</span></th>
+                                            <td colspan="3">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" placeholder="#해시태그1, #해시태그2. #해시태그3">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4">
+                                                <div class="row justify-content-between align-items-center">
+                                                    <div class="col-auto">
+                                                        제품정보고시 <span class="text-danger">※</span>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button type="button" class="btn btn-sm btn-info">추가</button>
+                                                        <button type="button" class="btn btn-sm btn-gray">선택삭제</button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        <!-- 제품정보고시 -->
+                                        <tr>
+                                            <td colspan="4">
+                                                <div class="table-responsive">
+                                                    <table class="table table-center table-bordered table-valign-middle">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    <span class="custom-checkbox custom-control without-label">
+                                                                        <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                                        <label for="allchk" class="custom-control-label"></label>
+                                                                    </span>
+                                                                </th>
+                                                                <th>항목명</th>
+                                                                <th>내용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td rowspan="2">
+                                                                    <span class="custom-checkbox custom-control without-label">
+                                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                                        <label for="chk1" class="custom-control-label"></label>
+                                                                    </span>
+                                                                </td>
+                                                                <td><input type="text" class="form-control"></td>
+                                                                <td><input type="text" class="form-control"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- //제품정보고시 -->
+                                        <tr>
+                                            <th rowspan="6">제품이미지 <span class="text-danger">※</span></th>
+                                            <td rowspan="3" class="text-center"><span class="badge bg-black">APP</span></td>
+                                            <td>목록 이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>상세이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>확대이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" class="text-center"><span class="badge bg-black">WEB</span></td>
+                                            <td>목록 이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>상세이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>확대이미지<br>(사이즈 10 *10)</td>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <div class="custom-file w-auto">
+                                                            <input type="file" class="custom-file-input position-absolute" id="">
+                                                            <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="d-inline-block">
+                                                            <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></i></a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4">제품설명 <span class="text-danger">※</span></th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <ul class="nav nav-tabs my-tabs trans_tab tab_div3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">APP 제품설명</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">WEB 제품설명</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="pill" href="#t3" role="tab" aria-controls="t3" aria-selected="false">mobile 제품설명</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active show" id="t1" role="tabpanel">
+                                                        app 에디터영역
+                                                    </div>
+                                                    <div class="tab-pane" id="t2" role="tabpanel">
+                                                        web 에디터영역
+                                                    </div>
+                                                    <div class="tab-pane" id="t3" role="tabpanel">
+                                                        mobile 에디터영역
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="text-right mt-2">
+                                                    <span class="custom-control custom-checkbox custom-control-inline">
+                                                        <input class="custom-control-input" type="checkbox" id="chkSame1">
+                                                        <label for="chkSame1" class="custom-control-label">APP/WEB동일</label>
+                                                    </span>
+                                                </div> -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 구성품코드 선택 -->
+    <div class="modal fade" id="modalCode">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">구성품코드 선택</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-row align-items-end">
+                                <div class="col-md-3 form-group">
+                                    <select class="form-control" id="validationCustom04">
+                                        <option value="">코드설명</option>
+                                        <option value="">구성품코드</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-top">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                            </div>
+                            <div class="col-auto">
+                                <select name="" id="" class="form-control d-inline-block w-auto">
+                                    <option value="">10개</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="border-top pt-3 pb-3">
+                            <div class="row justify-content-between row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">구성품코드</span>
+                                </div>
+                                <div class="col">XXX-XXXX-XXXX</div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-gray">선택</button>
+                                </div>
+                            </div>
+                            <div class="row row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">코드설명</span>
+                                </div>
+                                <div class="col">
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.<br>
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="border-top pt-3 pb-3">
+                            <div class="row justify-content-between row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">구성품코드</span>
+                                </div>
+                                <div class="col">XXX-XXXX-XXXX</div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-gray">선택</button>
+                                </div>
+                            </div>
+                            <div class="row row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">코드설명</span>
+                                </div>
+                                <div class="col">
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.<br>
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="border-top border-bottom pt-3 pb-3">
+                            <div class="row justify-content-between row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">구성품코드</span>
+                                </div>
+                                <div class="col">XXX-XXXX-XXXX</div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-gray">선택</button>
+                                </div>
+                            </div>
+                            <div class="row row-10">
+                                <div class="col-auto">
+                                    <span class="badge bg-black">코드설명</span>
+                                </div>
+                                <div class="col">
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.<br>
+                                    구성품 코드에 대한 설명이 표시되는 영역입니다.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagination-wrap">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

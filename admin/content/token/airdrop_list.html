@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>토큰관리</span>
+                    <span data-depth2 hidden>에어드랍관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAirdrop01">보유 토큰 에어드랍 실행</button>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalAirdrop02">무료 에어드랍 실행</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>기간</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>구분</label>
+                                            <div class="row align-items-center">
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="divide" id="d1">
+                                                            <label for="d1" class="custom-control-label">전체</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="divide" id="d2">
+                                                            <label for="d2" class="custom-control-label">일괄</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="divide" id="d3">
+                                                            <label for="d3" class="custom-control-label">직접입력</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>처리현황</label>
+                                            <div class="row align-items-center">
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="state" id="s1">
+                                                            <label for="s1" class="custom-control-label">전체</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="state" id="s2">
+                                                            <label for="s2" class="custom-control-label">성공</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="state" id="s3">
+                                                            <label for="s3" class="custom-control-label">대기</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="state" id="s4">
+                                                            <label for="s4" class="custom-control-label">부분성공</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="state" id="s5">
+                                                            <label for="s5" class="custom-control-label">실패</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>제목</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>구분</th>
+                                        <th>제목</th>
+                                        <th>등록자</th>
+                                        <th>실행일시</th>
+                                        <th>등록일시</th>
+                                        <th>상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>일괄</td>
+                                        <td class="text-left"><a href="#">일괄 에어드랍 실행 #1</a></td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>성공</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>직접입력</td>
+                                        <td class="text-left"><a href="#">일괄 에어드랍 실행 #1</a></td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>일괄</td>
+                                        <td class="text-left"><a href="#">일괄 에어드랍 실행 #1</a></td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>부분성공</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>직접입력</td>
+                                        <td class="text-left"><a href="#">일괄 에어드랍 실행 #1</a></td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                        <td>실패</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                </div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 보유토큰 에어드랍 실행 -->
+    <div class="modal fade" id="modalAirdrop01">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">보유토큰 에어드랍실행</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-right">
+                        <span class="text-danger">※</span> 필수입력항목
+                    </div>
+                    <div class="form-group">
+                        <label>홀더 지정방식 <span class="text-danger">※</span></label>
+                        <div class="row align-items-center">
+                            <div class="col-md">
+                                <div class="form-inline">
+                                    <span class="custom-control custom-radio">
+                                        <input class="custom-control-input upload_chk1" type="radio" name="holder" id="h1" checked>
+                                        <label for="h1" class="custom-control-label">직접입력</label>
+                                    </span>
+                                    <span class="custom-control custom-radio ml-3">
+                                        <input class="custom-control-input upload_chk2" type="radio" name="holder" id="h2">
+                                        <label for="h2" class="custom-control-label">일괄등록</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="upload_type1">
+                            <textarea name="" id="upload_type1" cols="" rows="1" class="form-control">AccountID를 입력하세요. " , "로 구분하여 다중 홀더를 선택가능)</textarea>
+                        </div>
+                        <div id="upload_type2" class="mt-1" style="display:none;">
+                            <div class="custom-file d-inline-block w-auto">
+                                <input type="file" class="custom-file-input position-absolute" id="">
+                                <!-- <label class="btn btn-gray btn-sm" for="">엑셀업로드</label> -->
+                                <button type="button" class="btn btn-gray btn-sm"><label for="" class="mb-0">엑셀업로드</label></button>
+                            </div>
+                            <button type="button" class="btn btn-gray btn-sm d-inline-block w-auto">엑셀 양식 다운로드</button>
+                            <div><a href="javascript:;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1"></i></a></div>
+                        </div>
+                        <script type="text/javascript">
+                            $('.upload_chk1').click(function(){
+                                $('#upload_type1').css('display','block');
+                                $('#upload_type2').css('display','none');
+                            });
+                            $('.upload_chk2').click(function(){
+                                $('#upload_type1').css('display','none');
+                                $('#upload_type2').css('display','block');
+                            });
+                        </script>
+                    </div>
+                    <div class="form-group">
+                        <label>지급사유 <span class="text-danger">※</span></label>
+                        <textarea name="" id="" cols="" rows="2" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>지갑선택 <span class="text-danger">※</span></label>
+                        <select name="" id="" class="form-control">
+                            <option value="">자금 지갑을 선택하세요</option>
+                            <option value="">자금계정지갑관리</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>스냅샷일시 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center">
+                            <div class="col col-md-3">
+                                <input type="text" class="form-control text-center">
+                            </div>
+                            <div class="col col-md-9">
+                                <!-- <i class="fas fa-info-circle text-danger mr-1"></i> 홀더의 보유 토큰개수 스냅샷 시간 지정 (UTC+9기준 -->
+                                <i class="fas fa-info-circle text-danger mr-1"></i> UTC+9기준
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>보유량 설정 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center">
+                            <div class="col col-md-6">
+                                <input type="text" class="form-control text-center">
+                            </div>
+                            <div class="col col-md-4">
+                                <select class="form-control">
+                                    <option value="">개 이상</option>
+                                    <option value="">개 이하</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label>에어드롭 조건 선택 <span class="text-danger">※</span></label>
+                        <select name="" id="" class="form-control">
+                            <option value="">에어드롭 조선을 선택하세요</option>
+                        </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label>지급일시 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center mb-2">
+                            <div class="col col-md-3">
+                                <input type="text" class="form-control" data-event="datepicker">
+                            </div>
+                            <div class="col col-md-3">
+                                <input type="text" class="form-control text-center">
+                            </div>
+                        </div>
+                        <i class="fas fa-info-circle text-danger mr-1"></i> 지급시간은 현재 시간 기준 30분 이후부터 설정이 가능합니다.
+                    </div>
+                    <div class="form-group">
+                        <label>지급토큰 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center">
+                            <div class="col col-md-5">
+                                <select name="" id="" class="form-control">
+                                    <option value="">토큰종류를 선택하세요</option>
+                                    <option value="">COSBALL</option>
+                                    <option value="">COSKRW</option>
+                                    <option value="">COSUSD</option>
+                                    <option value="">COSJPY</option>
+                                    <option value="">COSCNY</option>
+                                </select>
+                            </div>
+                            <div class="col col-md-5">
+                                <input type="text" class="form-control" placeholder="지급할 토큰개수를 입력하세요.">
+                            </div>
+                            <div class="col col-md-2">
+                                <select name="" id="" class="form-control">
+                                    <option value="">개</option>
+                                    <option value="">%</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>OTP인증 <span class="text-danger">※</span></label>
+                        <div>
+                            <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">실행</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 무료 에어드랍실행 -->
+    <div class="modal fade" id="modalAirdrop02">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">무료 에어드랍실행</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-right">
+                        <span class="text-danger">※</span> 필수입력항목
+                    </div>
+                    <div class="form-group">
+                        <label>홀더 지정방식 <span class="text-danger">※</span></label>
+                        <div class="row align-items-center">
+                            <div class="col-md">
+                                <div class="form-inline">
+                                    <span class="custom-control custom-radio">
+                                        <input class="custom-control-input upload_chk3" type="radio" name="holder" id="h3">
+                                        <label for="h3" class="custom-control-label">직접입력</label>
+                                    </span>
+                                    <span class="custom-control custom-radio ml-3">
+                                        <input class="custom-control-input upload_chk4" type="radio" name="holder" id="h4">
+                                        <label for="h4" class="custom-control-label">일괄등록</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="upload_type3">
+                            <textarea name="" id="upload_type1" cols="" rows="1" class="form-control">AccountID를 입력하세요. " , "로 구분하여 다중 홀더를 선택가능)</textarea>
+                        </div>
+                        <div id="upload_type4" class="mt-1" style="display:none;">
+                            <div class="custom-file d-inline-block w-auto">
+                                <input type="file" class="custom-file-input position-absolute" id="">
+                                <!-- <label class="btn btn-gray btn-sm" for="">엑셀업로드</label> -->
+                                <button type="button" class="btn btn-gray btn-sm"><label for="" class="mb-0">엑셀업로드</label></button>
+                            </div>
+                            <button type="button" class="btn btn-gray btn-sm d-inline-block w-auto">엑셀 양식 다운로드</button>
+                            <div><a href="javascript:;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1"></i></a></div>
+                        </div>
+                        <script type="text/javascript">
+                            $('.upload_chk3').click(function(){
+                                $('#upload_type3').css('display','block');
+                                $('#upload_type4').css('display','none');
+                            });
+                            $('.upload_chk4').click(function(){
+                                $('#upload_type3').css('display','none');
+                                $('#upload_type4').css('display','block');
+                            });
+                        </script>
+
+                        <!-- <div class="row align-items-center">
+                            <div class="col-md">
+                                <div class="form-inline">
+                                    <span class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" name="holder2" id="h3" checked>
+                                        <label for="h3" class="custom-control-label">직접입력</label>
+                                    </span>
+                                    <span class="custom-control custom-radio ml-3">
+                                        <input class="custom-control-input" type="radio" name="holder2" id="h4">
+                                        <label for="h4" class="custom-control-label">일괄등록</label>
+                                    </span>
+
+                                    <button type="button" class="btn btn-gray btn-sm ml-2">엑셀업로드</button>
+                                    <button type="button" class="btn btn-gray btn-sm ml-2">엑셀 양식 다운로드</button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <textarea name="" id="" cols="" rows="1" class="form-control">AccountID를 입력하세요. " , "로 구분하여 다중 홀더를 선택가능)</textarea>
+                        </div>
+
+                        <div class="mt-2">
+                            <a href="javascript:;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1"></i></i></a>
+                        </div> -->
+
+                    </div>
+                    <div class="form-group">
+                        <label>지급사유 <span class="text-danger">※</span></label>
+                        <textarea name="" id="" cols="" rows="2" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>지갑선택 <span class="text-danger">※</span></label>
+                        <select name="" id="" class="form-control">
+                            <option value="">자금 지갑을 선택하세요</option>
+                            <option value="">자금계정지갑관리</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>지급일시 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center mb-2">
+                            <div class="col col-md-3">
+                                <input type="text" class="form-control" data-event="datepicker">
+                            </div>
+                            <div class="col col-md-3">
+                                <input type="text" class="form-control text-center">
+                            </div>
+                        </div>
+                        <i class="fas fa-info-circle text-danger mr-1"></i> 지급시간은 현재 시간 기준 30분 이후부터 설정이 가능합니다.
+                    </div>
+                    <div class="form-group">
+                        <label>지급토큰 <span class="text-danger">※</span></label>
+                        <div class="row row-10 align-items-center">
+                            <div class="col col-md-6">
+                                <select name="" id="" class="form-control">
+                                    <option value="">토큰종류를 선택하세요</option>
+                                    <option value="">COSBALL</option>
+                                    <option value="">COSKRW</option>
+                                    <option value="">COSUSD</option>
+                                    <option value="">COSJPY</option>
+                                    <option value="">COSCNY</option>
+                                </select>
+                            </div>
+                            <div class="col col-md-6">
+                                <input type="text" class="form-control" placeholder="지급할 토큰개수를 입력하세요.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>OTP인증 <span class="text-danger">※</span></label>
+                        <div>
+                            <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">실행</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* ie 핵 */
+_:-ms-input-placeholder, :root .my_picture .custom-control {  } /* Only works in IE10 이상 */
+select::-ms-expand { display:none!important } /* select 화살표 숨김 */
+
+/* 마이페이지 - order-search */
+.order-search { background:#f7f7f7; padding:30px; display:flex; justify-content:space-between; }
+.order-search .order-search-radio-group { border-radius:4px; border:solid 1px #e2e2e2; display:inline-block; background:#fff; }
+.order-search .order-search-radio-group li { border-left:solid 1px #e2e2e2; display:inline-block; }
+.order-search .order-search-radio-group li:first-child { border-left:none; }
+.order-search .order-search-radio-group label { color:#999; display:block; padding:9px 20px; }
+.order-search .order-search-radio-group input[type=radio] { overflow:hidden !important; position:absolute !important; left:-9999px!important; width:1px; height:1px; }
+.order-search .order-search-radio-group input[type=radio]:checked + label{ color:#111; }
+.order-search .order-search-date input[type=text] { width:160px; }
+.order-search-info { margin-top:10px; font-size:14px; font-weight:300; line-height: 2.14; color:#333; }
+
+
+/* 마이페이지 - partition-text-are */
+.partition-text-area { margin-bottom:10px; position:relative; }
+.partition-text-area li, .partition-text-area strong, .partition-text-area span { display:inline-block; }
+.partition-text-area li { margin-left:16px; }
+.partition-text-area li:before { display:inline-block; width:1px; height:18px; content:''; background:#eee; margin-right:16px; position:relative; top:3px; }
+.partition-text-area li:first-child { margin-left:0; }
+.partition-text-area li:first-child:before { display:none; }
+.partition-text-area li.alt:before { display:none; }
+/* .partition-text-area li.alt button { position:relative; top:-3px; } */
+.partition-text-area strong { color:#333; margin-right:5px; }
+
+.currecy_unit { font-style:normal; color:#999; font-size:12px; font-weight:300; }
+.price_type { font-weight:300; color:#111; }
+
+/* 마이페이지 - my_picture */
+.my_picture { display:flex; align-items:center; }
+.my_picture span { display:inline-block; vertical-align:middle; }
+.my_picture .img { width:80px; height:80px; background:#f4f4f4; }
+.my_picture .img img { max-width:100%; }
+.my_picture .txt { font-size:20px; font-weight:300; line-height:1.3; color:#111; margin-left:20px; }
+.my_picture .txt_min { font-size:16px; font-weight:300; line-height:1.3; color:#111; margin-left:20px; }
+.my_picture .custom-control { }
+
+/* 마이페이지 - my_ball */
+.my_ball { width:57px; text-align:center; display:inline-block; position:relative; }
+.my_ball img { width:57px; }
+.my_ball strong { width:57px; height:49px; line-height:33px; position:absolute; top:0; left:0; text-shadow:0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size:11.3px; font-weight:500; text-align:center; color:#fff; }
+
+/* 마이페이지 - 합계 */
+.my_total { }
+.my_total strong { font-weight:300; color:#111; }
+.my_total > div { display:inline-block; }
+.my_total img { display:inline-block; margin:0 20px; }
+
+
+/* 마이페이지 - 완료 */
+.complete-message { text-align:center; padding:80px 0; }
+.complete-message::before { width:62px; height:62px; display:block; margin:0 auto; margin-bottom:30px; content:'';
+background:url(../../resources/images/icon-info-confirm.svg); }
+.complete-message .cm_txt1 { font-size:22px; font-weight:500; color:#111; }
+.complete-message .cm_txt2 { font-size:18px; font-weight:300; color:#666; margin-top:12px; }
+
+
+/* 마이페이지 - 배송지관리 */
+.my_shipping_area { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; }
+.shipping_title { font-weight:500; color:#999; font-size:16px; }
+.shipping_title label { margin-bottom:10px; }
+.shipping_title input[type=radio] { overflow:hidden !important; position:absolute !important; left:-9999px!important; width:1px; height:1px; }
+.shipping_title input[type=radio]:checked + label{ color:#682dd2; }
+.shipping_title label:before { width:28px; height:28px; display:inline-block; content:''; margin-right:6px;
+background:url(../../resources/images/btn-radio-off-2.svg); position:relative; top:8px; }
+.shipping_title input[type="radio"]:checked + label:before { background:url(../../resources/images/btn-radio-on-2.svg); }
+
+
+/* 마이페이지 - 팝업 */
+.custom-modal .modal-title { text-align:center; width:100%; display:block; }
+/* .custom-modal .modal-header:after { content:''; display:block; height:1px; width:100%; background-color:#e5e5e5; position:absolute; bottom:6px; left:0; }
+.custom-modal .modal-header .close { padding:0; margin:0; position:absolute; top:26px; right:30px; }
+.custom-modal .modal-body h2 { font-size:20px; } */
+.shipping_del button { outline:none!important; border:none!important; background:none!important; color:#333; font-size:16px; }
+.shipping_del button:before { width:16px; height:16px; display:inline-block; content:''; margin-right:6px;
+background:url(../../resources/images/ic-etc-delete.svg); position:relative; top:2px; }
+
+/* etc */
+.min_info { font-size:14px; position:relative; top:-3px; margin-left:8px; letter-spacing:-1px; }
+.table_btns { }
+.col_btns { width:260px; }
+
+
+@media (max-width:1200px) {
+    /* my_picture */
+    .my_picture { text-align:center; display:block }
+    .my_picture span { display:block; }
+    .my_picture .img { margin:0 auto; margin-bottom:10px; }
+    .my_picture .txt { margin-left:0px; }
+    .my_picture .txt_min { margin-left:0px;font-size: 15px;}
+    .my_picture .custom-control { display:block!important; margin-right:0!important; margin-left:10px; margin-bottom:5px; }
+
+    /* 마이페이지 - order-search */
+    .order-search { padding:20px; }
+    .order-search .order-search-radio-group label { padding:9px 10px; }
+    .order-search .order-search-date input[type=text] { width:145px; }
+    .order-search .btn-dark{min-width: 80px;}
+}
+
+@media (max-width:991px) {
+    /* my_picture */
+    .my_picture .txt { font-size:13px; }
+    .my_picture .txt_min { font-size:13px; }
+
+    /* etc */
+    .col_btns { width:200px!important; }
+}
+
+@media (max-width:910px) {
+
+    /* 마이페이지 - 합계 */
+    .my_total img { margin:0px 10px; width:16px; }
+
+    /* etc */
+    .min_info { font-size:12px; }
+}
+
+@media (max-width:768px) {
+    /* my_picture */
+    .my_picture .img { width:60px; height:60px; }
+
+    /* 마이페이지 - 배송지관리 */
+    .shipping_title { font-size:14px; }
+
+    /* 마이페이지 - 합계 */
+    .my_total { padding:20px; }
+    .my_total > div { display:block; display:flex; justify-content:space-between; }
+    .my_total .plus, .my_total .sum { display:none; }
+    .my_total .total_line { border-top:1px solid #eee; padding-top:5px; margin-top:10px; }
+    .my_total .total_line .text-danger { font-size:16px; }
+
+    /* 마이페이지 - 팝업 */
+    .shipping_del button { font-size:14px; }
+    .shipping_del button:before { top:3px; }
+
+    /* 마이페이지 - order-search */
+    .order-search { padding:15px; display:block; }
+    .order-search .order-search-radio-group { display:flex; justify-content:space-between; }
+    .order-search .order-search-radio-group li { display:block; width:20%; }
+    .order-search .order-search-radio-group label { padding:9px 0px; text-align:center; }
+    .order-search .order-search-date{margin-top: 10px;}
+    .order-search .order-search-date input[type=text] { width:100%; }
+    .order-search-info { font-size:12px; }
+
+    /* etc */
+    .col_btns { width:130px!important; }
+    .currecy_unit.alt { display:block; margin-right:0 !important; }
+}
+
+@media (max-width:576px) {
+    /* my_picture */
+    .my_picture .img { width:50px; height:50px; }
+
+    /* 마이페이지 - partition-text-are */
+    .partition-text-area li.alt { float:right; margin-top:-5px; }
+    /* .partition-text-area li.alt { display:block; margin-left:0; margin-top:10px; } */
+
+    /* 마이페이지 - order-search */
+    .order-search .btn-dark{min-width: 65px;}
+
+    /* 마이페이지 - 완료 */
+    .complete-message { padding:20px 0; }
+    .complete-message::before { width:50px; height:50px; margin-bottom:20px; background-size:100%; }
+    .complete-message .cm_txt1 { font-size:18px; }
+    .complete-message .cm_txt2 { font-size:14px; margin-top:5px; }
+
+    /* etc */
+    .min_info { display:block; margin-left:0; top:-10px; }
+    .table_btns { padding-bottom:5px; }
+    .table_btns button { display:block; width:100%; margin:0!important; margin-top:10px!important; }
+    .col_btns { width:80px!important; }
+
+}
+
+@media (max-width:460px) {
+    /* 마이페이지 - partition-text-are */
+    .partition-text-area li.alt { float:none; display:block; margin-left:0; margin-top:10px; }
+}
+
+@media (max-width:360px) {
+    /* 마이페이지 - partition-text-are */
+    .partition-text-area li { display:block; margin-left:0; }
+    .partition-text-area li:before { display:none; }
+    .partition-text-area li.alt { position:absolute; top:-4px; right:0; }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>주문 상세정보</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label class="m-0">주문번호 :</label>
+                                        1234885555
+                                    </div>
+                                    <div class="col-md">
+                                        <label class="m-0">주문 일시 :</label>
+                                        2020.04.0303:10
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">주문 상품정보 (3건)</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>상품번호</th>
+                                                <th>상품이미지</th>
+                                                <th>상품명</th>
+                                                <th>수량</th>
+                                                <th>상품금액</th>
+                                                <th>총상품금액</th>
+                                                <th>총 배송비</th>
+                                                <th>총 결제금액</th>
+                                                <th>결제방법</th>
+                                                <th>주문상태</th>
+                                                <th>택배사<br>(송장번호)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">11,000원</td>
+                                                <td rowspan="3" class="text-right">30,500원</td>
+                                                <td rowspan="3" class="text-right">2,500원</td>
+                                                <td rowspan="3" class="text-right">33,000원</td>
+                                                <td rowspan="3">무</td>
+                                                <td rowspan="3">구매확정</td>
+                                                <td rowspan="3">
+                                                    우체국택배<br>
+                                                    <a href="#;">039492-9303033</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">11,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">8,500원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">결제정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered table-valign-middle resp_table">
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>총 상품금액</th>
+                                                    <td class="text-right">30,500원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총 배송비</th>
+                                                    <td class="text-right">(+) 2.500원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-danger">총 할인금액</th>
+                                                    <td class="text-danger text-right">(-)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총 결제금액</th>
+                                                    <td class="text-right"><strong>33,000원</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">결제수단</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered table-valign-middle resp_table">
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>결제 방법</th>
+                                                    <td>무통장입금 (모바일 PG)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>입금계좌</th>
+                                                    <td>우리은행 /1002-757-449921</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>입금자명</th>
+                                                    <td>홍길동</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>주문 확인일</th>
+                                                    <td>2020.04.0303:10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>결제 확인일</th>
+                                                    <td>2020.04.0303:18</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="product-detail content-top-padding">
+                            <span class="img">
+                                <img src="../../resources/images/temp/@product02.png" alt="@제품 이미지">
+                                <span class="sns-area">
+                                    <a href="#"><img src="../../resources/images/icon-share.svg" alt="공유하기"></a>
+                                    <a href="#"><img src="../../resources/images/icon-facebook.svg" alt="페이스북"></a>
+                                    <a href="#"><img src="../../resources/images/icon-twitter.svg" alt="트위터"></a>
+                                </span>
+                            </span>
+                            <div class="detail">
+                                <p class="tit">상품명상품명상품명상품명상품명</p>
+                                <span class="badge badge-outline-primary">1234567890</span>
+                                <span class="name-hash">세럼 <em>|</em>  #신상품 #리미티드에디션</span>
+                                <p class="desc">노화의 원인이 되는 문제성 피부 및 자극으로 인한 피부의 여러가지 상황을 완화시키고 탄력을 회복하는 단계별 안티링클 시스템을 통해 표정주름까지 잡아주는 강력한 주름 개선 효과를 기대할 수 있습니다.</p>
+                                <div class="pay-box">
+                                    <div class="d-flex">
+                                        <span>상품가격</span>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <strong class="price">109,000</strong>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>상품수량</span>
+                                        <div>
+                                            <div class="spinner" data-max="99" data-min="1">
+                                                <div class="spinner-box">
+                                                    <button type="button" class="spinner-decrement" disabled><i class="icon-minus"></i></button>
+                                                    <input type="tel" class="spinner-input" value="1">
+                                                    <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>배송기간</span>
+                                        <div>
+                                            <p>추석연휴 2-3일전 배송지연될 예정입니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>배송비</span>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <strong class="price">1,000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sum">
+                                    <span>총 결제금액</span>
+                                    <div>
+                                        <span class="exch">KRW</span>
+                                        <strong class="price">109,000</strong>
+                                    </div>
+                                </div>
+                                <div class="btn-area">
+                                    <div class="col-6">
+                                        <button class="btn btn-lg btn-square btn-block btn-dark">장바구니</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-lg btn-square btn-block btn-primary">바로구매</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <section class="detail-tab">
+                        <nav class="tab">
+                            <div class="nav" role="tablist">
+                                <a class="active" id="item-detail-tab" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true"><span>상품상세정보</span></a>
+                                <a id="item-delivery-tab" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false"><span>배송정보</span></a>
+                                <a id="item-detexchangeail-tab" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false"><span>교환 및 반품</span></a>
+                            </div>
+                        </nav>
+                    </section>
+                    <div class="container content-bottom-padding">
+                        <div class="tab-content" id="tab-content">
+                            <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="item-detail-tab">
+                                <section class="detail-info">
+                                    <img src="../../resources/images/temp/@default-detail.png" alt="@상품상세정보 이미지">
+                                </section>
+
+                                <section class="precaution">
+                                    <span><img src="../../resources/images/icon-precaution.svg" alt="!"> 주의사항</span>
+                                    <p>주의사항에 관한 내용이 한줄로 들어갑니다. 예를 들면 이 제품은 먹는 제품이 아닙니다 등등</p>
+                                </section>
+
+                                <section class="product-info">
+                                    <div class="title-area">
+                                        <h3 class="title"><span>상품정보 제공공시</span></h3>
+                                    </div>
+                                    <div class="table-view">
+                                        <table class="table border-0">
+                                            <colgroup>
+                                                <col width="25%">
+                                                <col width="75%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>제품명</th>
+                                                    <td>제품명제품명제품명제품명제품명제품명</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>용량</th>
+                                                    <td>100ml</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>제품주요사양<br>피부타입, 색상(호,번) 등</th>
+                                                    <td>모든피부</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>사용기한</th>
+                                                    <td>사용기간 36개월, 개봉 후 12개월 이내 사용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>사용방법</th>
+                                                    <td>매일 아침, 저녁 세안 후 스킨케어 단계에서 적당량을 덜어 피부결에 따라 충분히 두드리며 발라준다.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>제조업자 및 제조판매업자</th>
+                                                    <td>(주)COSBALL</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>제조국</th>
+                                                    <td>한국</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>성분</th>
+                                                    <td>성분을 적습니다</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>기능성 화장품의 경우 화장품법에 따른<br>식품의약안정청 심사 필 유무</th>
+                                                    <td>모든피부</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>사용할 때 주의사항</th>
+                                                    <td>사용기간 36개월, 개봉 후 12개월 이내 사용</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>품질 보증 기준</th>
+                                                    <td>본 제품에 이상이 있을 경우 , 공정거래위원회 고시에 의거 보상드립니다.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>소비자 상담관련 전화번호</th>
+                                                    <td>080-000-0000(수신자 요금부담) 운영시간 : 09:00 ~ 18:00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="t2" role="tabpanel" aria-labelledby="item-delivery-tab">
+                                <section class="buy-info">
+                                    <div class="title-area">
+                                        <h3 class="title"><span>구매 안내</span></h3>
+                                    </div>
+                                    <div class="table-view">
+                                        <table class="table border-0">
+                                            <colgroup>
+                                                <col width="25%">
+                                                <col width="75%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>배송 지역</th>
+                                                    <td>전국가능 (군부대 일부 지역은 제외)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>배송 기간</th>
+                                                    <td>
+                                                        입금 확인 후 2~4일 가량 소요되며 , 지역별 택배업체 사정에 따라 약간의 차이가 있을 수 있습니다.<br>
+                                                        연휴/공휴일 포함 주문 또는 일부 도서지역/사서함 배송 주문은 2~3일 가량 추가 소요될 수 있습니다.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>제품주요사양<br>피부타입, 색상(호,번) 등</th>
+                                                    <td>모든피부</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="t3" role="tabpanel" aria-labelledby="item-detexchangeail-tab">
+                                tab 3 내용 <br>tab 3 내용 <br>tab 3 내용 <br>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="buy-bottom">
+                        <button type="button" class="toggler"><span class="sr-only">레이어 여닫기 버튼</span></button>
+                        <div class="container">
+                            <div class="d-flex align-items-start">
+                                <p>상품명상품명상품명상품명상품명이2줄이상인경우</p>
+                                <div class="sum-box">
+                                    <div class="default">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">109,000</span>
+                                    </div>
+                                    <span class="calc"><img src="../../resources/images/icon-calc-multiply.svg" alt="X"></span>
+                                    <div class="spinner-area">
+                                        <div class="spinner" data-max="99" data-min="1">
+                                            <div class="spinner-box">
+                                                <button type="button" class="spinner-decrement" disabled><i class="icon-minus"></i></button>
+                                                <input type="tel" class="spinner-input" value="1">
+                                                <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="calc"><img src="../../resources/images/icon-calc-sum.svg" alt="="></span>
+                                    <div class="sum">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">109,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-area justify-content-end">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-dark">장바구니</button>
+                                </div>
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary">바로구매</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+</body>
+</html>

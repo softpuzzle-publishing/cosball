@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div>
+                                <ol class="steps row">
+                                    <li class="step col-4 prev">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon1"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>1. 프로필 선택</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4 active">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon2"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>2.정보입력</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon3"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>3.패키지결과</strong>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="title-area">
+                                <h3 class="title"><span>패캐지구매</span></h3>
+                                <p class="desc">김로라님의 피부정보를 확인해주세요.</p>
+                            </div>
+                        </section>
+
+                        <section class="package-sec content-bottom-padding">
+                            <h4>1. 성별을 선택해주세요.</h4>
+                            <div class="form-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="skin-female" name="radio1-group">
+                                    <label class="custom-control-label" for="skin-female">여자</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="skin-male" name="radio1-group">
+                                    <label class="custom-control-label" for="skin-male">남자</label>
+                                </div>
+                            </div>
+                            <div class="skin-select" id="skin-female-select">
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin1" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin1">
+                                                <img src="../../resources/images/img-woman-skin-1@3x.jpg" alt="하양">
+                                                <span>하양</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin2" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin2">
+                                                <img src="../../resources/images/img-woman-skin-2@3x.jpg" alt="아이보리">
+                                                <span>아이보리</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin3" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin3">
+                                                <img src="../../resources/images/img-woman-skin-3@3x.jpg" alt="밝은갈색">
+                                                <span>밝은갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin4" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin4">
+                                                <img src="../../resources/images/img-woman-skin-4@3x.jpg" alt="밝은갈색">
+                                                <span>갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin5" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin5">
+                                                <img src="../../resources/images/img-woman-skin-5@3x.jpg" alt="갈색">
+                                                <span>갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Fskin6" name="radio2-group">
+                                            <label class="custom-control-label" for="Fskin6">
+                                                <img src="../../resources/images/img-woman-skin-6@3x.jpg" alt="어두운갈색">
+                                                <span>어두운갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skin-select" id="skin-male-select">
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin1" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin1">
+                                                <img src="../../resources/images/img-man-skin-1@3x.jpg" alt="하양">
+                                                <span>하양</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin2" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin2">
+                                                <img src="../../resources/images/img-man-skin-2@3x.jpg" alt="아이보리">
+                                                <span>아이보리</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin3" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin3">
+                                                <img src="../../resources/images/img-man-skin-3@3x.jpg" alt="밝은갈색">
+                                                <span>밝은갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin4" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin4">
+                                                <img src="../../resources/images/img-man-skin-4@3x.jpg" alt="밝은갈색">
+                                                <span>갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin5" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin5">
+                                                <img src="../../resources/images/img-man-skin-5@3x.jpg" alt="갈색">
+                                                <span>갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="Mskin6" name="radio3-group">
+                                            <label class="custom-control-label" for="Mskin6">
+                                                <img src="../../resources/images/img-man-skin-6@3x.jpg" alt="어두운갈색">
+                                                <span>어두운갈색</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>2. 생년월일을 입력해주세요.</h4>
+                            <div class="form-group form-inline">
+                                <input type="text" class="form-control">
+                            </div>
+                            <h4>3. 패키지 구매량을 선택해주세요.</h4>
+                            <div class="form-group mt-n2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="packageBuy1" name="radio3-group" checked>
+                                    <label class="custom-control-label" for="packageBuy1">1주일</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="packageBuy2" name="radio3-group">
+                                    <label class="custom-control-label" for="packageBuy2">2주일</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="packageBuy3" name="radio3-group">
+                                    <label class="custom-control-label" for="packageBuy3">3주일</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="packageBuy4" name="radio3-group">
+                                    <label class="custom-control-label" for="packageBuy4">한달</label>
+                                </div>
+                                <div class="d-inline-block etc-group">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="packageBuy5" name="radio3-group" data-check="etc" data-match="#etc">
+                                        <label class="custom-control-label" for="packageBuy5">직접입력</label>
+                                    </div>
+                                    <div class="custom-control-inline month-input">
+                                        <input type="text" class="form-control d-inline-block text-center" value="0" disabled><span class="m-l-10">개월</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>5. 개선되었으면 하는 부분을 선택해주세요.</h4>
+                            <p class="desc">우선순위 순서대로 해당되는 항목을 모두 선택해주세요.</p>
+                            <div class="form-group custom-checkbox-ordering" id="order1">
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk1">
+                                    <label class="custom-control-label" for="chk1" data-value="">주근깨</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk2">
+                                    <label class="custom-control-label" for="chk2" data-value="">색소침착</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk3">
+                                    <label class="custom-control-label" for="chk3" data-value="">주름</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk4">
+                                    <label class="custom-control-label" for="chk4" data-value="">모공</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk5">
+                                    <label class="custom-control-label" for="chk5" data-value="">피부탄력</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk6">
+                                    <label class="custom-control-label" for="chk6" data-value="">지성피부</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk7">
+                                    <label class="custom-control-label" for="chk7" data-value="">건조한피부</label>
+                                </div>
+                            </div>
+                            <h4>6. 피부고민을 선택해주세요.</h4>
+                            <p class="desc">우선순위 순서대로 해당되는 항목을 모두 선택해주세요.</p>
+                            <div class="form-group custom-checkbox-ordering" id="order2">
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk8">
+                                    <label class="custom-control-label" for="chk8" data-value="">주근깨</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk9">
+                                    <label class="custom-control-label" for="chk9" data-value="">색소침착</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk10">
+                                    <label class="custom-control-label" for="chk10" data-value="">주름</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk11">
+                                    <label class="custom-control-label" for="chk11" data-value="">모공</label>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-bottom">
+            <div class="btn-area">
+                <div class="col-6 col-md-auto">
+                    <button class="btn btn-lg btn-block btn-dark">가까운 매장찾기</button>
+                </div>
+                <div class="col-6 col-md-auto">
+                    <button class="btn btn-lg btn-block btn-primary">결과보기</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        //성별 선택
+        $('[name=radio1-group]').on('change', function(){
+            if($('#skin-female').is(':checked')){
+                $('#skin-male-select').removeClass('active');
+                $('#skin-female-select').addClass('active');
+            }else if($('#skin-male').is(':checked')){
+                $('#skin-female-select').removeClass('active');
+                $('#skin-male-select').addClass('active');
+            }
+        })
+
+        //기타 선택
+        $('[name=radio3-group]').on('change', function(){
+            if($('#packageBuy5').is(':checked')){
+                $('.month-input .form-control').prop('disabled',false);
+                $('.month-input .form-control').focus();
+            }else{
+                $('.month-input .form-control').prop('disabled',true);
+            }
+        })
+
+        //체크박스 선택 순서
+        var order = [];
+        $('#order1 input[type=checkbox]').on('click, change', function(){
+            var idx = order.indexOf(this);
+
+            if (idx !== -1) {
+                order.splice(idx, 1);
+            }
+            if (this.checked) {
+                order.push(this);
+            }
+
+            $.each(order, function(idx, item) {
+                $(item).siblings('label').attr('data-value',idx + 1);
+            });
+        });
+
+        var order2 = [];
+        $('#order2 input[type=checkbox]').on('click, change', function(){
+            var idx = order2.indexOf(this);
+
+            if (idx !== -1) {
+                order2.splice(idx, 1);
+            }
+            if (this.checked) {
+                order2.push(this);
+            }
+
+            $.each(order2, function(idx, item) {
+                $(item).siblings('label').attr('data-value',idx + 1);
+            });
+        });
+    </script>
+</body>
+</html>

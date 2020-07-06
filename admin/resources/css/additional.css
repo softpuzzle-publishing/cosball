@@ -1,0 +1,91 @@
+.mnemonicCode {padding:0.7em 0;}
+.mnemonicCode+.mnemonicCode {border-top:1px dashed #ddd;}
+.mnemonicCode>* {border-left:1px solid #ddd;}
+.mnemonicCode>*:first-child {border-left:none;}
+
+#modalCate .panel {border:1px solid #ddd;}
+#modalCate .panel+.panel {border-top:0;}
+#modalCate .toggle-area {padding:1em;}
+.cateList {margin:0;padding:1em;border-top:1px solid #ddd;}
+.cateList li {position:relative;line-height:2em;}
+.cateList li label {padding-left:1em;}
+.cateList li li li label {padding-left:2em;}
+.cateList li li li li label {padding-left:3em;}
+.cateList li li li li li label {padding-left:4em;}
+
+.row-disabled td,
+.row-disabled td a {color:#ccc;}
+
+/* 언어번역 아이콘 2020-06-08 */
+.custom_position { position:relative; }
+.custom_icon_min { position:absolute; top:10%; left:0; color:#fff; width:100%; text-align:center; font-size:10px; font-weight:normal; }
+.custom_icon_min.alt { top:12%; }
+/* /언어번역 아이콘 2020-06-08 */
+
+/* 상품카테고리 트리구조 2020-06-09 */
+.tree_category { border:1px solid rgba(0, 0, 0, 0.125); border-radius:5px; position:relative; display:block; background-color:#fff; overflow:hidden; }
+.tree_category .tree_bg:hover, .tree_category .tree_bg.on { background:#f8f9fa; }
+.tree_depth1 > div { border-bottom:1px solid rgba(0, 0, 0, 0.125); padding:1rem 0.5rem 0.5rem 0.5rem; position:relative; }
+.tree_depth2 > li > div { border-bottom:1px solid rgba(0, 0, 0, 0.125); padding:0.7rem 1.2rem; }
+.tree_depth3 > li > div { border-bottom:1px solid rgba(0, 0, 0, 0.125); padding:0.7rem 1.7rem; }
+.tree_category .role_tree { position: absolute; top:0.25rem; right:0; }
+.tree_category .role_tree i { padding:1rem; }
+/* 상품카테고리 트리구조  2020-06-09 */
+
+/* 탭 반응형 추가 2020-06-16 */
+@media screen and (max-width: 1200px) {
+    /* .trans_tab_wrap { overflow-x:hidden; overflow-x: scroll; width:100%; }
+    .trans_tab { width:1200px; } */
+}
+/* 테이블 반응형 추가 2020-06-10 */
+@media screen and (max-width: 768px) {
+    .resp_table { border-top:none; }
+    .resp_table > colgroup { display:none; }
+
+    .resp_table > thead,
+    .resp_table > thead > tr,
+    .resp_table > thead > tr > th,
+    .resp_table > thead > tr > td,
+    .resp_table > tbody,
+    .resp_table > tbody > tr,
+    .resp_table > tbody > tr > th,
+    .resp_table > tbody > tr > td,
+    .resp_table > tr,
+    .resp_table > tr > th,
+    .resp_table > tr > td { display:block; }
+
+    .resp_table > thead > tr > th,
+    .resp_table > thead > tr > td,
+    .resp_table > tbody > tr > th,
+    .resp_table > tbody > tr > td,
+    .resp_table > tr > th,
+    .resp_table > tr > td { border:none; border-top:1px solid #ddd; }
+
+    .resp_table th br { display:none; }
+
+    .resp_table .no_data { display:none; }
+
+    .force_block { display:block !important; }
+    .force_input_size { width:60px !important; }
+
+
+    .trans_tab { display:flex; border-bottom:none !important; }
+    .trans_tab li { display:block !important; margin-right:-1px; /*flex-basis:auto; flex:auto;*/ }
+    .trans_tab li a { width:100%; border-top-left-radius:0 !important; border-top-right-radius:0 !important; text-align:center;
+        border:1px solid #ccc !important; }
+    .trans_tab li a.active { background:#f1f1fa !important; }
+
+    .trans_tab.tab_div4 li { flex-basis:25%; }
+    .trans_tab.tab_div3 li { flex-basis:33.33333%; }
+    .trans_tab.tab_div2 li { flex-basis:50%; }
+}
+
+@media screen and (max-width: 600px) {
+    .trans_tab li { flex-basis:50% !important; }
+}
+@media screen and (max-width: 360px) {
+    .trans_tab li { flex-basis:100% !important; }
+    .trans_tab.tab_div2 li { flex-basis:50% !important; }
+    .trans_tab.tab_div4 li { flex-basis:50% !important; }
+}
+/* 테이블 반응형 추가 2020-06-10 */

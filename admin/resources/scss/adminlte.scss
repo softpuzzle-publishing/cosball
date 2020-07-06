@@ -1,0 +1,24 @@
+/*!
+ *   AdminLTE v3.0.2
+ *   Author: Colorlib
+ *   Website: AdminLTE.io <http://adminlte.io>
+ *   License: Open source - MIT <http://opensource.org/licenses/MIT>
+ */
+// Bootstrap
+// ---------------------------------------------------
+@import 'bootstrap/functions';
+@import 'AdminLTE/bootstrap-variables';
+@import 'bootstrap/bootstrap';
+
+// Variables and Mixins
+// ---------------------------------------------------
+@import 'AdminLTE/variables';
+@import 'AdminLTE/mixins';
+
+@import 'AdminLTE/parts/core';
+@import 'AdminLTE/parts/components';
+@import 'AdminLTE/parts/extra-components';
+@import 'AdminLTE/parts/pages';
+@import 'AdminLTE/parts/plugins';
+@import 'AdminLTE/parts/miscellaneous';
+

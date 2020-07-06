@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>피부정보관리</span>
+                    <span data-depth2 hidden>설문관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="text-right mb-1"><span class="text-danger">※</span> 필수입력항목</div>
+                        <table class="table table-bordered table-valign-middle resp_table">
+                            <colgroup>
+                                <col style="width:140px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>설문코드 <span class="text-danger">※</span></th>
+                                    <td>XXXXXXXXX</td>
+                                </tr>
+                                <tr>
+                                    <th>언어설정 <span class="text-danger">※</span></th>
+                                    <td>
+                                        <div class="form-inline min-height-auto">
+                                            <span class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" name="lang" id="l1">
+                                                <label for="l1" class="custom-control-label"><span class="badge bg-dark lang">KR</span></label>
+                                            </span>
+                                            <span class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" name="lang" id="l2">
+                                                <label for="l2" class="custom-control-label"><span class="badge bg-dark lang">EN</span></label>
+                                            </span>
+                                            <span class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" name="lang" id="l3">
+                                                <label for="l3" class="custom-control-label"><span class="badge bg-dark lang">CN</span></label>
+                                            </span>
+                                            <span class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" name="lang" id="l4">
+                                                <label for="l4" class="custom-control-label"><span class="badge bg-dark lang">JP</span></label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>설문제시 시간대 <span class="text-danger">※</span></th>
+                                    <td>
+                                        <div class="row row-10 align-items-center">
+                                            <div class="col-auto">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">00시</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">~</div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">09시</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>설문지 <span class="text-danger">※</span></th>
+                                    <td>
+                                        <div class="row align-items-center survey">
+                                            <div class="col-auto">
+                                                <span class="badge bg-dark lang">KR</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>설문문제</label>
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="푹 잠들고 아침에 일어나셨습니까? ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>설문답변</label>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="예">
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-gray btn-sm mr-3">추가</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center mt-2">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="아니오">
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-gray btn-sm mr-3">추가</button>
+                                                            <a href="javascript:;" class="align-middle"><i class="fas fa-backspace align-middle"><span class="sr-only">삭제</span></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center survey">
+                                            <div class="col-auto">
+                                                <span class="badge bg-dark lang">EN</span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>설문문제</label>
+                                                    <div class="row">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="Did you deeply asleep, and wake up in the morning?">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>설문답변</label>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="YES">
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-gray btn-sm mr-3">추가</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center mt-2">
+                                                        <div class="col-7">
+                                                            <input type="text" class="form-control" value="NO">
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-gray btn-sm mr-3">추가</button>
+                                                            <a href="javascript:;" class="align-middle"><i class="fas fa-backspace align-middle"><span class="sr-only">삭제</span></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                <tr>
+                                    <th>OTP 인증 <span class="text-danger">※</span></th>
+                                    <td>
+                                        <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

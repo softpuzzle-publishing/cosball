@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+    <style>
+        h3{color: #444;font-weight: 500;}
+        .color > div{font-size: 1.25rem;font-weight: 500;}
+        .color > div > span{display: inline-block;padding: 2px 6px;}
+
+        #content .container{padding: 3rem 0;display: flex;flex-wrap: wrap;}
+        #content .container section{border: 1px solid #ccc;padding: 1.5rem;border-radius: 4px;width: 99%;margin: 0.5%;}
+        #content .container section h2{margin-bottom: 20px;}
+        #content .container [half]{width: 49%}
+        @media (max-width: 991px){
+            #content .container section{padding: .75rem;}
+        }
+    </style>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div id="visual" style="background-image: url('../../resources/images/temp/@img-category.jpg');">
+                        <div>
+                            <h2 class="pagetitle"><span>스킨케어</span></h2>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <h2>[카테고리]</h2>
+                            <div class="category">
+                                <div class="item"><div class="box"><a href="">전체</a></div></div>
+                                <div class="item active"><div class="box"><a href="">스킨</a></div></div>
+                                <div class="item"><div class="box"><a href="">로션</a></div></div>
+                                <div class="item"><div class="box"><a href="">에센스</a></div></div>
+                                <div class="item"><div class="box"><a href="">앰플</a></div></div>
+                                <div class="item"><div class="box"><a href="">세럼</a></div></div>
+                                <div class="item"><div class="box"><a href="">메뉴명7</a></div></div>
+                                <div class="item"><div class="box"><a href="">메뉴명8</a></div></div>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[타이틀]</h2>
+                            <div class="title-area">
+                                <h3 class="title"><span>패캐지구매</span></h3>
+                                <p class="desc">김로라님의 피부정보를 확인해주세요.</p>
+                            </div>
+                            <div class="title-area">
+                                <h3 class="title"><strong>“aaaa1234”</strong> <span>검색결과</span></h3>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Sort]</h2>
+                            <div class="sort-area">
+                                <div class="count">
+                                    총 <span>999</span>건
+                                </div>
+                                <div class="sort">
+                                    <a href="" class="active">최근등록순</a>
+                                    <a href="">낮은가격순</a>
+                                    <a href="">높은가격순</a>
+                                    <a href="">판매순</a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-4 color">
+                            <h2>[Color]</h2>
+                            <div>
+                                <span class="text-primary">primary</span>
+                                <span class="text-secondary">secondary</span>
+                                <span class="text-success">success</span>
+                                <span class="text-info">info</span>
+                                <span class="text-warning">warning</span>
+                                <span class="text-danger">danger</span>
+                                <span class="text-gray">gray</span>
+                                <span class="text-dark">dark</span>
+                                <span class="bg-dark"><span class="text-light">light : f7f7f7</span></span>
+                                <span class="bg-dark"><span class="text-default">default : f2f2f2</span></span>
+                                <span class="bg-dark"><span class="text-peach">peach</span></span>
+                                <span class="bg-dark"><span class="text-lavender">lavender</span></span>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Button]</h2>
+                            <h3>- btn-lg</h3>
+                            <div>
+                                <button class="btn btn-lg btn-dark">장바구니</button>
+                                <button class="btn btn-lg btn-primary">바로구매</button>
+                                <button class="btn btn-lg btn-primary btn-square">바로결제</button>
+                                <button class="btn btn-lg btn-dark btn-square">장바구니</button>
+                            </div>
+                            <h3 class="mt-2">- btn-md(height 44px default)</h3>
+                            <div>
+                                <button class="btn btn-primary">주문하기</button>
+                                <button class="btn btn-outline-primary">자세히보기</button>
+                                <button class="btn btn-outline-gray">이전글</button>
+                                <button class="btn btn-outline-gray">다음글</button>
+                                <button class="btn btn-outline-dark">삭제</button>
+                                <button class="btn btn-dark">검색</button>
+                                <button class="btn btn-dark">나의 배송주소록</button>
+                                <button class="btn btn-dark">우편번호검색</button>
+                            </div>
+                            <h3 class="mt-2">- btn-sm(height 34px)</h3>
+                            <div>
+                                <button class="btn btn-sm btn-dark">선택상품삭제</button>
+                                <button class="btn btn-sm btn-primary">삭제</button>
+                            </div>
+                            <h3 class="mt-2">- btn-xs(height 30px)</h3>
+                            <div>
+                                <button class="btn btn-xs btn-outline-gray">수정</button>
+                                <button class="btn btn-xs btn-outline-primary">상세보기</button>
+                                <button class="btn btn-xs btn-dark">수정</button>
+                                <button class="btn btn-xs btn-primary">기본 배송지 지정</button>
+                            </div>
+                            <h3 class="mt-2">- 하단 버튼 영역</h3>
+                            <div class="btn-bottom">
+                                <div class="btn-area">
+                                    <div class="col-6 col-md-auto">
+                                        <button class="btn btn-lg btn-block btn-dark">장바구니</button>
+                                    </div>
+                                    <div class="col-6 col-md-auto">
+                                        <button class="btn btn-lg btn-block btn-primary">바로구매</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Step]</h2>
+                            <div>
+                                <ol class="steps row">
+                                    <li class="step col-4 prev">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon1"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>1. 프로필 선택</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4 active">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon2"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>2.정보입력</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon3"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>3.패키지결과</strong>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Tab]</h2>
+                            <nav class="tab">
+                                <div class="nav" role="tablist">
+                                    <a class="active" id="item-detail-tab" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true"><span>상품상세정보</span></a>
+                                    <a id="item-delivery-tab" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false"><span>배송정보</span></a>
+                                    <a id="item-detexchangeail-tab" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false"><span>교환 및 반품</span></a>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="tab-content">
+                                <div class="tab-pane fade show active" id="t1" role="tabpanel" aria-labelledby="item-detail-tab">
+                                    tab 1 내용 <br>
+                                </div>
+                                <div class="tab-pane fade" id="t2" role="tabpanel" aria-labelledby="item-delivery-tab">
+                                    tab 2 내용 <br>tab 2 내용 <br>
+                                </div>
+                                <div class="tab-pane fade" id="t3" role="tabpanel" aria-labelledby="item-detexchangeail-tab">
+                                    tab 3 내용 <br>tab 3 내용 <br>tab 3 내용 <br>
+                                </div>
+                              </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[form]</h2>
+                            <div class="row">
+                                <div class="col">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="아이디">
+                                    </div>
+                                    <!-- <div class="mt-1">
+                                        <select class="form-control">
+                                            <option value="">선택해주세요.(default)</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="mt-1">
+                                        <select class="custom-select">
+                                            <option value="">선택해주세요. (custom)</option>
+                                            <option value="">111</option>
+                                            <option value="">2222</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-1">
+                                        <input type="text" class="form-control" data-event="search" placeholder="검색해주세요.">
+                                    </div>
+                                    <div class="mt-1">
+                                        <input type="text" class="form-control" data-event="datepicker" readonly>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="아이디" disabled>
+                                    </div>
+                                    <!-- <div class="mt-1">
+                                        <select class="form-control" disabled>
+                                            <option value="">선택해주세요.(default)</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="mt-1">
+                                        <select class="custom-select" disabled>
+                                            <option value="">선택해주세요. (custom)</option>
+                                            <option value="">111</option>
+                                            <option value="">2222</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-1">
+                                        <input type="text" class="form-control" data-event="search" placeholder="검색해주세요." disabled>
+                                    </div>
+                                    <div class="mt-1">
+                                        <input type="text" class="form-control" data-event="datepicker" readonly disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                <div class="col">
+                                    <div class="textarea-wrap">
+                                        <div class="text">
+                                            <textarea name="" id="" cols="" rows="3" title="내용 입력" class="form-control" placeholder="구체적인 내용을 입력해주세요." onkeyup="javascript:byteCheck(this,'100','#byteCount')"></textarea>
+                                        </div>
+                                        <div class="byte">
+                                            <small><span id="byteCount">0</span> / 100자</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="spinner" data-max="99" data-min="1">
+                                        <div class="spinner-box">
+                                            <button type="button" class="spinner-decrement" disabled><i class="icon-minus"></i></button>
+                                            <input type="tel" class="spinner-input" value="1">
+                                            <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="spinner spinner-sm" data-max="5" data-min="2">
+                                        <div class="spinner-box">
+                                            <button type="button" class="spinner-decrement" disabled><i class="icon-minus"></i></button>
+                                            <input type="tel" class="spinner-input" value="2">
+                                            <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="radio1" name="radio1-group" checked>
+                                    <label class="custom-control-label" for="radio1">Radio On</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="radio2" name="radio1-group">
+                                    <label class="custom-control-label" for="radio2">Radio Off</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="radio3" name="radio1-group" disabled>
+                                    <label class="custom-control-label" for="radio3">Radio Disabled</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="radio4" name="radio1-group" data-check="etc" data-match="#etc">
+                                    <label class="custom-control-label" for="radio4">기타 입력</label>
+                                </div>
+                                <div class="custom-control-inline mr-0" style="display: none;" id="etc">
+                                    <input type="text" class="form-control d-inline-block w-auto">
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox1" checked>
+                                    <label class="custom-control-label" for="checkbox1">checkbox On</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                    <label class="custom-control-label" for="checkbox2">checkbox Off</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="checkbox3" disabled>
+                                    <label class="custom-control-label" for="checkbox3">checkbox Disabled</label>
+                                </div>
+                            </div>
+
+                            <div class="custom-checkbox-ordering mt-2">
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk1">
+                                    <label class="custom-control-label" for="chk1" data-value="">주근깨</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk2">
+                                    <label class="custom-control-label" for="chk2" data-value="">색소침착</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk3">
+                                    <label class="custom-control-label" for="chk3" data-value="">주름</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk4">
+                                    <label class="custom-control-label" for="chk4" data-value="">모공</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk5">
+                                    <label class="custom-control-label" for="chk5" data-value="">피부탄력</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk6">
+                                    <label class="custom-control-label" for="chk6" data-value="">지성피부</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="chk7">
+                                    <label class="custom-control-label" for="chk7" data-value="">건조한피부</label>
+                                </div>
+                            </div>
+                            <div class="output"></div>
+                        </section>
+
+                        <section class="mt-4" half>
+                            <h2>[Badge]</h2>
+                            <div>
+                                <span class="badge badge-primary">1234567890</span>
+                                <span class="badge badge-outline-primary">1234567890</span>
+                            </div>
+                        </section>
+
+                        <section class="mt-4" half>
+                            <h2>[전체화면 팝업]</h2>
+                            <div>
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-sample">일반 팝업</button>
+                                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-all-event">전체화면 팝업</button>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Table]</h2>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="table 가이드">
+                                        <caption class="sr-only">table 가이드</caption>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">상품정보</th>
+                                                <th class="text-center">수량</th>
+                                                <th class="text-center">상품금액</th>
+                                                <th class="text-center">주문상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr class="bg-light">
+                                                <td colspan="4" class="text-right">
+                                                    토탈
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">김새롬님의 코즈볼 패키지</td>
+                                                <td class="text-center">200</td>
+                                                <td class="text-center"><i>KRW</i> <strong>100,000</strong></td>
+                                                <td class="text-center" rowspan="2">교환 처리중</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">300</td>
+                                                <td class="text-center"><i>KRW</i> <strong>100,000</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-title">취소 정보</div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="table 가이드">
+                                        <caption>table 가이드</caption>
+                                        <tbody>
+                                            <tr>
+                                                <th>주소 명칭</th>
+                                                <td>집</td>
+                                            </tr>
+                                            <tr>
+                                                <th>주소</th>
+                                                <td>777777 <br>서울시 영등포구 양평동2가 37-3 투웨니퍼스트 1101호</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-4">
+                            <h2>[Pagination]</h2>
+                            <div>
+                                <div class="pagination-wrap d-none d-md-block">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-first"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-prev"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-next"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-last"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pagination-wrap d-md-none">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-first"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-prev"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-next"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="icon-last"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+
+                        <section class="section-payment-calc mt-4 center-bottom-padding">
+                            <h2>[결제 정보]</h2>
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg"
+                                                    alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="minus"><img src="../../resources/images/icon-calc-minus.svg"
+                                                    alt="-"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg"
+                                                    alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">221,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="minus"><img src="../../resources/images/icon-calc-minus.svg"
+                                                    alt="-"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price"><span class="d-md-none">(-)</span> 10,000원</span>
+                                            <span class="info">패키지할인(20%)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg"
+                                                    alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg"
+                                                    alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">지역 추가 배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,300,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 공지사항 -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-sample" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">공지사항 제목 영역입니다.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="noti-txt">
+                            공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다. 공지사항 내용 영역입니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-dark btn-block">하루동안 보이지 않기</button>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block" data-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 전체이벤트 보기 -->
+    <div class="modal modal-full" tabindex="-1" role="dialog" id="modal-all-event">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="banner-in-modal">
+                        <ul class="banner">
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                            <li><a href=""><span><img src="../../resources/images/temp/@banner-event.png" alt=""></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //체크박스 선택 순서
+        var order = [];
+        $('.custom-checkbox-ordering input[type=checkbox]').on('click, change', function(){
+            var idx = order.indexOf(this);
+
+            if (idx !== -1) {
+                order.splice(idx, 1);
+            }
+            if (this.checked) {
+                order.push(this);
+            }
+
+            $.each(order, function(idx, item) {
+                $(item).siblings('label').attr('data-value',idx + 1);
+            });
+        });
+    </script>
+</body>
+</html>

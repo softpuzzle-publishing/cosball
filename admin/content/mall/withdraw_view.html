@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>회원관리</span>
+                    <span data-depth3 hidden>탈퇴회원</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">탈퇴회원정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption hidden>탈퇴회원정보 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>회원구분</th>
+                                            <td colspan="3">일반회원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>AccountID</th>
+                                            <td>a_1234567</td>
+                                            <th>볼코드</th>
+                                            <td>ABC0123</td>
+                                        </tr>
+                                        <tr>
+                                            <th>CharacterID</th>
+                                            <td colspan="3">
+                                                <div>
+                                                    c1231<br>
+                                                    c1232<br>
+                                                    c1233<br>
+                                                    c1234<br>
+                                                    c1235
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>가입일</th>
+                                            <td colspan="3">2020-01-01 15:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>탈퇴신청일</th>
+                                            <td>2020-01-01 15:00:00</td>
+                                            <th>탈퇴일</th>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>탈퇴사유</th>
+                                            <td colspan="3">기타</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

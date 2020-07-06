@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>볼페이POS</span>
+                    <span data-depth2 hidden>이메일발송관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>발송일자</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1" checked>
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-10 align-items-center">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>제목</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>발송구분</label>
+                                            <div class="form-inline">
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="sendDivde" id="s1" checked>
+                                                    <label for="s1" class="custom-control-label">전체</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="sendDivde" id="s2">
+                                                    <label for="s2" class="custom-control-label">즉시</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="sendDivde" id="s3">
+                                                    <label for="s3" class="custom-control-label">예약</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="sendDivde" id="s4">
+                                                    <label for="s4" class="custom-control-label">취소</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>발송구분</th>
+                                        <th>제목</th>
+                                        <th>발송현황<br>(성공/실패)</th>
+                                        <th>등록자</th>
+                                        <th>발송일시</th>
+                                        <th>등록일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>즉시</td>
+                                        <td class="text-left">
+                                            <div class="row">
+                                                <div class="col-11 text-truncate">
+                                                    이메일 제목이 표시되는 영역입니다. 이메일 제목이 표시되는 영역입니다.…
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>100/0</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>예약</td>
+                                        <td class="text-left">
+                                            <div class="row">
+                                                <div class="col-11 text-truncate">
+                                                    이메일 제목이 표시되는 영역입니다. 이메일 제목이 표시되는 영역입니다.…
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>100/0</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>즉시</td>
+                                        <td class="text-left">
+                                            <div class="row">
+                                                <div class="col-11 text-truncate">
+                                                    이메일 제목이 표시되는 영역입니다. 이메일 제목이 표시되는 영역입니다.…
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>50/50</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>취소</td>
+                                        <td class="text-left">
+                                            <div class="row">
+                                                <div class="col-11 text-truncate">
+                                                    이메일 제목이 표시되는 영역입니다. 이메일 제목이 표시되는 영역입니다.…
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>50/50</td>
+                                        <td>홍길동</td>
+                                        <td>-</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group"></div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

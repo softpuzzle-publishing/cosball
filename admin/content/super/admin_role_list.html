@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>슈퍼관리자</span>
+                    <span data-depth2 hidden>관리자역할관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>기간</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row align-items-end">
+                                    <div class="col-md-6 form-group">
+                                        <label for="validationCustom04">역할이름</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">사용여부 전체</option>
+                                        <option value="">사용</option>
+                                        <option value="">중지</option>
+                                    </select>
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                <label for="allchk" class="custom-control-label"></label>
+                                            </span>
+                                        </th>
+                                        <th>번호</th>
+                                        <th>역활이름</th>
+                                        <th>관리자수</th>
+                                        <th>생성자</th>
+                                        <th>생성일자</th>
+                                        <th>사용여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk1">
+                                                <label for="chk1" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>4</td>
+                                        <td>최고관리자</td>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:01</td>
+                                        <td>
+                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
+                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch1" checked>
+                                                <label class="custom-control-label" for="switch1">사용</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk2">
+                                                <label for="chk2" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>3</td>
+                                        <td>일반관리자</td>
+                                        <td>10</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:01</td>
+                                        <td>
+                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
+                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch2">
+                                                <label class="custom-control-label" for="switch2">중지</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk3">
+                                                <label for="chk3" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>2</td>
+                                        <td>쇼핑몰관리자</td>
+                                        <td>5</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:01</td>
+                                        <td>
+                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
+                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch3" checked>
+                                                <label class="custom-control-label" for="switch3">사용</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk4">
+                                                <label for="chk4" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>1</td>
+                                        <td>기본관리자</td>
+                                        <td>0</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-01 15:00:01</td>
+                                        <td>
+                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
+                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch4" checked>
+                                                <label class="custom-control-label" for="switch4">사용</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                    <label for="">선택항목</label>
+                                    <select name="" id="" class="form-control d-inline-block w-auto ml-1">
+                                        <option value="">사용</option>
+                                        <option value="">중지</option>
+                                    </select>
+                                    <button type="button" class="btn btn-dark d-inline-block" data-toggle="modal" data-target="#modalOtp">일괄변경</button>
+                                </div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- modal : OTP 인증 -->
+    <div class="modal fade" id="modalOtp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">OTP 인증</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="text-center">OTP 인증번호를 입력하세요.</div>
+                    <div class="m-1">
+                        <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
+                    </div>
+                    <div class="text-danger">
+                        <i class="fas fa-info-circle"></i>
+                        <span>인증번호가 일치하지 않습니다. 다시 입력하세요.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

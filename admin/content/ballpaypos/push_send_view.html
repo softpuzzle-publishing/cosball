@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>볼페이POS</span>
+                    <span data-depth2 hidden>푸시발송관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption>푸시발송관리 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>발송구분</th>
+                                            <td>즉시발송 (발송시간 :2020-01-0115:00:00)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>대상</th>
+                                            <td>전체 (발송 : 000 / 성공 : 000 / 실패 : 000 / 읽음확인 : 000)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td>푸시 제목이 표시됩니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <th>메시지</th>
+                                            <td>
+                                                푸시 메시지가 표시됩니다.<br>
+                                                푸시 메시지가 표시됩니다.<br>
+                                                푸시 메시지가 표시됩니다.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>이미지 링크</th>
+                                            <td>http://www.0000000.000000/000.jpg</td>
+                                        </tr>
+                                        <tr>
+                                            <th>링크</th>
+                                            <td>http://www.0000000.000000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom mt-3">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto">
+                                            <i class="fas fa-info-circle text-danger mr-1"></i>
+                                            예약발송 시,발송시간 <span class="text-danger">1시간 전까지 발송취소 및 내용수정이 가능</span>합니다.
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>피부정보관리</span>
+                    <span data-depth2 hidden>피부측정알고리즘관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">기본정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption>기본정보</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>라인업 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="form-inline">
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                        <label for="p1" class="custom-control-label">보습</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                        <label for="p2" class="custom-control-label">탄력</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                        <label for="p3" class="custom-control-label">주름</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                        <label for="p4" class="custom-control-label">미백</label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <th>제품코드 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-auto">
+                                                        <select name="" id="" class="form-control d-inline-block w-auto">
+                                                            <option value="">선택하세요</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-auto m-1">
+                                                        <span class="text-icon">
+                                                            <i class="fas fa-info-circle text-danger mr-1"></i> 코즈볼패키지에서 등록된 제품코드입니다.
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">피부측정항목</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered mb-3 resp_table">
+                                    <caption>피부측정항목</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>피부측정항목 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <select name="" id="" class="form-control d-inline-block w-auto">
+                                                    <option value="">선택하세요</option>
+                                                </select>
+                                                <button type="button" class="btn btn-gray">추가</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>피부측정항목</th>
+                                                <th>설정범위</th>
+                                                <th>상태</th>
+                                                <th>우선순위</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody data-event="sortable">
+                                            <tr>
+                                                <td>7</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>미백(기미• 색소침착) 측정</td>
+                                                <td>0 ~ 30</td>
+                                                <td>
+                                                    <a href="#" data-toggle="modal" data-target="#modalEdit">수정</a>
+                                                    |
+                                                    <a href="">삭제</a>
+                                                </td>
+                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 피부측정항목 설정 -->
+    <div class="modal fade" id="modalEdit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">피부측정항목 설정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-right mb-1">
+                        <span class="text-danger">※</span> 필수입력항목
+                    </div>
+                    <div class="form-group">
+                        <label for="">피부측정항목 <span class="text-danger">※</span></label>
+                        <select name="" id="" class="form-control">
+                            <option value="">미백측정</option>
+                            <option value="">주름측정</option>
+                            <option value="">유분측정</option>
+                            <option value="">타크서클 측정</option>
+                            <option value="">스킨톤 측정</option>
+                            <option value="">적용연령</option>
+                            <option value="">성별</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">범위지정 <span class="text-danger">※</span></label>
+                        <!-- 성별 이외의 옵션 선택 시 -->
+                        <div class="row row-20">
+                            <div class="col">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">최소</div>
+                                    <div class="col">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">최대</div>
+                                    <div class="col">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 성별 선택 시 -->
+                        <div class="form-inline">
+                            <span class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" name="gender" id="mail">
+                                <label for="mail" class="custom-control-label">남성</label>
+                            </span>
+                            <span class="custom-control custom-radio ml-3">
+                                <input class="custom-control-input" type="radio" name="gender" id="female">
+                                <label for="female" class="custom-control-label">여성</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

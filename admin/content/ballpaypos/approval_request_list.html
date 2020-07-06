@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>볼페이POS</span>
+                    <span data-depth2 hidden>판매처승인요청</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>추천인코드</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>회원상태</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">전체</option>
+                                                <option value="">정상</option>
+                                                <option value="">패널티</option>
+                                                <option value="">보내기 금지</option>
+                                                <option value="">교환 금지</option>
+                                                <option value="">보내기 화이트리스트</option>
+                                                <option value="">교환 화이트리스트</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>검색어</label>
+                                            <div class="row align-items-center">
+                                                <div class="col-md form-group">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">아이디(이메일)</option>
+                                                        <option value="">AccountID</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-8 form-group">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>진행상태</label>
+                                            <div class="form-inline">
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="progressState" id="p1">
+                                                    <label for="p1" class="custom-control-label">전체</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="progressState" id="p2">
+                                                    <label for="p2" class="custom-control-label">대기</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="progressState" id="p3">
+                                                    <label for="p3" class="custom-control-label">보류</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="progressState" id="p4">
+                                                    <label for="p4" class="custom-control-label">반려</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                <label for="allchk" class="custom-control-label"></label>
+                                            </span>
+                                        </th>
+                                        <th>번호</th>
+                                        <th>아이디(이메일)</th>
+                                        <th>AccountID</th>
+                                        <th>추천인코드</th>
+                                        <th>회원명</th>
+                                        <th>요청일</th>
+                                        <th>동의여부</th>
+                                        <th>회원상태</th>
+                                        <th>진행상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk1">
+                                                <label for="chk1" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>4</td>
+                                        <td>abc@gmail.com</td>
+                                        <td>a_1234567</td>
+                                        <td>ABC0123</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-0115:15:15</td>
+                                        <td>Y</td>
+                                        <td>패널티</td>
+                                        <td>대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk2">
+                                                <label for="chk2" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>3</td>
+                                        <td>abc@gmail.com</td>
+                                        <td>a_1234567</td>
+                                        <td>ABC0123</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-0115:15:15</td>
+                                        <td>Y</td>
+                                        <td>정상</td>
+                                        <td>대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk3">
+                                                <label for="chk3" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>2</td>
+                                        <td>abc@gmail.com</td>
+                                        <td>a_1234567</td>
+                                        <td>ABC0123</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-0115:15:15</td>
+                                        <td>Y</td>
+                                        <td>보내기 화이트리스트</td>
+                                        <td>보류</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk3">
+                                                <label for="chk3" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>1</td>
+                                        <td>abc@gmail.com</td>
+                                        <td>a_1234567</td>
+                                        <td>ABC0123</td>
+                                        <td>홍길동</td>
+                                        <td>2020-01-0115:15:15</td>
+                                        <td>Y</td>
+                                        <td>교환금지</td>
+                                        <td>반려</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                    <div class="row align-items-center">
+                                        <div class="col-sm-auto">
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalLabel">선택회원 승인처리</button>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <i class="fas fa-info-circle text-danger mr-1"></i> 회원상태가 <span class="text-danger">'패널티'</span> 인 경우, <span class="text-danger">판매처회원승인이 불가능</span>합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 라벨 -->
+    <div class="modal fade" id="modalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">라벨</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l1">
+                            <label for="l1" class="custom-control-label">1차 라벨 A</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l2">
+                            <label for="l2" class="custom-control-label">1차 라벨 A>2차 라벨 A</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l3">
+                            <label for="l3" class="custom-control-label">1차 라벨 A>2차 라벨 B</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l4">
+                            <label for="l4" class="custom-control-label">등급</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l5">
+                            <label for="l5" class="custom-control-label">등급 >1등급</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l6">
+                            <label for="l6" class="custom-control-label">등급 >2등급</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l7">
+                            <label for="l7" class="custom-control-label">등급 >3등급</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l8">
+                            <label for="l8" class="custom-control-label">등급 >4등급</label>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <span class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l9">
+                            <label for="l9" class="custom-control-label">등급 >5등급</label>
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

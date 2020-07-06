@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div class="title-area row align-items-end justify-content-between m-0">
+                                <h3 class="title"><span>주문/결제</span></h3>
+
+                                <nav class="breadcrumb col-auto p-0">
+                                    <ol>
+                                        <li class="breadcrumb-item"><a href="#;">홈</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">장바구니</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">주문/결제</a> <i></i></li>
+                                        <li class="breadcrumb-item active">주문완료 <i></i></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="table-responsive cart-list">
+                                <table class="table mb-0" summary="주문/결제 리스트">
+                                    <caption class="sr-only">주문/결제 리스트</caption>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th class="text-center">상품정보</th>
+                                            <th class="text-center">수량</th>
+                                            <th class="text-center">상품금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="3" class="text-center">
+                                                <div class="my_picture">
+                                                    <span class="img"></span>
+                                                </div>
+                                            </td>
+                                            <td class="text-left">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center">2000</td>
+                                            <td class="text-center">
+                                                <i class="currecy_unit mr-1 alt">KRW</i>
+                                                <span class="price_type">216,000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center">2000</td>
+                                            <td class="text-center">
+                                                <i class="currecy_unit mr-1 alt">KRW</i>
+                                                <span class="price_type">216,000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center">2000</td>
+                                            <td class="text-center">
+                                                <i class="currecy_unit mr-1 alt">KRW</i>
+                                                <span class="price_type">216,000</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-light">
+                                            <td colspan="4" class="text-right">
+                                                <div class="my_total">
+                                                    <div>
+                                                        <strong class="mr-2 total_t">상품금액</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">300,000</strong></span>
+                                                    </div>
+                                                    <span class="plus"><img src="../../resources/images/icon-plus.svg" alt="+"></span>
+                                                    <div>
+                                                        <strong class="mr-2 total_t">배송비</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">2,500</strong></span>
+                                                    </div>
+                                                    <span class="sum"><img src="../../resources/images/icon-sum.svg" alt="="></span>
+                                                    <div class="total_line">
+                                                        <strong class="mr-2 total_t">주문합계</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type text-danger">302,500</strong></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2" class="text-center">
+                                                <div class="my_picture">
+                                                    <span class="img"></span>
+                                                </div>
+                                            </td>
+                                            <td class="text-left">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center">2000</td>
+                                            <td class="text-center">
+                                                <i class="currecy_unit mr-1 alt">KRW</i>
+                                                <span class="price_type">216,000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center">2000</td>
+                                            <td class="text-center">
+                                                <i class="currecy_unit mr-1 alt">KRW</i>
+                                                <span class="price_type">216,000</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-light">
+                                            <td colspan="4" class="text-right">
+                                                <div class="my_total">
+                                                    <div>
+                                                        <strong class="mr-2 total_t">상품금액</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">300,000</strong></span>
+                                                    </div>
+                                                    <span class="plus"><img src="../../resources/images/icon-plus.svg" alt="+"></span>
+                                                    <div>
+                                                        <strong class="mr-2 total_t">배송비</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type">2,500</strong></span>
+                                                    </div>
+                                                    <span class="sum"><img src="../../resources/images/icon-sum.svg" alt="="></span>
+                                                    <div class="total_line">
+                                                        <strong class="mr-2 total_t">주문합계</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="price_type text-danger">302,500</strong></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">배송 정보</div>
+                            <div class="table-responsive write-type">
+                                <table class="table mb-0" summary="배송 정보">
+                                    <caption>배송 정보</caption>
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>배송지 선택</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="radio1" name="radio1-group" checked>
+                                                    <label class="custom-control-label" for="radio1">최근배송지</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="radio2" name="radio1-group">
+                                                    <label class="custom-control-label" for="radio2">신규배송지</label>
+                                                </div>
+                                                <button class="btn btn-outline-dark" data-toggle="modal" data-target="#my-address">나의 배송주소록</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소 명칭</th>
+                                            <td>
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control" placeholder="" value="집" onkeyup="javascript:byteCheck(this,'25','#byteCount1')">
+                                                    </div>
+                                                    <div class="byte">
+                                                        <small><span id="byteCount1">0</span> / 25자</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                            <td>
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control" placeholder="" value="홍길동" onkeyup="javascript:byteCheck(this,'25','#byteCount2')">
+                                                    </div>
+                                                    <div class="byte">
+                                                        <small><span id="byteCount2">0</span> / 25자</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="text-danger mr-1">*</span>주소</th>
+                                            <td>
+                                                <div class="form-inline">
+                                                    <input type="text" class="form-control w-25 mr-2" placeholder="" value="1234567">
+                                                    <button class="btn btn-outline-dark">우편번호검색</button>
+                                                </div>
+                                                <div class="mt-2">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <input type="text" class="form-control" placeholder="" value="서울시 영등포구 양평동 2가 37-3">
+                                                        </div>
+                                                        <div class="col-6 ml-n4">
+                                                            <input type="text" class="form-control" placeholder="" value="투웨이퍼스트 1104동">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                            <td>
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-5">
+                                                        <input type="text" class="form-control" placeholder="" value="01011112222">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>요청사항</th>
+                                            <td>
+                                                <div class="row mt-1">
+                                                    <div class="col">
+                                                        <div class="textarea-wrap">
+                                                            <div class="text">
+                                                                <textarea name="" id="" cols="" rows="3" title="내용 입력" class="form-control" placeholder="" value="문앞에 두고가세요." onkeyup="javascript:byteCheck(this,'100','#byteCount3')"></textarea>
+                                                            </div>
+                                                            <div class="byte">
+                                                                <small><span id="byteCount3">0</span> / 100자</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="section-payment-calc mt-5">
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">지역 추가 배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">배송 정보</div>
+                            <div class="table-responsive write-type">
+                                <table class="table mb-0" summary="배송 정보">
+                                    <caption>배송 정보</caption>
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>배송지 선택</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="radio3" name="radio2-group" checked>
+                                                    <label class="custom-control-label" for="radio3">신용/체크카드</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" class="custom-control-input" id="radio4" name="radio2-group">
+                                                    <label class="custom-control-label" for="radio4">무통장입금(가상계좌)</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="mt-5 content-bottom-padding">
+                            <div class="btn-area">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#pay-error">결제하기</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 나의 배송 주소록 -->
+    <div class="modal" tabindex="-1" role="dialog" id="my-address">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">나의 배송 주소록</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="../../resources/images/btn-search-close.svg" class="" alt="close">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="my-address-list">
+                        <div class="choice">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="pop-radio1" name="my-address1" checked>
+                                <label class="custom-control-label" for="pop-radio1">홍길동</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="name">[우리집]</span>
+                                <p>1234567 서울시 구로구 디지털로 170길<br>
+                                에이스하이엔드1차 101호</p>
+                                <span class="phone">010-1111-2222</span>
+                            </div>
+                            <button class="btn btn-xs btn-outline-gray">수정</button>
+                        </div>
+                    </div>
+                    <div class="my-address-list">
+                        <div class="choice">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="pop-radio2" name="my-address1">
+                                <label class="custom-control-label" for="pop-radio2">홍길동</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="name">[우리집]</span>
+                                <p>1234567 서울시 구로구 디지털로 170길<br>
+                                에이스하이엔드1차 101호</p>
+                                <span class="phone">010-1111-2222</span>
+                            </div>
+                            <button class="btn btn-xs btn-outline-gray">수정</button>
+                        </div>
+                    </div>
+                    <div class="my-address-list">
+                        <div class="choice">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="pop-radio3" name="my-address1">
+                                <label class="custom-control-label" for="pop-radio3">홍길동</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="name">[우리집]</span>
+                                <p>1234567 서울시 구로구 디지털로 170길<br>
+                                에이스하이엔드1차 101호</p>
+                                <span class="phone">010-1111-2222</span>
+                            </div>
+                            <button class="btn btn-xs btn-outline-gray">수정</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="pagination-wrap d-none d-md-block">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-first"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-prev"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-next"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-last"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="pagination-wrap d-md-none">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-first"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-prev"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-next"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="icon-last"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">배송지추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 결제 오류 및 실패 -->
+    <div class="modal" tabindex="-1" role="dialog" id="pay-error">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">결제 오류 및 실패</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <img src="../../resources/images/btn-search-close.svg" class="" alt="close">
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="pay-error-box text-center">
+                        <i><img src="../../resources/images/icon-exclamation.svg" alt="!"></i>
+                        <strong>결제에 실패하였습니다.</strong>
+                        <p>
+                            이용에 불편을 드려 죄송합니다.<br>
+                            결제 대행사와의 연결이 정상 처리 되지 않아 결제가 완료되지 않았습니다.<br>
+                            주문 내역을 확인하신 후 다시 시도 해주시기 바랍니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">이전 화면</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

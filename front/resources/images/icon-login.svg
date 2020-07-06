@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="25px" viewBox="0 0 22 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Btn / btn_login</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-1393.000000, -78.000000)" fill="#000000">
+            <g id="title영역">
+                <g transform="translate(0.000000, 40.000000)">
+                    <g id="Btn-/-btn_login" transform="translate(1393.000000, 38.000000)">
+                        <polygon id="Rectangle" points="10 -3.27996177e-13 12 -3.27996177e-13 12 10.5769231 10 10.5769231"></polygon>
+                        <path d="M22,14.4230769 C22,20.2645502 17.0751322,25 11,25 C4.92486775,25 0,20.2645502 0,14.4230769 C0,9.58170292 3.38288353,5.50005467 7.9997812,4.24435275 L8.00041586,6.26150976 C4.50462151,7.44938649 2,10.6549886 2,14.4230769 C2,19.2024642 6.02943725,23.0769231 11,23.0769231 C15.9705627,23.0769231 20,19.2024642 20,14.4230769 C20,10.6553457 17.4958532,7.44999408 14.000578,6.26184754 L14.0012171,4.24462432 C18.6176041,5.50064307 22,9.58205188 22,14.4230769 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

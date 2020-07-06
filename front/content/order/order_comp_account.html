@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div class="title-area row align-items-end justify-content-between m-0">
+                                <h3 class="title"><span>주문완료</span></h3>
+
+                                <nav class="breadcrumb col-auto p-0">
+                                    <ol>
+                                        <li class="breadcrumb-item"><a href="#;">홈</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">장바구니</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">주문/결제</a> <i></i></li>
+                                        <li class="breadcrumb-item active">주문완료 <i></i></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="complete-message">
+                                <div class="cm_txt1">“주문이 완료되었습니다.” </div>
+                                <div class="cm_txt2">진행 상황은  [마이페이지 > 주문 배송 현황]에서 <br>다시 확인 할 수 있습니다.</div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="table-title">결제 내역</div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="결제 내역">
+                                        <caption>결제 내역</caption>
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>주문 번호</th>
+                                                <td>1234567890</td>
+                                            </tr>
+                                            <tr>
+                                                <th>총 결제 금액</th>
+                                                <td><i class="currecy_unit mr-1">KRW</i> <strong class="price_type text-danger">216,000</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th>결제 수단</th>
+                                                <td>무통장(가상계좌)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>입금계좌</th>
+                                                <td>신한은행 123456-123-22</td>
+                                            </tr>
+                                            <tr>
+                                                <th>입금기한</th>
+                                                <td>2020.06.05 16:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5 content-bottom-padding">
+                            <div class="btn-area">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-dark">홈화면으로 이동</button>
+                                </div>
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary">주문내역 확인하기</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+</body>
+</html>

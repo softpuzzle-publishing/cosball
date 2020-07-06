@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>상품관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <label>상품 카테고리</label>
+                                        <div class="row align-items-center">
+                                            <div class="col-md form-group">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">1차 카테고리</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md form-group">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">2차 카테고리</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md form-group">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">3차 카테고리</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <label>검색어</label>
+                                        <div class="row row-10 align-items-center">
+                                            <div class="col-md form-group">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">상품명</option>
+                                                    <option value="">상품코드</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-9 form-group">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">4</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                <label for="allchk" class="custom-control-label"></label>
+                                            </span>
+                                        </th>
+                                        <th rowspan="2">상품코드</th>
+                                        <th rowspan="2">상품명</th>
+                                        <th rowspan="2">이미지</th>
+                                        <th colspan="2">판매가</th>
+                                        <th rowspan="2">판매상태</th>
+                                        <th rowspan="2">게시 언어</th>
+                                        <th rowspan="2">재고</th>
+                                        <th rowspan="2">등록일시</th>
+                                    </tr>
+                                    <tr>
+                                        <th>볼페이</th>
+                                        <th>PG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk1">
+                                                <label for="chk1" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>XXXXXX</td>
+                                        <td class="text-left"><a href="#">비포더 코즈볼 샴푸</a></td>
+                                        <td><img src="" alt="비포더 코즈볼 샴푸 이미지"></td>
+                                        <td>1,000COSKRW</td>
+                                        <td>1,000KRW</td>
+                                        <td>판매중</td>
+                                        <td>
+                                            <span class="badge bg-black m-1">KR</span>
+                                            <span class="badge bg-black m-1">EN</span>
+                                            <span class="badge bg-black m-1">CN</span>
+                                            <span class="badge bg-black m-1">JP</span>
+                                        </td>
+                                        <td>품절</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk2">
+                                                <label for="chk2" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>XXXXXX</td>
+                                        <td class="text-left"><a href="#">비포더 코즈볼 샴푸</a></td>
+                                        <td><img src="" alt="비포더 코즈볼 샴푸 이미지"></td>
+                                        <td>1,000COSKRW</td>
+                                        <td>1,000KRW</td>
+                                        <td>일시정지</td>
+                                        <td>
+                                            <span class="badge bg-black m-1">KR</span>
+                                            <span class="badge bg-black m-1">EN</span>
+                                            <span class="badge bg-black m-1">CN</span>
+                                            <span class="badge bg-black m-1">JP</span>
+                                        </td>
+                                        <td>100,000</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk3">
+                                                <label for="chk3" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>XXXXXX</td>
+                                        <td class="text-left"><a href="#">비포더 코즈볼 샴푸</a></td>
+                                        <td><img src="" alt="비포더 코즈볼 샴푸 이미지"></td>
+                                        <td>1,000COSKRW</td>
+                                        <td>1,000KRW</td>
+                                        <td>판매종료</td>
+                                        <td>
+                                            <span class="badge bg-black m-1">KR</span>
+                                            <span class="badge bg-black m-1">EN</span>
+                                        </td>
+                                        <td>품절</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="custom-checkbox custom-control without-label">
+                                                <input class="custom-control-input" type="checkbox" id="chk4">
+                                                <label for="chk4" class="custom-control-label"></label>
+                                            </span>
+                                        </td>
+                                        <td>XXXXXX</td>
+                                        <td class="text-left"><a href="#">비포더 코즈볼 샴푸</a></td>
+                                        <td><img src="" alt="비포더 코즈볼 샴푸 이미지"></td>
+                                        <td>1,000COSKRW</td>
+                                        <td>1,000KRW</td>
+                                        <td>판매중</td>
+                                        <td>
+                                            <span class="badge bg-black m-1">KR</span>
+                                            <span class="badge bg-black m-1">EN</span>
+                                            <span class="badge bg-black m-1">CN</span>
+                                            <span class="badge bg-black m-1">JP</span>
+                                        </td>
+                                        <td>100,000</td>
+                                        <td>2020-01-01 15:00:00</td>
+                                    </tr>
+                                    <!--
+                                    <tr>
+                                        <td colspan="9">등록된 상품이 없습니다.</td>
+                                    </tr>
+                                    -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">선택삭제</button>
+                                </div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

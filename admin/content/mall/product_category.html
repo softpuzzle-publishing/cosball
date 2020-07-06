@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>상품카테고리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <!-- content 시작 -->
+                        <!-- row 시작 -->
+                        <div class="row">
+                            <!-- col 시작 -->
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">상품카테고리 목록</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <button type="button" class="btn btn-sm btn-info">대분류 추가</button>
+                                            <button type="button" class="btn btn-sm btn-gray">선택삭제</button>
+                                        </div>
+                                        <!-- tree -->
+                                        <ul class="tree_category">
+                                            <!-- depth1 -->
+                                            <li class="tree_depth1">
+                                                <div class="tree_bg on">
+                                                    <h5 class="d-inline-block"><strong>1차 카테고리</strong></h5>
+                                                    <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                    <div class="role_tree collapsed d-inline-block" role="button" data-toggle="collapse" data-target="#roletree_1">
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <!-- depth2 -->
+                                                <ul id="roletree_1" class="tree_depth2 collapse show">
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 B-1</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                        <!-- depth3 -->
+                                                        <ul class="tree_depth3">
+                                                            <li>
+                                                                <div class="tree_bg">
+                                                                    <small>3차 카테고리 c-1</small>
+                                                                    <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="tree_bg"><input type="text" class="form-control" placeholder="카테고리를 입력하세요."></div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- /depth3 -->
+                                                    </li>
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 B-1</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 B-1</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <!-- /depth2 -->
+                                            </li>
+                                            <!-- /depth1 -->
+                                            <!-- depth1 -->
+                                            <li class="tree_depth1">
+                                                <div class="tree_bg">
+                                                    <h5 class="d-inline-block"><strong>1차 카테고리 B</strong></h5>
+                                                    <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                    <div class="role_tree collapsed d-inline-block" role="button" data-toggle="collapse" data-target="#roletree_2">
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <!-- depth2 -->
+                                                <ul id="roletree_2" class="tree_depth2 collapse">
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 B-1</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                        <!-- depth3 -->
+                                                        <ul class="tree_depth3">
+                                                            <li>
+                                                                <div class="tree_bg">
+                                                                    <small>3차 카테고리 c-1</small>
+                                                                    <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- /depth3 -->
+                                                    </li>
+                                                </ul>
+                                                <!-- /depth2 -->
+                                            </li>
+                                            <!-- /depth1 -->
+                                            <!-- depth1 -->
+                                            <li class="tree_depth1">
+                                                <div class="tree_bg">
+                                                    <h5 class="d-inline-block"><strong>1차 카테고리 C</strong></h5>
+                                                    <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                    <div class="role_tree collapsed d-inline-block" role="button" data-toggle="collapse" data-target="#roletree_3">
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </div>
+                                                </div>
+                                                <!-- depth2 -->
+                                                <ul id="roletree_3" class="tree_depth2 collapse">
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 C-1</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 C-2</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tree_bg">
+                                                            <span>2차 카테고리 C-3</span>
+                                                            <i class="fas fa-plus-circle ml-1 text-info"></i>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <!-- /depth2 -->
+                                            </li>
+                                            <!-- /depth1 -->
+                                        </ul>
+                                        <!-- /tree -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col 끝 -->
+
+                            <!-- col 시작 -->
+                            <div class="col-sm-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">선택 상품카테고리 상세</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-right mb-2">
+                                            <span class="text-danger">※</span> 필수입력항목
+                                        </div>
+                                        <table class="table table-bordered resp_table">
+                                            <caption>선택 상품카테고리 상세</caption>
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>선택카테고리</th>
+                                                    <td>1차 카테고리 B>2차 카테고리</td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="4">카테고리명 <span class="text-danger">※</span></th>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">KR</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">EN</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">CN</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">JP</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>사용여부</th>
+                                                    <td>
+                                                        <div class="custom-control custom-switch custom-control-inline custom-control-right">
+                                                            <input type="checkbox" class="custom-control-input switch_chk" id="switch1" checked>
+                                                            <label class="custom-control-label" for="switch1">사용</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="2">카테고리이미지 <span class="text-danger">※</span></th>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">APP</span>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <div class="custom-file w-auto">
+                                                                    <input type="file" class="custom-file-input position-absolute" id="">
+                                                                    <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <span class="d-inline-block">
+                                                                    <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></a></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">WEB</span>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <div class="custom-file w-auto">
+                                                                    <input type="file" class="custom-file-input position-absolute" id="">
+                                                                    <label class="btn btn-gray" for="file3">파일찾기</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <span class="d-inline-block">
+                                                                    <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></a></i>
+                                                                </span>
+                                                                <span class="d-inline-block">
+                                                                    <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></a></i>
+                                                                </span>
+                                                                <span class="d-inline-block">
+                                                                    <a href="#;">홀더 일괄업로드 엑셀파일.xls<i class="fas fa-times ml-1 mr-2"></a></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <th rowspan="2">카테고리이미지 <span class="text-danger">※</span></th>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">APP</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="customFile">
+                                                                    <label class="custom-file-label" for="customFile">파일 찾기</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-auto">
+                                                                <span class="badge bg-black">WEB</span>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input" id="customFile">
+                                                                    <label class="custom-file-label" for="customFile">파일 찾기</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr> -->
+                                                <tr>
+                                                    <th>최종변경일시</th>
+                                                    <td>2020-01-01 15:00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col 끝 -->
+                        </div>
+                        <!-- row 끝 -->
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+</body>
+
+</html>

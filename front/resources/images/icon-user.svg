@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="13px" viewBox="0 0 11 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-369.000000, -13.000000)" stroke="#000000" stroke-width="0.888888889">
+            <g id="Top">
+                <g>
+                    <g id="코즈볼회원수" transform="translate(370.000000, 9.000000)">
+                        <g id="Group" transform="translate(0.000000, 4.000000)">
+                            <circle id="Oval" cx="4.22222222" cy="4.22222222" r="3.77777778"></circle>
+                            <line x1="2.7890625" y1="7.50694444" x2="1.02584607e-13" y2="11.9513889" id="Path-5"></line>
+                            <line x1="9.01128472" y1="7.50694444" x2="6.22222222" y2="11.9513889" id="Path-5-Copy" transform="translate(7.616753, 9.729167) scale(-1, 1) translate(-7.616753, -9.729167) "></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

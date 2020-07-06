@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>피부정보관리</span>
+                    <span data-depth2 hidden>피부정보</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>기간</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label>성별</label>
+                                            <div class="form-inline">
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="gender" id="g1">
+                                                    <label for="g1" class="custom-control-label">전체</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="period" id="g2">
+                                                    <label for="g2" class="custom-control-label">여성</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline">
+                                                    <input class="custom-control-input" type="radio" name="period" id="g3">
+                                                    <label for="g3" class="custom-control-label">남성</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label>국적</label>
+                                            <div class="row row-10">
+                                                <div class="col">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">KOR</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="https://ko.wikipedia.org/wiki/ISO_3166-1_alpha-3" class="btn btn-gray" target="_blank" title="새 창">국가코드 전체보기 <i class="fas fa-external-link-alt ml-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>검색어</label>
+                                            <div class="row row-10">
+                                                <div class="col-3">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">UID</option>
+                                                        <option value="">Character ID</option>
+                                                        <option value="">Account ID</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>UID</th>
+                                        <th>Account ID</th>
+                                        <th>Character ID</th>
+                                        <th>국적</th>
+                                        <th>생년월일</th>
+                                        <th>성별</th>
+                                        <th>측정일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>XXXXX</td>
+                                        <td><a href="skin_view.html">a_1234567</a></td>
+                                        <td>a_1234567</td>
+                                        <td>KOR</td>
+                                        <td>1999-01-01</td>
+                                        <td>여성</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>XXXXX</td>
+                                        <td><a href="skin_view.html">a_1234567</a></td>
+                                        <td>a_1234567</td>
+                                        <td>KOR</td>
+                                        <td>1999-01-01</td>
+                                        <td>여성</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>XXXXX</td>
+                                        <td><a href="skin_view.html">a_1234567</a></td>
+                                        <td>a_1234567</td>
+                                        <td>KOR</td>
+                                        <td>1999-01-01</td>
+                                        <td>여성</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>XXXXX</td>
+                                        <td><a href="skin_view.html">a_1234567</a></td>
+                                        <td>a_1234567</td>
+                                        <td>KOR</td>
+                                        <td>1999-01-01</td>
+                                        <td>여성</td>
+                                        <td>2020-01-01 10:00:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-bottom">
+                            <div class="row justify-content-between">
+                                <div class="col-auto form-group">
+                                </div>
+                                <div class="col-auto form-group">
+                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

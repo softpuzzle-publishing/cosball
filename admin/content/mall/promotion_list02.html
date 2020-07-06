@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>프로모션관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-row align-items-end">
+                                    <div class="col-md-3 form-group">
+                                        <label for="validationCustom04">검색어</label>
+                                        <select class="form-control" id="validationCustom04">
+                                            <option value="">제목+내용</option>
+                                            <option value="">제목</option>
+                                            <option value="">작성자</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                            <figure class="figure col-md-3">
+                                <a href="#;">
+                                    <img src="https://themes.getbootstrap.com/wp-content/uploads/2019/03/leap-1-540x405.png" class="figure-img img-fluid rounded" alt="">
+                                </a>
+                                <figcaption class="figure-caption"><a href="#;">제목이 표시되는 영역입니다.</a></figcaption>
+                                <figcaption class="figure-caption text-right">2020-01-01</figcaption>
+                            </figure>
+                        </div>
+
+
+
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

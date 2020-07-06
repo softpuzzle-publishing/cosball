@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>볼페이관리</span>
+                    <span data-depth2 hidden>회원결제내역</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">회원정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption hidden>회원정보 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>AccountID</th>
+                                            <td colspan="3">a_1234567</td>
+                                        </tr>
+                                        <tr>
+                                            <th>회원명</th>
+                                            <td>홍길동</td>
+                                            <th>아이디(이메일)</th>
+                                            <td>abc123@naver.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">상세내역</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption hidden>회원정보 상세내역 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>결제일시</th>
+                                            <td>2020-01-0115:00:00</td>
+                                            <th>상태</th>
+                                            <td>
+                                                성공
+                                                <!--
+                                                실패(XXXXXXX)
+                                                -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제경로</th>
+                                            <td colspan="3">볼페이POS</td>
+                                        </tr>
+                                        <tr>
+                                            <th>판매처명</th>
+                                            <td>00000 판매점</td>
+                                            <th>추천인코드</th>
+                                            <td>ABC0123</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제토큰종류</th>
+                                            <td colspan="3">COSKRW</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제금액</th>
+                                            <td>10,000KRW</td>
+                                            <th>결제토큰</th>
+                                            <td>10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제코드</th>
+                                            <td colspan="3">30012000</td>
+                                        </tr>
+                                        <tr>
+                                            <th>메모</th>
+                                            <td colspan="3"><textarea name="" id="" cols="" rows="2" class="form-control">관리자가 메모를 등록할 수 있는 영역입니다.</textarea></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="table-bottom mt-4">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto"></div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

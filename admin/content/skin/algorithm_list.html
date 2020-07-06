@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>피부정보관리</span>
+                    <span data-depth2 hidden>피부측정알고리즘관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">신규</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div2" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">알고리즘관리</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">옵션관리</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>등록기간</label>
+                                                    <div class="row row-10 align-items-center">
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-md">
+                                                            <div class="form-inline">
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                                    <label for="p1" class="custom-control-label">오늘</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                                    <label for="p2" class="custom-control-label">어제</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                                    <label for="p3" class="custom-control-label">1개월</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                                    <label for="p4" class="custom-control-label">3개월</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-auto">
+                                                <div class="form-group">
+                                                    <label>적용연령</label>
+                                                    <div class="row row-10 align-items-center">
+                                                        <div class="col col-md-3">
+                                                            <input type="tel" class="form-control">
+                                                        </div>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col col-md-3">
+                                                            <input type="tel" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg">
+                                                <div class="form-group">
+                                                    <label>검색어</label>
+                                                    <div class="row row-10">
+                                                        <div class="col-4">
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">제품코드</option>
+                                                                <option value="">제품명</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                            <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-primary card-outline card-outline-tabs">
+                                    <div class="card-header p-0 border-bottom-0">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="pill" href="#t1-1" role="tab" aria-controls="t1-1" aria-selected="true">보습</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#t1-2" role="tab" aria-controls="t1-2" aria-selected="false">탄력</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#t1-3" role="tab" aria-controls="t1-3" aria-selected="false">주름</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#t1-4" role="tab" aria-controls="t1-4" aria-selected="false">미백</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane show active" id="t1-1" role="tabpanel" aria-labelledby="t1-1">
+                                                <div class="table-top">
+                                                    <div class="row justify-content-between align-items-end">
+                                                        <div class="col-auto">
+                                                            총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <select name="" id="" class="form-control d-inline-block w-auto">
+                                                                <option value="">10개</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>번호</th>
+                                                                <th>제품코드</th>
+                                                                <th>제품명</th>
+                                                                <th>적용연령</th>
+                                                                <th>등록일시</th>
+                                                                <th>우선순위</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody data-event="sortable">
+                                                            <tr>
+                                                                <td>4</td>
+                                                                <td><a href="algorithm_view.html">P00022014</a></td>
+                                                                <td>A1</td>
+                                                                <td>12~20</td>
+                                                                <td>2020-01-01 10:00:00</td>
+                                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td><a href="algorithm_view.html">P00022014</a></td>
+                                                                <td>A1</td>
+                                                                <td>12~20</td>
+                                                                <td>2020-01-01 10:00:00</td>
+                                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td><a href="algorithm_view.html">P00022014</a></td>
+                                                                <td>A1</td>
+                                                                <td>12~20</td>
+                                                                <td>2020-01-01 10:00:00</td>
+                                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td><a href="algorithm_view.html">P00022014</a></td>
+                                                                <td>A1</td>
+                                                                <td>12~20</td>
+                                                                <td>2020-01-01 10:00:00</td>
+                                                                <td class="handle"><i class="fas fa-arrows-alt-v"></i></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="table-bottom">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-auto form-group">
+                                                        </div>
+                                                        <div class="col-auto form-group">
+                                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="t1-2" role="tabpanel" aria-labelledby="t1-2">
+
+                                            </div>
+                                            <div class="tab-pane" id="t1-3" role="tabpanel" aria-labelledby="t1-3">
+
+                                            </div>
+                                            <div class="tab-pane" id="t1-4" role="tabpanel" aria-labelledby="t1-4">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="text-right mb-2">
+                                    <strong class="text-info">Y</strong> 옵션 설정값을 등록한 상태 / <strong class="text-danger">N</strong> : 옵션 설정값이 없는 상태
+                                </div>
+                                <table class="table table-bordered table-center">
+                                    <caption>옵션관리</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" class="align-middle">번호</th>
+                                            <th rowspan="2" class="align-middle">라인업</th>
+                                            <th colspan="4">옵션현황</th>
+                                            <th rowspan="2" class="align-middle">최종변경일시</th>
+                                        </tr>
+                                        <tr>
+                                            <th>온도</th>
+                                            <th>습도</th>
+                                            <th>자외선지수</th>
+                                            <th>시간대</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><a href="algorithm_view_option.html">보습</a></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-danger">N</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><a href="algorithm_view_option.html">탄력</a></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-danger">N</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-danger">N</strong></td>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><a href="algorithm_view_option.html">주름</a></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-danger">N</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><a href="algorithm_view_option.html">미백</a></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-danger">N</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td><strong class="text-info">Y</strong></td>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

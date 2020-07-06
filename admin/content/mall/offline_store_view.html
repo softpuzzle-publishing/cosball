@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>오프라인매장관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-right mb-2">
+                                    <span class="text-danger">※</span> 필수입력항목
+                                </div>
+                                <table class="table table-bordered resp_table">
+                                    <caption hidden>오프라인매장관리 상세</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>언어설정</th>
+                                            <td>
+                                                <span class="custom-control custom-checkbox custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l1" checked>
+                                                    <label for="l1" class="custom-control-label"><span class="badge bg-black">KR</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l2" checked>
+                                                    <label for="l2" class="custom-control-label"><span class="badge bg-black">EN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l3">
+                                                    <label for="l3" class="custom-control-label"><span class="badge bg-black">CN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l4">
+                                                    <label for="l4" class="custom-control-label"><span class="badge bg-black">JP</span></label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>상호명 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">KR</span>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" value="강남 000 매장">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">EN</span>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" value="Gangnam 000 Store">
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="same1">
+                                                            <label for="same1" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>위도 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <input type="text" class="form-control w-auto" value="37.483270">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>경도 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <input type="text" class="form-control w-auto" value="127.032635">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>전화번호</th>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">KR</span>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control" value="02-1234-5678">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">EN</span>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <input type="text" class="form-control" value="82-2-1234-5678">
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="same2">
+                                                            <label for="same2" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소</th>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">KR</span>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" value="서울특별시 강남구 0000 00000">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">EN</span>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <input type="text" class="form-control" value="0000 00000, Gangnam-gu, Seoul, Republic of Korea">
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="same1">
+                                                            <label for="same1" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록일시</th>
+                                            <td>2020-01-01 15:00:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>회원관리</span>
+                    <span data-depth3 hidden>회원관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div2" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">회원관리</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">탈퇴회원</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <label>검색어</label>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md form-group">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">이름</option>
+                                                            <option value="">아이디(이메일)</option>
+                                                            <option value="">AccountID</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-8 form-group">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>회원상태</label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">전체</option>
+                                                        <option value="">정상</option>
+                                                        <option value="">패널티</option>
+                                                        <option value="">탈퇴신청</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>회원구분</label>
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="memberSort" id="m1" checked>
+                                                            <label for="m1" class="custom-control-label">전체</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="memberSort" id="m2">
+                                                            <label for="m2" class="custom-control-label">개인회원</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="memberSort" id="m3">
+                                                            <label for="m3" class="custom-control-label">판매처회원</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>볼코드</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>가입일 검색</label>
+                                                    <div class="row row-10 align-items-center">
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>가입승인여부</label>
+                                                    <div class="form-inline">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="joinApproval" id="j1" checked>
+                                                            <label for="j1" class="custom-control-label">전체</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="joinApproval" id="j2">
+                                                            <label for="j2" class="custom-control-label">승인</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="joinApproval" id="j3">
+                                                            <label for="j3" class="custom-control-label">미승인</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                            <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-top">
+                                    <div class="row justify-content-between align-items-end">
+                                        <div class="col-auto">
+                                            총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control d-inline-block w-auto">
+                                                <option value="">10개</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2">
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                        <label for="allchk" class="custom-control-label"></label>
+                                                    </span>
+                                                </th>
+                                                <th rowspan="2">번호</th>
+                                                <th rowspan="2">이름</th>
+                                                <th rowspan="2">아이디(이메일)</th>
+                                                <th rowspan="2">프로필</th>
+                                                <th rowspan="2">국적</th>
+                                                <th rowspan="2">회원구분</th>
+                                                <th rowspan="2">AccountID</th>
+                                                <th colspan="2">주문금액</th>
+                                                <th rowspan="2">회원상태</th>
+                                                <th rowspan="2">가입일</th>
+                                            </tr>
+                                            <tr>
+                                                <th>PG</th>
+                                                <th>토큰</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>4</td>
+                                                <td>홍길동</td>
+                                                <td><a href="holder_view.html">aaa@aaa.com</a></td>
+                                                <td>3개</td>
+                                                <td>KOR</td>
+                                                <td>개인회원</td>
+                                                <td>a_1234567</td>
+                                                <td class="text-right">1,000 KRW</td>
+                                                <td class="text-right">1,000COSKRW</td>
+                                                <td>정상</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk2">
+                                                        <label for="chk2" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>3</td>
+                                                <td>홍길동</td>
+                                                <td><a href="holder_view.html">aaa@aaa.com</a></td>
+                                                <td>3개</td>
+                                                <td>KOR</td>
+                                                <td>판매처회원</td>
+                                                <td>a_1234567</td>
+                                                <td class="text-right">1,000 KRW</td>
+                                                <td class="text-right">1,000COSKRW</td>
+                                                <td>정상</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk3">
+                                                        <label for="chk3" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>2</td>
+                                                <td>홍길동</td>
+                                                <td><a href="holder_view.html">aaa@aaa.com</a></td>
+                                                <td>3개</td>
+                                                <td>KOR</td>
+                                                <td>개인회원</td>
+                                                <td>a_1234567</td>
+                                                <td class="text-right">1,000 KRW</td>
+                                                <td class="text-right">1,000COSKRW</td>
+                                                <td>패널티</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk4">
+                                                        <label for="chk4" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td>1</td>
+                                                <td>홍길동</td>
+                                                <td><a href="holder_view.html">aaa@aaa.com</a></td>
+                                                <td>3개</td>
+                                                <td>KOR</td>
+                                                <td>판매처회원</td>
+                                                <td>a_1234567</td>
+                                                <td class="text-right">1,000 KRW</td>
+                                                <td class="text-right">1,000COSKRW</td>
+                                                <td>탈퇴신청</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-bottom">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto form-group">
+                                            <label for="">선택항목</label>
+                                            <select name="" id="" class="form-control d-inline-block w-auto ml-1">
+                                                <option value="">탈퇴처리</option>
+                                                <option value="">가입승인</option>
+                                            </select>
+                                            <button type="button" class="btn btn-dark d-inline-block">일괄변경</button>
+                                        </div>
+                                        <div class="col-auto form-group">
+                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination-wrap">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>기간</label>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-sm-2 mb-1 bt-1">
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">가입일</option>
+                                                                <option value="">탈퇴신청일</option>
+                                                                <option value="">탈퇴일</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col col-md-3 mb-1 bt-1">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-auto mb-1 bt-1">~</div>
+                                                        <div class="col col-md-3 mb-1 bt-1">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-md mb-1 bt-1">
+                                                            <div class="form-inline">
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                                    <label for="p1" class="custom-control-label">오늘</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                                    <label for="p2" class="custom-control-label">어제</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                                    <label for="p3" class="custom-control-label">1개월</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                                    <label for="p4" class="custom-control-label">3개월</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>AccountID</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                            <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-top">
+                                    <div class="row justify-content-between align-items-end">
+                                        <div class="col-auto">
+                                            총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control d-inline-block w-auto">
+                                                <option value="">10개</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>AccountID</th>
+                                                <th>가입일시</th>
+                                                <th>탈퇴신청일시</th>
+                                                <th>탈퇴일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>a_1234567</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>a_1234567</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>a_1234567</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>a_1234567</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                                <td>2020-01-01 15:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-bottom">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto form-group"></div>
+                                        <div class="col-auto form-group">
+                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination-wrap">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>자동발송관리</span>
+                    <span data-depth2 hidden>이메일발송관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>분류</label>
+                                            <div class="row align-items-center">
+                                                <div class="col-md">
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                        <label for="p1" class="custom-control-label">전체</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                        <label for="p2" class="custom-control-label">회원관련</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                        <label for="p3" class="custom-control-label">주문배송관련</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                        <label for="p4" class="custom-control-label">암호화폐관련</label>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row align-items-end">
+                                    <div class="col-md-6 form-group">
+                                        <label for="validationCustom04">템플릿구분</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-end">
+                                <div class="col-auto">
+                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="form-control d-inline-block w-auto">
+                                        <option value="">10개</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>분류</th>
+                                        <th>템플릿구분</th>
+                                        <th>상세보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>회원관련</td>
+                                        <td>회원가입완료</td>
+                                        <td><a href="#;" data-toggle="modal" data-target="#modalOrderCancel">상세보기</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>회원관련</td>
+                                        <td>이메일인증코드</td>
+                                        <td><a href="#;" data-toggle="modal" data-target="#modalOrderCancel">상세보기</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>회원관련</td>
+                                        <td>회원탈퇴완료</td>
+                                        <td><a href="#;" data-toggle="modal" data-target="#modalOrderCancel">상세보기</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>회원관련</td>
+                                        <td>비밀번호 찾기</td>
+                                        <td><a href="#;" data-toggle="modal" data-target="#modalOrderCancel">상세보기</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-wrap">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- modal : 이메일 미리보기 -->
+    <div class="modal fade" id="modalOrderCancel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">이메일 미리보기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <caption>이메일 미리보기</caption>
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>메일 제목</th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <input type="text" class="form-control" value="[${mall.mallName}] 회원가입을 진심으로 환영합니다.">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>내용</th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal : 이메일 미리보기 -->
+
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

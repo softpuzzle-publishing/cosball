@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>피부정보관리</span>
+                    <span data-depth2 hidden>피부정보</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">엑셀다운로드</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">개인정보</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">피부측정결과</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t3" role="tab" aria-controls="t3" aria-selected="false">환경정보</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t4" role="tab" aria-controls="t4" aria-selected="false">설문정보</a>
+                            </li> -->
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">기본정보</h3>
+                                        <div class="float-right small">피부측정일시  <span class="text-danger">2020-01-01 15:00:15</span></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered resp_table">
+                                            <caption>기본정보</caption>
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                                <col style="width:140px">
+                                                <col>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>Account ID</th>
+                                                    <td>a_1234567</td>
+                                                    <th>UID</th>
+                                                    <td>XXXXXXXX</td>
+                                                    <th>Character ID</th>
+                                                    <td>c_1234567</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>생년월일</th>
+                                                    <td>1999-01-01</td>
+                                                    <th>성별</th>
+                                                    <td>여성</td>
+                                                    <th>국적</th>
+                                                    <td>KOR(대한민국)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">옵션정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4 mb-2 mt-2">
+                                                <div class="callout callout-success h-100">
+                                                    <h5 class="mb-3">피부톤</h5>
+                                                    <p>갈색</p>
+                                                  </div>
+                                            </div>
+                                            <div class="col-md-4 mb-2 mt-2">
+                                                <div class="callout callout-success h-100">
+                                                    <h5 class="mb-3">무엇을 개선하고 싶습니까?</h5>
+                                                    <p>
+                                                        (1) 주근깨 <br>
+                                                        (2) 색소침착 <br>
+                                                        (3) 주름 <br>
+                                                        (4) 모공 <br>
+                                                        (5) 피부탄력 <br>
+                                                        (6) 지성피부 <br>
+                                                        (7) 건조한 피부
+                                                    </p>
+                                                  </div>
+                                            </div>
+                                            <div class="col-md-4 mb-2 mt-2">
+                                                <div class="callout callout-success h-100">
+                                                    <h5 class="mb-3">현재 진행중인 피부 문제</h5>
+                                                    <p>갈색</p>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-right mt-3">※ 괄호 안 숫자는 사용자가 선택한 우선순위를 의미합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">피부측정결과</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-center">
+                                                <caption>피부측정결과</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>측정항목</th>
+                                                        <th>측정수치</th>
+                                                        <th>수치설명</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>기미/색소침착(미백)</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>주름</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>유분</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>다크써클</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>피부결(스킨텍스쳐)</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>모공탄력</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>피부나이지수</td>
+                                                        <td>50</td>
+                                                        <td class="text-left"><strong class="text-danger">좋음</strong> : 사용자의 국가, 성별, 연령 평균 측정값의 +21이하인 경우)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t3" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">위치 및 시간정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered resp_table">
+                                            <caption>위치 및 시간정보</caption>
+                                            <colgroup>
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>위치정보</th>
+                                                    <td>38.348973498 / 49.23948723</td>
+                                                    <th>위치국가</th>
+                                                    <td>대한민국</td>
+                                                    <th>우편번호</th>
+                                                    <td>06547</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>UTC 시간대</th>
+                                                    <td>UTC + 9</td>
+                                                    <th>정보수집일시</th>
+                                                    <td colspan="3">2020-06-08 10:00:00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">날씨정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered resp_table">
+                                            <caption>날씨정보</caption>
+                                            <colgroup>
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                                <col style="width:13%">
+                                                <col style="width:20%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>현재기상상태</th>
+                                                    <td>맑음 (clear sky)</td>
+                                                    <th>현재기온</th>
+                                                    <td>10℃</td>
+                                                    <th>최저기온</th>
+                                                    <td>10℃</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>최고기온</th>
+                                                    <td>10℃</td>
+                                                    <th>현재습도</th>
+                                                    <td>10℃</td>
+                                                    <th>자외선지수</th>
+                                                    <td>11</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">미세먼지정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered resp_table">
+                                            <caption>미세먼지정보</caption>
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                                <col style="width:140px">
+                                                <col>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>미세먼지 (PM10 )</th>
+                                                    <td></td>
+                                                    <th>미세먼지 (PM2.5 )</th>
+                                                    <td></td>
+                                                    <th>오존(O3 )</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>아황산가스(SO2 )</th>
+                                                    <td></td>
+                                                    <th>일산화탄소(CO)</th>
+                                                    <td></td>
+                                                    <th>이산화질소(NO2 )</th>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                            <!-- <div class="tab-pane" id="t4" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">설문답변</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-right mb-2">
+                                            <strong class="mr-1">피부측정일시</strong>
+                                            <span class="text-danger">2020-01-01 15:00:15</span>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered text-center">
+                                                <caption>설문답변</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>설문시간대</th>
+                                                        <th>설문문제</th>
+                                                        <th>설문답변</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>00시 ~ 00시</td>
+                                                        <td class="text-left">화장 후 클렌징을 잘 하셨습니까?</td>
+                                                        <td>예</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>00시 ~ 00시</td>
+                                                        <td class="text-left">외출 30분전에 UV케어(썬크림등)을 하셨습니까?</td>
+                                                        <td>아니오</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>00시 ~ 00시</td>
+                                                        <td class="text-left">현기증 날 때까지 운동 하셨습니까?</td>
+                                                        <td>예</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

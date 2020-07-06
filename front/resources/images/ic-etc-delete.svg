@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5308CF6E-FDA7-4B5B-B95E-888F50BE02CB</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[LayerPopup]-배송지-수정-화면" transform="translate(-1151.000000, -706.000000)">
+            <g id="POPUP" transform="translate(0.000000, 0.000000)">
+                <g id="contents" transform="translate(610.000000, 200.000000)">
+                    <g id="Icon/icon_etc/ic_etc_delete" transform="translate(541.000000, 506.000000)">
+                        <g id="img_cancel" transform="translate(1.000000, 0.000000)">
+                            <line x1="0.466666667" y1="2.35294118" x2="13.5333333" y2="2.35294118" id="Line-5" stroke="#999999" stroke-linecap="square"></line>
+                            <path d="M12.5,2.38235294 L1.5,2.38235294 L1.5,14.2352941 C1.5,14.5912581 1.62597822,14.9154047 1.83573605,15.1493258 C2.02682852,15.3624314 2.28916464,15.5 2.58241758,15.5 L11.4175824,15.5 C11.7108354,15.5 11.9731715,15.3624314 12.1642639,15.1493258 C12.3740218,14.9154047 12.5,14.5912581 12.5,14.2352941 L12.5,2.38235294 Z" id="Rectangle" stroke="#999999"></path>
+                            <path d="M8.9,0.5 L5.1,0.5 C4.79624339,0.5 4.52124339,0.623121694 4.32218254,0.822182541 C4.12312169,1.02124339 4,1.29624339 4,1.6 L4,2.32352941 L10,2.32352941 L10,1.6 C10,1.29624339 9.87687831,1.02124339 9.67781746,0.822182541 C9.47875661,0.623121694 9.20375661,0.5 8.9,0.5 Z" id="Rectangle" stroke="#999999"></path>
+                            <polygon id="Path" fill="#999999" fill-rule="nonzero" points="5 4.70588235 5 13.1764706 4 13.1764706 4 4.70588235"></polygon>
+                            <polygon id="Path" fill="#999999" fill-rule="nonzero" points="7.5 4.70588235 7.5 13.1764706 6.5 13.1764706 6.5 4.70588235"></polygon>
+                            <polygon id="Path-Copy-2" fill="#999999" fill-rule="nonzero" points="10 4.70588235 10 13.1764706 9 13.1764706 9 4.70588235"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

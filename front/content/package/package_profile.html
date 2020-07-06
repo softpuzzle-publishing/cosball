@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div>
+                                <ol class="steps row">
+                                    <li class="step col-4 active">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon1"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>1. 프로필 선택</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon2"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>2.정보입력</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon3"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>3.패키지결과</strong>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="title-area">
+                                <h3 class="title"><span>프로필 선택</span></h3>
+                                <p class="desc">김로라님만을 위한 추천상품을 안내해드립니다.</p>
+                            </div>
+                        </section>
+
+                        <section class="profile-sec content-bottom-padding">
+                            <p class="tit">프로필을 선택해주세요.</p>
+                            <ul class="d-flex">
+                                <li class="col-6 col-md-2 col-xl-auto">
+                                    <span class="img"><label for="radio1"><img src="../../resources/images/temp/@profile.png" alt="@프로필 이미지"></label></span>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio1" name="radio1-group" checked="">
+                                        <label class="custom-control-label" for="radio1">김새롬</label>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-md-2 col-xl-auto">
+                                    <span class="img"><label for="radio2"><img src="../../resources/images/temp/@profile.png" alt="@프로필 이미지"></label></span>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio2" name="radio1-group">
+                                        <label class="custom-control-label" for="radio2">아빠</label>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-md-2 col-xl-auto">
+                                    <span class="img"><label for="radio3"><img src="../../resources/images/temp/@profile.png" alt="@프로필 이미지"></label></span>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio3" name="radio1-group">
+                                        <label class="custom-control-label" for="radio3">엄마</label>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-md-2 col-xl-auto">
+                                    <span class="img"><label for="radio4"><img src="../../resources/images/temp/@profile.png" alt="@프로필 이미지"></label></span>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio4" name="radio1-group">
+                                        <label class="custom-control-label" for="radio4">언니</label>
+                                    </div>
+                                </li>
+                                <li class="col-6 col-md-2 col-xl-auto">
+                                    <span class="img"><label for="radio5"><img src="../../resources/images/temp/@profile.png" alt="@프로필 이미지"></label></span>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="radio5" name="radio1-group">
+                                        <label class="custom-control-label" for="radio5">남동생</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-bottom">
+            <div class="btn-area">
+                <div class="col-6 col-md-auto">
+                    <button class="btn btn-lg btn-block btn-dark">장바구니</button>
+                </div>
+                <div class="col-6 col-md-auto">
+                    <button class="btn btn-lg btn-block btn-primary">바로구매</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        //체크박스 선택 순서
+        var order = [];
+        $('.post-ordering input[type=checkbox]').on('click, change', function(){
+            var idx = order.indexOf(this);
+
+            if (idx !== -1) {
+                order.splice(idx, 1);
+            }
+            if (this.checked) {
+                order.push(this);
+            }
+
+            $.each(order, function(idx, item) {
+                $(item).siblings('label').attr('data-value',idx + 1);
+            });
+        });
+
+        var order2 = [];
+        $('.post-ordering-2 input[type=checkbox]').on('click, change', function(){
+            var idx = order2.indexOf(this);
+
+            if (idx !== -1) {
+                order2.splice(idx, 1);
+            }
+            if (this.checked) {
+                order2.push(this);
+            }
+
+            $.each(order2, function(idx, item) {
+                $(item).siblings('label').attr('data-value',idx + 1);
+            });
+        });
+    </script>
+</body>
+</html>

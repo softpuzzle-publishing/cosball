@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>교환관리 상세</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label class="m-0">주문번호 :</label>
+                                        1234885555
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="m-0">주문 일시 :</label>
+                                        2020.04.0303:10
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="m-0">교환 신청 일시 :</label>
+                                        2020.04.0303:10
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="m-0">교환 완료 일시 :</label>
+                                        -
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">주문 상품정보 (3건)</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>상품번호</th>
+                                                <th>상품이미지</th>
+                                                <th>상품명</th>
+                                                <th>수량</th>
+                                                <th>상품금액</th>
+                                                <th>총상품금액</th>
+                                                <th>총 배송비</th>
+                                                <th>총 결제금액</th>
+                                                <th>결제방법</th>
+                                                <th>클레임상태</th>
+                                                <th>택배사<br>(송장번호)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">11,000원</td>
+                                                <td rowspan="3" class="text-right">30,500원</td>
+                                                <td rowspan="3" class="text-right">2,500원</td>
+                                                <td rowspan="3" class="text-right">33,000원</td>
+                                                <td rowspan="3">무</td>
+                                                <td rowspan="3">교환처리<br>[수거진행]</td>
+                                                <td rowspan="3">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">11,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><img src="" alt="이미지"></td>
+                                                <td>
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td>1개</td>
+                                                <td class="text-right">8,500원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-bottom">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto form-group">
+                                            <label for="">선택주문</label>
+                                            <select name="" id="" class="form-control d-inline-block w-auto ml-1">
+                                                <option value="">교환처리[상품준비중]</option>
+                                            </select>
+                                            <button type="button" class="btn btn-dark d-inline-block">변경</button>
+                                        </div>
+                                        <div class="col-auto form-group">
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalOrderCancel">교환상세</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">결제정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered table-valign-middle resp_table">
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>총 상품금액</th>
+                                                    <td class="text-right">30,500원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총 배송비</th>
+                                                    <td class="text-right">(+) 2.500원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-danger">총 할인금액</th>
+                                                    <td class="text-danger text-right">(-)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>총 결제금액</th>
+                                                    <td class="text-right"><strong>33,000원</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">결제수단</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-bordered table-valign-middle resp_table">
+                                            <colgroup>
+                                                <col style="width:140px">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>결제 방법</th>
+                                                    <td>무통장입금 (모바일 PG)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>입금계좌</th>
+                                                    <td>우리은행 /1002-757-449921</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>입금자명</th>
+                                                    <td>홍길동</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>주문 확인일</th>
+                                                    <td>2020.04.0303:10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>결제 확인일</th>
+                                                    <td>2020.04.0303:18</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 반품신청 -->
+    <div class="modal fade" id="modalOrderCancel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">교환 상세</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">교환 상품정보 (3건)</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-center table-bordered table-valign-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>상품번호</th>
+                                            <th>상품이미지</th>
+                                            <th>상품명</th>
+                                            <th>교환수량</th>
+                                            <th>상품금액</th>
+                                            <th>총상품금액</th>
+                                            <th>총 배송비</th>
+                                            <th>총 결제금액</th>
+                                            <th>결제방법</th>
+                                            <th>클레임상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="" alt="이미지"></td>
+                                            <td>
+                                                <a href="#">코즈볼 a1외 2건</a><br>
+                                                <span class="text-danger">(일반)</span>
+                                            </td>
+                                            <td>1개</td>
+                                            <td class="text-right">11,000원</td>
+                                            <td rowspan="3" class="text-right">30,500원</td>
+                                            <td rowspan="3" class="text-right">2,500원</td>
+                                            <td rowspan="3" class="text-right">33,000원</td>
+                                            <td rowspan="3">무</td>
+                                            <td rowspan="3">교환처리<br>[수거진행]</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="" alt="이미지"></td>
+                                            <td>
+                                                <a href="#">코즈볼 a1외 2건</a><br>
+                                                <span class="text-danger">(일반)</span>
+                                            </td>
+                                            <td>1개</td>
+                                            <td class="text-right">11,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="" alt="이미지"></td>
+                                            <td>
+                                                <a href="#">코즈볼 a1외 2건</a><br>
+                                                <span class="text-danger">(일반)</span>
+                                            </td>
+                                            <td>1개</td>
+                                            <td class="text-right">8,500원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col card">
+                            <div class="card-header">
+                                <h3 class="card-title">교환정보</h3>
+                                <!-- accordion button -->
+                                <a href="#;" id="accordionExample" class="float-right" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">자세히<i class="fas fa-angle-down ml-1"></i></a>
+                                <!-- /accordion button -->
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>교환수거방법</th>
+                                            <td>
+                                                <span class="custom-control custom-radio custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="radio" name="period" id="p1" checked disabled>
+                                                    <label for="p1" class="custom-control-label">판매자 수거 요청</label>
+                                                </span>
+                                                <span class="custom-control custom-radio custom-control-inline mb-1 mt-1">
+                                                    <input class="custom-control-input" type="radio" name="period" id="p2" disabled>
+                                                    <label for="p2" class="custom-control-label">구매자 직접 반품</label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>교환접수정보</th>
+                                            <td>우체국택배 / <a href="#;">039492-9303033</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- accordion content -->
+                    <div id="collapseOne" class="collapse" data-parent="#accordionExample">
+                        <div class="col card">
+                            <div class="card-header">
+                                <h3 class="card-title">교환 수거 정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th rowspan="4">최초 출고정보</th>
+                                            <th>수령자 명</th>
+                                            <td>홍길순</td>
+                                        </tr>
+                                        <tr>
+                                            <th>연락처</th>
+                                            <td>010-1234-5678</td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소</th>
+                                            <td>
+                                                [08390] (152-777)<br>
+                                                서울특별시 구로구 디지털로32길 30 코오롱디지털타워빌란트 13층
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>배송 요청사항</th>
+                                            <td>문앞에 두고가세요 ~코로나 조심</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-bordered table-valign-middle resp_table mt-3">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th rowspan="4">교환수거정보</th>
+                                            <th>교환자 명</th>
+                                            <td><input type="text" class="form-control" value="홍길순"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>연락처</th>
+                                            <td><input type="text" class="form-control" value="010-1234-5678"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소</th>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-auto mb-1">
+                                                        <input type="text" class="form-control w-auto d-inline-block" value="08390">
+                                                        <button type="button" class="btn btn-gray btn-sm d-inline-block mt-1 mb-1">우편번호찾기</button>
+                                                    </div>
+                                                    <div class="col-md-12 mb-1">
+                                                        <input type="text" class="form-control" value="서울특별시 구로구 디지털로32길 30">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control" value="코오롱 디지털 타워 빌란트 13층">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>배송 요청사항</th>
+                                            <td><input type="text" class="form-control" value=""></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ accordion content -->
+
+                    <div class="row justify-content-between">
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h3 class="card-title">교환구분/사유</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered table-valign-middle resp_table">
+                                        <colgroup>
+                                            <col style="width:140px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>사유 선택</th>
+                                                <td>상품불량/파손 - 판매자 귀책</td>
+                                            </tr>
+                                            <tr>
+                                                <th>내용 작성</th>
+                                                <td>파손됐다..휴</td>
+                                            </tr>
+                                            <tr>
+                                                <th>관리자 메모</th>
+                                                <td>…..하…….. 교환신청이네… 배송중이라 송장 번호는 나중에…… / 상품 하자 검토후 추가결제요청 / 운송번호 필수값</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <h3 class="card-title">교환 처리 금액</h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered table-valign-middle resp_table">
+                                        <colgroup>
+                                            <col style="width:140px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>교환상품 금액</th>
+                                                <td>33,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th>차감내역</th>
+                                                <td>
+                                                    (-)2,500원<br>
+                                                    (-)8,500원
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>교환처리금액</th>
+                                                <td>(-)22,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="row">
+                        <button type="button" class="btn btn-primary col-xs-auto m-1">교환신청/승인대기 복원</button>
+                        <button type="button" class="btn btn-primary col-xs-auto m-1">교환/상품준비중</button>
+                        <button type="reset" class="btn btn-gray col-xs-auto m-1" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal : 반품신청 -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

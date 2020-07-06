@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>슈퍼관리자</span>
+                    <span data-depth2 hidden>관리자역할관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <!-- content 시작 -->
+                        <!-- row 시작 -->
+                        <div class="row">
+                            <!-- col 시작 -->
+                            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">메뉴목록</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <b class="text-left">메뉴권한 <span class="text-danger">※</span></b>
+                                        </div>
+                                        <ul>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <input type="checkbox" class="custom-control-input" id="all_menu" data-check2="all">
+                                                <label class="custom-control-label" for="all_menu">전체</label>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div>
+                                                    <input type="checkbox" class="custom-control-input" id="tree_a">
+                                                    <label class="custom-control-label" for="tree_a">토큰관리</label>
+                                                    <div class="role_tree collapsed d-inline-block float-right" role="button" data-toggle="collapse" data-target="#roletree_1">
+                                                        <i class="fas fa-angle-down ml-5"></i>
+                                                    </div>
+                                                </div>
+                                                <ul id="roletree_1" class="collapse">
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_a1">
+                                                        <label class="custom-control-label" for="tree_a1">폴더관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_a2">
+                                                        <label class="custom-control-label" for="tree_a2">토큰이동관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_a3">
+                                                        <label class="custom-control-label" for="tree_a3">에어드립관리</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div class="role_tree" role="button">
+                                                    <input type="checkbox" class="custom-control-input" id="tree_m">
+                                                    <label class="custom-control-label" for="tree_m">회원관리</label>
+                                                </div>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div>
+                                                    <input type="checkbox" class="custom-control-input" id="tree_b">
+                                                    <label class="custom-control-label" for="tree_b">피부정보관리</label>
+                                                    <div class="role_tree collapsed d-inline-block float-right" role="button" data-toggle="collapse" data-target="#roletree_2">
+                                                        <i class="fas fa-angle-down ml-5"></i>
+                                                    </div>
+                                                </div>
+                                                <ul id="roletree_2" class="collapse">
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_b1">
+                                                        <label class="custom-control-label" for="tree_b1">피부정보</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_b2">
+                                                        <label class="custom-control-label" for="tree_b2">설문관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_b3">
+                                                        <label class="custom-control-label" for="tree_b3">옵션관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_b4">
+                                                        <label class="custom-control-label" for="tree_b4">피부측정알고리즘관리</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div>
+                                                    <input type="checkbox" class="custom-control-input" id="tree_c">
+                                                    <label class="custom-control-label" for="tree_c">볼페이POS</label>
+                                                    <div class="role_tree collapsed d-inline-block float-right" role="button" data-toggle="collapse" data-target="#roletree_3">
+                                                        <i class="fas fa-angle-down ml-5"></i>
+                                                    </div>
+                                                </div>
+                                                <ul id="roletree_3" class="collapse">
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c1">
+                                                        <label class="custom-control-label" for="tree_c1">추천인 리워드 설정관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c2">
+                                                        <label class="custom-control-label" for="tree_c2">판매처회원관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c3">
+                                                        <label class="custom-control-label" for="tree_c3">판매처승인요청</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c4">
+                                                        <label class="custom-control-label" for="tree_c4">라벨관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c5">
+                                                        <label class="custom-control-label" for="tree_c5">초대코드관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c6">
+                                                        <label class="custom-control-label" for="tree_c6">푸시발송관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c7">
+                                                        <label class="custom-control-label" for="tree_c7">이메일발송관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c8">
+                                                        <label class="custom-control-label" for="tree_c8">OS버전관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c9">
+                                                        <label class="custom-control-label" for="tree_c9">정기점검관리</label>
+                                                    </li>
+                                                    <li class="custom-control custom-checkbox mt-1">
+                                                        <input type="checkbox" class="custom-control-input" id="tree_c10">
+                                                        <label class="custom-control-label" for="tree_c10">팝업관리</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div class="role_tree" role="button">
+                                                    <input type="checkbox" class="custom-control-input" id="tree_d">
+                                                    <label class="custom-control-label" for="tree_d">볼페이관리</label>
+                                                </div>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div class="role_tree" role="button">
+                                                    <input type="checkbox" class="custom-control-input" id="tree_e">
+                                                    <label class="custom-control-label" for="tree_e">리워드관리</label>
+                                                </div>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div class="role_tree" role="button">
+                                                    <input type="checkbox" class="custom-control-input" id="tree_f">
+                                                    <label class="custom-control-label" for="tree_f">쇼핑몰관리</label>
+                                                </div>
+                                            </li>
+                                            <li class="custom-control custom-checkbox mb-2">
+                                                <div class="role_tree" role="button">
+                                                    <input type="checkbox" class="custom-control-input" id="tree_g">
+                                                    <label class="custom-control-label" for="tree_g">설정</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col 끝 -->
+
+                            <!-- col 시작 -->
+                            <div class="col-sm-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">상세정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="text-right mb-2">
+                                            <span class="text-danger">※</span> 필수입력항목
+                                        </div>
+                                        <table class="table table-bordered resp_table">
+                                            <caption>보안질문관리 상세/등록</caption>
+                                            <colgroup>
+                                                <col style="width:30%">
+                                                <col>
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>역활명 <span class="text-danger">※</span></th>
+                                                    <td>
+                                                        <div class="row">
+                                                            <div class="col-md-8">
+                                                                <input type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>관련사용자 <span class="text-danger">※</span></th>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="allchk" data-check="all">
+                                                            <label class="custom-control-label" for="allchk">전체</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                            <label class="custom-control-label" for="customCheck1">홍길동 (abc@cosball.com)</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                            <label class="custom-control-label" for="customCheck2">김길동 (def@cosball.com)</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                            <label class="custom-control-label" for="customCheck3">고길동 (ghi@cosball.com)</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                                            <label class="custom-control-label" for="customCheck4">이길동 (jkl@cosball.com)</label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col 끝 -->
+                        </div>
+                        <!-- row 끝 -->
+
+
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

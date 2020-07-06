@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/sub2.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+
+                    <div class="container lnb_wrap">
+                        <!-- lnb -->
+                        <div id="lnb">
+                            <h2>마이페이지</h2>
+                            <ul class="have_depth_2">
+                                <li class="depth_1">
+                                    <a href="#;">나의 쇼핑몰 이용내역</a>
+                                    <ul class="depth_2">
+                                        <li><a href="#;">주문 배송 현황</a></li>
+                                        <li><a href="#;">취소/반품 현황</a></li>
+                                        <li><a href="#;">교환 현황</a></li>
+                                        <li><a href="#;">장바구니</a></li>
+                                    </ul>
+                                </li>
+                                <li class="depth_1"><a href="#;" class="on">배송지관리</a></li>
+                                <li class="depth_1"><a href="#;">고객센터</a></li>
+                                <li class="depth_1"><a href="#;">이용약관</a></li>
+                                <li class="depth_1"><a href="#;">개인정보처리방침</a></li>
+                            </ul>
+                        </div>
+                        <!-- //lnb -->
+
+                        <section class="content-top-padding">
+                            <div class="title-area row align-items-end justify-content-between m-0">
+                                <h3 class="title col-auto p-0"><span>배송지관리</span></h3>
+                                <nav class="breadcrumb col-auto p-0">
+                                    <ol>
+                                        <li class="breadcrumb-item"><a href="#;">홈</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">마이페이지</a> <i></i></li>
+                                        <li class="breadcrumb-item active">배송지관리 <i></i></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                             <div class="my_shipping_area">
+                                 <div class="shipping_title">
+                                     <input type="radio" id="radio1" name="radio1-group" checked>
+                                     <label for="radio1">기본배송지</label>
+                                 </div>
+                                 <div>
+                                     <button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#shipping_mod">수정</button>
+                                 </div>
+                             </div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="기본배송지">
+                                        <caption>기본배송지</caption>
+                                        <colgroup>
+                                            <col class="col2_t">
+                                            <col class="col2_c">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>주소 명칭</th>
+                                                <td>집</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                                <td>홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                                <td>777777 <br>서울시 영등포구 양평동2가 37-3 투웨니퍼스트 1101호</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                                <td>010-1234-5678</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                             <div class="my_shipping_area">
+                                 <div class="shipping_title">
+                                     <input type="radio" id="radio2" name="radio1-group">
+                                     <label for="radio2">기본배송지 지정</label>
+                                 </div>
+                                 <div>
+                                     <button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#shipping_mod">수정</button>
+                                     <button class="btn btn-sm btn-dark">삭제</button>
+                                 </div>
+                             </div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="기본배송지">
+                                        <caption>기본배송지</caption>
+                                        <colgroup>
+                                            <col class="col2_t">
+                                            <col class="col2_c">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>주소 명칭</th>
+                                                <td>회사</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                                <td>홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                                <td>777777 <br>서울시 영등포구 양평동2가 37-3 투웨니퍼스트 1101호</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                                <td>010-1234-5678</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                             <div class="my_shipping_area">
+                                 <div class="shipping_title">
+                                     <input type="radio" id="radio3" name="radio1-group">
+                                     <label for="radio3">기본배송지 지정</label>
+                                 </div>
+                                 <div>
+                                     <button class="btn btn-sm btn-dark" data-toggle="modal" data-target="#shipping_mod">수정</button>
+                                     <button class="btn btn-sm btn-dark">삭제</button>
+                                 </div>
+                             </div>
+                            <div>
+                                <div class="table-responsive">
+                                    <table class="table" summary="기본배송지">
+                                        <caption>기본배송지</caption>
+                                        <colgroup>
+                                            <col class="col2_t">
+                                            <col class="col2_c">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>주소 명칭</th>
+                                                <td>엄마집</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                                <td>홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                                <td>777777 <br>서울시 영등포구 양평동2가 37-3 투웨니퍼스트 1101호</td>
+                                            </tr>
+                                            <tr>
+                                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                                <td>010-1234-5678</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5 content-bottom-padding">
+                            <div class="btn-area text-center">
+                                <div class="col-auto col-md-auto">
+                                    <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#shipping_add">배송지추가</button>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 배송지수정 -->
+    <div class="modal" tabindex="-1" role="dialog" id="shipping_mod" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">배송지수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-title">배송지정보</div>
+                    <table class="table" summary="배송지정보">
+                        <caption>배송지정보</caption>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>주소 명칭</th>
+                                <td><input type="text" class="form-control w-auto" value="집"></td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                <td>
+                                    <input type="text" class="form-control d-inline-block w-auto" value="홍길동">
+                                    <small class="d-inline-block ml-1 text-gray"><span id="byteCount">0</span> / 25자</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                <td>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control w-50 mr-2" placeholder="" value="1234567">
+                                        <button class="btn btn-outline-dark">우편번호검색</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="서울시 영등포구 양평동 2가 37-3">
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="투웨이퍼스트 1104동">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                <td><input type="text" class="form-control w-auto" value="01011112222"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="shipping_del text-right">
+                        <button>배송지 삭제하기</button>
+                    </div>
+                </div>
+                <div class="modal-footer pt-0">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-dark btn-block" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">수정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 배송지추가 -->
+    <div class="modal" tabindex="-1" role="dialog" id="shipping_add" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">배송지추가</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-title">배송지정보</div>
+                    <table class="table" summary="배송지정보">
+                        <caption>배송지정보</caption>
+                        <colgroup>
+                            <col style="width:20%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>주소 명칭</th>
+                                <td><input type="text" class="form-control w-auto"></td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                <td>
+                                    <input type="text" class="form-control d-inline-block w-auto">
+                                    <small class="d-inline-block ml-1 text-gray"><span id="byteCount">0</span> / 25자</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                <td>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control w-50 mr-2" placeholder="" value="1234567">
+                                        <button class="btn btn-outline-dark">우편번호검색</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="서울시 영등포구 양평동 2가 37-3">
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="투웨이퍼스트 1104동">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                <td><input type="text" class="form-control w-auto"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer pt-0">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-dark btn-block" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">수정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

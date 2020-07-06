@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>팝업관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">목록</button>
+                                <button type="button" class="btn btn-secondary">삭제</button>
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-right mb-2">
+                                    <span class="text-danger">※</span> 필수입력항목
+                                </div>
+                                <table class="table table-bordered resp_table">
+                                    <caption>팝업관리 상세/등록</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>유형 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l1">
+                                                    <label for="l1" class="custom-control-label"><span class="badge bg-black">WEB</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l2">
+                                                    <label for="l2" class="custom-control-label"><span class="badge bg-black">APP</span></label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>언어설정 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l3">
+                                                    <label for="l3" class="custom-control-label"><span class="badge bg-black">KR</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l4">
+                                                    <label for="l4" class="custom-control-label"><span class="badge bg-black">EN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l5">
+                                                    <label for="l5" class="custom-control-label"><span class="badge bg-black">CN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l6">
+                                                    <label for="l6" class="custom-control-label"><span class="badge bg-black">JP</span></label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>표시기간 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row form-inline">
+                                                    <div class="col-md-auto">
+                                                        <input type="text" class="form-control m-1" data-event="datepicker">
+                                                        <select name="" id="" class="form-control m-1">
+                                                            <option value="">00시</option>
+                                                        </select>
+                                                        <select name="" id="" class="form-control m-1">
+                                                            <option value="">00분</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-auto text-center m-1">~</div>
+                                                    <div class="col-md-auto">
+                                                        <input type="text" class="form-control m-1" data-event="datepicker">
+                                                        <select name="" id="" class="form-control m-1">
+                                                            <option value="">00시</option>
+                                                        </select>
+                                                        <select name="" id="" class="form-control m-1">
+                                                            <option value="">00분</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>팝업제목 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">KR</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">EN</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="same1">
+                                                            <label for="same1" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>팝업내용 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center mb-2">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">KR</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        <span class="badge bg-black">EN</span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <span class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox" id="same2">
+                                                            <label for="same2" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-3">
+                                    <i class="fas fa-info-circle text-danger mr-1"></i> 팝업은 <span class="text-danger">1개만 설정</span>이 가능합니다.<br>
+                                    설정된 팝업 기간이 중복되는 상황일 경우 <span class="text-danger">최근에 등록된 팝업을 우선으로 표시</span>합니다.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

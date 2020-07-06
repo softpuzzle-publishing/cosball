@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>대시보드</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <h3 class="card-title">관리자 정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label>이름</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>아이디(이메일)</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>비밀번호</label>
+                                            <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#modalPassword">비밀번호 변경</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>OTP 설정여부</label>
+                                            <button type="button" class="btn btn-dark btn-block" data-toggle="modal" data-target="#modalOtp">OTP 설정</button>
+                                            <div class="text-icon mt-2">
+                                                <i class="fas fa-info-circle text-danger mr-1"></i> OTP 설정 후 관리자 메뉴가
+                                                표시됩니다.
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>OTP 설정여부</label>
+                                            <button type="button" class="btn btn-dark btn-block" disabled>설정완료</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <div class="row align-items-end justify-content-between">
+                                            <div class="col-auto">
+                                                <h3 class="card-title">공지사항</h3>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href=""><i class="fas fa-plus ml-1"></i> 더보기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Cras justo odio</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Dapibus ac facilisis in</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Morbi leo risus</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Cras justo odio</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Dapibus ac facilisis in</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Morbi leo risus</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Cras justo odio</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Dapibus ac facilisis in</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Morbi leo risus</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <a href="" class="text-truncate">Cras justo odio</a>
+                                                <span class="text-gray text-nowrap">2020-01-01</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- modal : 비밀번호 변경 -->
+    <div class="modal fade" id="modalPassword">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">비밀번호 변경</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="formPwNew">새 비밀번호</label>
+                        <input type="password" class="form-control" id="formPwNew">
+                    </div>
+                    <div class="form-group">
+                        <label for="formPwNewRe">새 비밀번호 확인</label>
+                        <input type="password" class="form-control" id="formPwNewRe">
+                    </div>
+                    <div class="noti mt-4">
+                        <strong>[비밀번호 작성 규칙안내]</strong>
+                        <p>※ 최소 8자 ~ 최대 20자 이내로 입력합니다.</p>
+                        <p>※ 반드시 영문, 숫자, 특수문자가 각 1자리 이상 포함 (<, >, (, ), #, ', /, | 는 사용 불가) </p>
+                        <p>※ 3자리 이상 연속/동일한 숫자 또는 문자열은 사용할 수 없습니다.</p>
+                        <p>※ 아래와 같은 문자는 사용할 수 없습니다.(love, happy, qwer, asdf, zxcv, test, gpin, ipin)</p>
+                        <p>※ 아이디와 연속한 3자리 이상 일치하는 비밀번호는 사용할 수 없습니다.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : OTP 설정 -->
+    <div class="modal fade" id="modalOtp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">OTP 설정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol class="otp">
+                        <li>
+                            <div class="mb-2">1. Google OTP 앱을 설치하세요.</div>
+                            <div>
+                                <button type="button" class="btn btn-dark"><i class="fab fa-google-play"></i> Google Play</button>
+                                <button type="button" class="btn btn-dark"><i class="fab fa-apple"></i> App Store</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mb-2">2. 다운 받은 Google OTP 앱에서 QR코드 스캔 또는 코드를 직접 입력하세요.</div>
+                            <div class="text-center">
+                                <img src="" alt="QR코드">
+                            </div>
+                            <div class="mt-1">
+                                <input type="text" class="form-control" readonly value="1SDSDFEW245EFDSF">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mb-2">3. Google OTP 앱에서 표시되는 OTP 번호를 입력하세요.</div>
+                            <div class="mt-1">
+                                <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

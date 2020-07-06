@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div>
+                                <ol class="steps row">
+                                    <li class="step col-4 prev">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon1"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>1. 프로필 선택</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4 prev">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon2"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>2.정보입력</strong>
+                                        </div>
+                                    </li>
+                                    <li class="step col-4 active">
+                                        <div class="step-segment">
+                                            <span class="step-icon icon3"></span>
+                                        </div>
+                                        <div class="step-content">
+                                            <strong>3.패키지결과</strong>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <section class="mt-5">
+                            <div class="title-area">
+                                <h3 class="title"><span>패키지결과</span></h3>
+                                <p class="desc">김로라님만을 위한 추천상품을 안내해드립니다.</p>
+                            </div>
+                        </section>
+
+                        <section class="package-exclusive-info">
+                            <h4>김로라님께서 “3주간” 사용하실<br>고객님만의 전용 패키지 상품입니다.</h4>
+                            <div class="ball-list">
+                                <ul class="row row-40 justify-content-center">
+                                    <li class="col-3 col-lg-auto active">
+                                        <a href="javascript:;" data-desc="수분 부족으로 처진 피부에 강력한 보습인자로 피부탄력을 강화시킵니다." data-href="../product/product_view.html">
+                                            <span class="img"><img src="../../resources/images/ball2-1.svg" alt="K3"></span>
+                                            <strong >K3</strong>
+                                            <span class="info">모공, 탄력</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 col-lg-auto">
+                                        <a href="javascript:;" data-desc="강력한 주름 개선 효과를 기대할 수 있습니다." data-href="../product/product_view.html">
+                                            <span class="img"><img src="../../resources/images/ball2-2.svg" alt="L4"></span>
+                                            <strong>L4</strong>
+                                            <span class="info">모공, 탄력</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 col-lg-auto">
+                                        <a href="javascript:;" data-desc="노화의 원인이 되는 문제성 피부 및 자극으로 인한 피부의 여러가지 상황을 완화시키고" data-href="../product/product_view.html">
+                                            <span class="img"><img src="../../resources/images/ball2-3.svg" alt="G5"></span>
+                                            <strong>G5</strong>
+                                            <span class="info">주름</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-3 col-lg-auto">
+                                        <a href="javascript:;" data-desc="탄력을 회복하는 단계별 안티링클 시스템을 통해 표정주름까지 잡아주는" data-href="../product/product_view.html">
+                                            <span class="img"><img src="../../resources/images/ball2-4.svg" alt="O3"></span>
+                                            <strong>O3</strong>
+                                            <span class="info">트러블</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tooltip">
+                                    <div class="inner row">
+                                        <div class="col">
+                                            <p id="tooltip-desc"></p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" id="tooltip-more">더 알아보기</a>
+                                        </div>
+                                        <span class="arrow" id="tooltip-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="package-exclusive-list">
+                            <ul class="row row-20">
+                                <li class="col-12 col-md-6">
+                                    <div class="box">
+                                        <div>
+                                            <span class="img"><img src="../../resources/images/ball2-1.svg" alt="K3"><strong>K3</strong></span>
+                                            <span class="price">1,000원</span>
+                                            <span class="calc"><img src="../../resources/images/icon-mutiply.svg" alt="X"></span>
+                                            <span class="num">36개</span>
+                                        </div>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <span class="sum">36,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-6">
+                                    <div class="box">
+                                        <div>
+                                            <span class="img"><img src="../../resources/images/ball2-2.svg" alt="L4"><strong>L4</strong></span>
+                                            <span class="price">1,000원</span>
+                                            <span class="calc"><img src="../../resources/images/icon-mutiply.svg" alt="X"></span>
+                                            <span class="num">999개</span>
+                                        </div>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <span class="sum">1,236,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-6">
+                                    <div class="box">
+                                        <div>
+                                            <span class="img"><img src="../../resources/images/ball2-3.svg" alt="G5"><strong>G5</strong></span>
+                                            <span class="price">1,000원</span>
+                                            <span class="calc"><img src="../../resources/images/icon-mutiply.svg" alt="X"></span>
+                                            <span class="num">36개</span>
+                                        </div>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <span class="sum">36,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-6">
+                                    <div class="box">
+                                        <div>
+                                            <span class="img"><img src="../../resources/images/ball2-4.svg" alt="O3"><strong>O3</strong></span>
+                                            <span class="price">1,000원</span>
+                                            <span class="calc"><img src="../../resources/images/icon-mutiply.svg" alt="X"></span>
+                                            <span class="num">6개</span>
+                                        </div>
+                                        <div>
+                                            <span class="exch">KRW</span>
+                                            <span class="sum">136,000</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="section-payment-calc">
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="minus"><img src="../../resources/images/icon-calc-minus.svg" alt="-"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">총 상품 금액(4개)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">221,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="minus"><img src="../../resources/images/icon-calc-minus.svg" alt="-"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price"><span class="d-md-none">(-)</span> 10,000원</span>
+                                            <span class="info">패키지할인(20%)</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">지역 추가 배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,300,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="browse-link">
+                            <p>코즈볼을 직접보거나 내게 맞는 상담을 받아보고 싶으신가요?<br>그럼 주변에 가까운 매장을 찾아보세요!</p>
+                            <span class="img">
+                                <a href="#"><img src="../../resources/images/btn-go.svg" alt="GO"></a>
+                            </span>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-bottom">
+            <div class="btn-area">
+                <div class="col-6 col-md-auto">
+                    <button class="btn btn-lg btn-block btn-primary">바로구매</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //툴팁 내용 채움
+            $('.ball-list > .row .active a').click();
+            $('.ball-list > .row a').on('click', function(e){
+                e.preventDefault();
+                var $active = $(this);
+
+                $active.parent('li').siblings().removeClass('active')
+                $active.parent('li').addClass('active');
+                $('#tooltip-desc').text($active.data('desc'));
+                $('#tooltip-more').attr('href', $active.data('href'));
+
+                var activeLeft = $active.position().left + ($active.outerWidth()/2);
+                $('.tooltip').show();
+                $('#tooltip-arrow').css({
+                    'opacity' : 1,
+                    'left' : activeLeft
+                });
+            });
+        });
+    </script>
+</body>
+</html>

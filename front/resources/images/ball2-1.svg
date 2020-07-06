@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="197" height="170" viewBox="0 0 197 170">
+    <defs>
+        <filter id="prefix__a" width="176.4%" height="960.4%" x="-38.2%" y="-511.3%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8.471"/>
+        </filter>
+        <filter id="prefix__b" width="198.9%" height="1213.9%" x="-49.5%" y="-638.1%" filterUnits="objectBoundingBox">
+            <feOffset dy="-8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="8.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.567455306 0 0 0 0 0.591531777 0 0 0 0 0.707314312 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__d" width="239.7%" height="1649.6%" x="-69.8%" y="-864.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10.588"/>
+        </filter>
+        <filter id="prefix__e" width="274.8%" height="2038.8%" x="-87.4%" y="-1059.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="-6" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.567455306 0 0 0 0 0.591531777 0 0 0 0 0.707314312 0 0 0 0.5 0"/>
+        </filter>
+        <ellipse id="prefix__c" cx="98.5" cy="124.183" rx="55.5" ry="4.93"/>
+        <ellipse id="prefix__f" cx="98.059" cy="127.524" rx="37.059" ry="3.341"/>
+        <radialGradient id="prefix__g" cx="100%" cy="100%" r="142.435%" fx="100%" fy="100%" gradientTransform="scale(-.98592 -1) rotate(44.594 2.431 -2.456)">
+            <stop offset="0%" stop-color="#118BAA"/>
+            <stop offset="100%" stop-color="#B2FFCF"/>
+        </radialGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 -.282)">
+        <g filter="url(#prefix__a)" opacity=".4">
+            <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+            <use fill="#8B8E9E" xlink:href="#prefix__c"/>
+        </g>
+        <g filter="url(#prefix__d)">
+            <use fill="#000" filter="url(#prefix__e)" xlink:href="#prefix__f"/>
+            <use fill="#333437" fill-opacity=".8" xlink:href="#prefix__f"/>
+        </g>
+        <ellipse cx="98" cy="60.155" fill="url(#prefix__g)" rx="60" ry="59.155"/>
+    </g>
+</svg>

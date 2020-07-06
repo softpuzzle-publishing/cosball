@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>배송비관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <div class="text-right mb-2">
+                            <span class="text-danger">※</span> 필수입력항목
+                        </div>
+
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">배송비설정</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>기본배송비 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto mt-1 mb-1">
+                                                        <lablel class="d-inline-block">일반 PG</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-danger text-right" value="2,500">
+                                                        <span class="d-inline-block">원,</span>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <lablel class="d-inline-block">볼페이</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="2,500">
+                                                        <span class="d-inline-block">COSKRW</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>무료배송 조건 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto mt-1 mb-1">
+                                                        <lablel class="d-inline-block">일반 PG</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="10,000">
+                                                        <span class="d-inline-block">원 이상,</span>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <lablel class="d-inline-block">볼페이</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="10,000">
+                                                        <span class="d-inline-block">COSKRW 이상 무료 배송</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="2">추가 배송비 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        제주도
+                                                    </div>
+                                                    <div class="col-md-auto mt-1 mb-1">
+                                                        <lablel class="d-inline-block">일반 PG</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="2,000">
+                                                        <span class="d-inline-block">원,</span>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <lablel class="d-inline-block">볼페이</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="2,000">
+                                                        <span class="d-inline-block">COSKRW</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-auto">
+                                                        도서산간
+                                                    </div>
+                                                    <div class="col-md-auto mt-1 mb-1">
+                                                        <lablel class="d-inline-block">일반 PG</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="2,000">
+                                                        <span class="d-inline-block">원,</span>
+                                                    </div>
+                                                    <div class="col-md-auto">
+                                                        <lablel class="d-inline-block">볼페이</lablel>
+                                                        <input type="text" class="form-control d-inline-block w-auto text-right" value="2,000">
+                                                        <span class="d-inline-block">COSKRW</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-2"><i class="fas fa-info-circle text-danger mr-1"></i> 설정된 배송비는 구입어시스던트(패키지상품)의 배송정책에 일괄적용됩니다.</div>
+                            </div>
+                        </div>
+                        <!-- /card -->
+
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">반품/교환지 설정</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:100px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>언어설정 <span class="text-danger">※</span></th>
+                                            <td colspan="2">
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l3">
+                                                    <label for="l3" class="custom-control-label"><span class="badge bg-black">KR</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l4">
+                                                    <label for="l4" class="custom-control-label"><span class="badge bg-black">EN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l5">
+                                                    <label for="l5" class="custom-control-label"><span class="badge bg-black">CN</span></label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                    <input class="custom-control-input" type="checkbox" id="l6">
+                                                    <label for="l6" class="custom-control-label"><span class="badge bg-black">JP</span></label>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th rowspan="2">반품/교환지 주소 <span class="text-danger">※</span></th>
+                                            <td class="text-center"><span class="badge bg-black">KR</span></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-auto mb-1">
+                                                        <input type="text" class="form-control w-auto d-inline-block" value="08390">
+                                                        <button type="button" class="btn btn-gray btn-sm d-inline-block mt-1 mb-1">우편번호찾기</button>
+                                                    </div>
+                                                    <div class="col-md-12 mb-1">
+                                                        <input type="text" class="form-control" value="서울특별시 구로구 디지털로32길 30">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control" value="코오롱 디지털 타워 빌란트 13층">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"><span class="badge bg-black">EN</span></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-md-auto mb-1">
+                                                        <input type="text" class="form-control w-auto d-inline-block" value="08390">
+                                                        <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
+                                                            <input class="custom-control-input" type="checkbox" id="same1">
+                                                            <label for="same1" class="custom-control-label">국문과 동일</label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-md-12 mb-1">
+                                                        <input type="text" class="form-control" value="서울특별시 구로구 디지털로32길 30">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control" value="코오롱 디지털 타워 빌란트 13층">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /card -->
+
+                        <!-- content 끝 -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

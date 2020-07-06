@@ -1,0 +1,120 @@
+.modal-full{
+    .modal-content{background: transparent;border: 0;border-radius: 0;}
+    .modal-header{
+        padding: 0;border-radius: 0;border: 0;
+        .close{padding: 0;width: 60px;height: 60px;margin: 0 -60px 0 auto;background: #000;color: #fff;opacity: .75;transform: none;}
+        .close:not(:disabled):not(.disabled):hover,
+        .close:not(:disabled):not(.disabled):focus{opacity: 1;}
+        &::after{display: none;}
+    }
+    .modal-body{padding: 0;border-radius: 0;}
+    .modal-dialog{margin-top: 0;}
+}
+@include media-breakpoint-up(xl) {
+    .modal-full{
+        .modal-dialog{min-width: 1180px;}
+    }
+}
+@include media-breakpoint-down(sm) {
+    .modal-full{
+        .modal-dialog{margin-left: 3rem;margin-right: 3rem;}
+        .modal-header{
+            .close{padding: 0;width: 40px;height: 40px;margin: 0 -40px 0 auto;opacity: 1;}
+        }
+    }
+    .banner-in-modal{
+        .banner{
+            li{width: 100%;}
+        }
+    }
+}
+
+.banner-in-modal{
+    width: 100%;overflow: hidden;
+    .banner{
+        display: flex;margin: -1px;flex-wrap: wrap;
+        li{padding: 1px;width: 50%;
+            a{display: block;}
+            img{width: 100%;max-width: 100%;}
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .banner-in-modal{
+        .banner{
+            li{width: 100%;}
+        }
+    }
+}
+
+#center-container{
+    display: flex;align-items: center;justify-content: center;min-height: calc(100vh - 243px);
+}
+.center-body{
+    padding-top: 0;background: transparent;
+    #center-container{min-height: 100vh;}
+}
+
+.center-content-wrap{width: 518px;margin: 0 auto;}
+.center-content-header{
+    border-bottom: 2px solid #111;padding-bottom: 22px;text-align: center;margin-bottom: 50px;
+    .logo{display: inline-block;vertical-align: top;width: 194px;height: 26px;background: url('../images/logo_dark.svg') no-repeat 50% 50%;background-size: contain;}
+}
+.center-content-body{
+    text-align: center;
+
+    .icon-exclamation{margin-bottom: 25px;vertical-align: top;}
+    .text-heading{
+        display: block;font-size: 34px;line-height: 1.24;font-weight: 500;
+        .smaller{font-size: 26px;display: block;margin-top: 10px;}
+    }
+    .text-explain{font-size: 18px;line-height: 1.56;color: #666;margin-top: 20px;word-break: keep-all;}
+    .info{
+        text-align: left;background: #f2f2f2;padding: 13px 30px;margin-top: 30px;
+        p{line-height: 1.75;margin: 0;}
+    }
+    .btn-area{margin-top: 50px;}
+}
+@include media-breakpoint-down(md) {
+    .center-content-wrap{min-width: auto;padding: 0 1.65rem;}
+    .center-content-header{
+        padding-bottom: 15px;margin-bottom: 40px;
+        .logo{height: 18px;}
+    }
+    .center-content-body{
+        .icon-exclamation{margin-bottom: 15px;}
+        .text-heading{
+            font-size: 19px;
+            .smaller{font-size: 17px;}
+        }
+        .text-explain{font-size: 13px;letter-spacing: -0.03em;word-break: keep-all;}
+        .info{padding: 12px 20px;}
+        .btn-area{margin-top: 40px;}
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .table-transform{
+        border-top: 0;
+        tbody, tr, th, td{display: block;}
+        thead{display: none;}
+        tbody{
+            border: 1px solid #ddd;position: relative;padding:15px 15px 15px 48px;
+            td{border-bottom: 0;text-align: left !important;padding: 0;}
+            .item-row{display: flex;flex-wrap: wrap;margin-bottom: 12px;}
+            .item-name{width: 100%;margin-bottom: 5px;}
+            .item-count{width: 50%;}
+            .item-price{width: 50%;text-align: right !important;}
+            .my_picture{text-align: left;padding-left: 0;}
+            .custom-checkbox{position: absolute;left:15px;top: 15px;margin-left: 0;}
+            .btn-area{position: absolute;top: 15px;right: 15px;margin: 0 -4px;justify-content: flex-start;}
+            .btn-area.flex-column{flex-direction: row !important;}
+            .btn-area [class^=col-]{padding: 0 4px;}
+            .btn-area .btn{display: block;min-width: 80px}
+            .spinner .spinner-box .spinner-input{width: 50px;}
+            .spinner .spinner-box i{width: 26px;height: 26px;}
+            .btn-del i{margin-left: 8px;margin-right: 0;}
+        }
+        tbody + tbody{margin-top: 10px;}
+    }
+}

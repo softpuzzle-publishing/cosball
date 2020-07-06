@@ -1,0 +1,36 @@
+/*
+    [z-index]
+    #header : 1001
+    #dim : 1002
+*/
+html,
+body{
+    height: 100%;
+}
+body{
+    min-width:320px !important;
+    padding-top: 200px;
+}
+#wrap{
+    position: relative;display: flex;flex-direction: column;justify-content: space-between;flex-wrap: nowrap;min-height: 100vh;
+}
+#container-block{flex-grow: 1;}
+
+#dim{display: block;width: 100%;height: 100vh;position: fixed;left: 9999px;top: 0;z-index: 1002;background: rgba(0,0,0,0.5);opacity: 0;transition: opacity .2s;}
+
+@include media-breakpoint-down(lg) {
+    .container{max-width:inherit}
+}
+@include media-breakpoint-down(md) {
+    body{
+        padding-top: 56px;
+        font-size: 0.8125rem;
+    }
+}
+
+.content-top-padding{padding-top: 70px;}
+.content-bottom-padding{padding-bottom: 130px;}
+@include media-breakpoint-down(md) {
+    .content-top-padding{padding-top: 40px;}
+    .content-bottom-padding{padding-bottom: 70px;}
+}

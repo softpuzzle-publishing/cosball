@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>쇼핑몰관리</span>
+                    <span data-depth2 hidden>취소관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-row align-items-end">
+                                    <div class="col-md-3 form-group">
+                                        <label for="validationCustom04">검색어</label>
+                                        <select class="form-control" id="validationCustom04">
+                                            <option value="">주문번호</option>
+                                            <option value="">주문자명</option>
+                                            <option value="">상품번호</option>
+                                            <option value="">상품명</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>기간</label>
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-auto">~</div>
+                                                <div class="col col-md-3">
+                                                    <input type="text" class="form-control" data-event="datepicker">
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="form-inline ml-3">
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
+                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                            <label for="p3" class="custom-control-label">3일</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                            <label for="p4" class="custom-control-label">1주일</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="period" id="p5">
+                                                            <label for="p5" class="custom-control-label">1개월</label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="form-group">
+                                            <label>클레임상태</label>
+                                            <div class="form-inline">
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o1">
+                                                    <label for="o1" class="custom-control-label">취소신청[승인대기]</label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o2">
+                                                    <label for="o2" class="custom-control-label">취소처리[환불보류]</label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o3">
+                                                    <label for="o3" class="custom-control-label">취소처리[환불대기]</label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o4">
+                                                    <label for="o4" class="custom-control-label">취소완료[환불없음]</label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o5">
+                                                    <label for="o5" class="custom-control-label">취소완료[환불완료]</label>
+                                                </span>
+                                                <span class="custom-control custom-checkbox custom-control-inline">
+                                                    <input class="custom-control-input" type="checkbox" name="orderState" id="o6">
+                                                    <label for="o6" class="custom-control-label">전체클레임</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs my-tabs trans_tab trans_tab tab_div3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">전체클레임</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">취소신청[승인대기]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t3" role="tab" aria-controls="t3" aria-selected="false">취소처리[환불보류]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t4" role="tab" aria-controls="t4" aria-selected="false">취소처리[환불대기]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t5" role="tab" aria-controls="t5" aria-selected="false">취소완료[환불없음]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t6" role="tab" aria-controls="t6" aria-selected="false">취소완료[환불완료]</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="table-top">
+                                    <div class="row justify-content-between align-items-end">
+                                        <div class="col-auto">
+                                            총 <span class="text-danger">5</span>건 (전체 1,000건 /검색결과 5건)
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="form-control d-inline-block w-auto">
+                                                <option value="">10개</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
+                                                        <label for="allchk" class="custom-control-label"></label>
+                                                    </span>
+                                                </th>
+                                                <th>취소신청일시</th>
+                                                <th>취소완료일시</th>
+                                                <th>주문일시</th>
+                                                <th>주문번호</th>
+                                                <th>주문자명 (이메일주소)</th>
+                                                <th>AccountID</th>
+                                                <th>주문 상품</th>
+                                                <th>주문경로</th>
+                                                <th>총상품금액</th>
+                                                <th>총 배송비</th>
+                                                <th>총 결제금액</th>
+                                                <th>결제방법</th>
+                                                <th>클레임 상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk1">
+                                                        <label for="chk1" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="text-nowrap">2020.04.05 12:19</td>
+                                                <td class="text-nowrap">2020.04.05 18:10</td>
+                                                <td class="text-nowrap">2020.04.04 12:10</td>
+                                                <td class="text-nowrap"><a href="#">6854555556</a></td>
+                                                <td class="text-nowrap">
+                                                    홍길동<br>
+                                                    (<a href="#">abc@gmail.com</a>)
+                                                </td>
+                                                <td class="text-nowrap">a1234</td>
+                                                <td class="text-nowrap">
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td class="text-nowrap">모바일PG</td>
+                                                <td class="text-nowrap text-right">30,500원</td>
+                                                <td class="text-nowrap text-right">2.500원</td>
+                                                <td class="text-nowrap text-right">33,000원</td>
+                                                <td class="text-nowrap">토</td>
+                                                <td class="text-nowrap">취소완료<br>[환불완료]</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk2">
+                                                        <label for="chk2" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="text-nowrap">2020.04.05 12:19</td>
+                                                <td class="text-nowrap">2020.04.05 18:10</td>
+                                                <td class="text-nowrap">2020.04.04 12:10</td>
+                                                <td class="text-nowrap"><a href="#">6854555556</a></td>
+                                                <td class="text-nowrap">
+                                                    홍길동<br>
+                                                    (<a href="#">abc@gmail.com</a>)
+                                                </td>
+                                                <td class="text-nowrap">a1234</td>
+                                                <td class="text-nowrap">
+                                                    <a href="#">핸드크림</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td class="text-nowrap">볼페이</td>
+                                                <td class="text-nowrap text-right">8.500<br>COSKRW</td>
+                                                <td class="text-nowrap text-right">2.500<br>COSKRW</td>
+                                                <td class="text-nowrap text-right">11,000<br>COSKRW</td>
+                                                <td class="text-nowrap">신</td>
+                                                <td class="text-nowrap">취소완료<br>[환불없음]</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk3">
+                                                        <label for="chk3" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="text-nowrap">2020.04.05 12:19</td>
+                                                <td class="text-nowrap">2020.04.05 18:10</td>
+                                                <td class="text-nowrap">2020.04.04 12:10</td>
+                                                <td class="text-nowrap"><a href="#">6854555556</a></td>
+                                                <td class="text-nowrap">
+                                                    홍길동<br>
+                                                    (<a href="#">abc@gmail.com</a>)
+                                                </td>
+                                                <td class="text-nowrap">a1234</td>
+                                                <td class="text-nowrap">
+                                                    <a href="#">[홍길동]코즈볼패키지</a><br>
+                                                    <span class="text-danger">(가상)</span>
+                                                </td>
+                                                <td class="text-nowrap">웹 PG</td>
+                                                <td class="text-nowrap text-right">30,500원</td>
+                                                <td class="text-nowrap text-right">2.500원</td>
+                                                <td class="text-nowrap text-right">33,000원</td>
+                                                <td class="text-nowrap">토</td>
+                                                <td class="text-nowrap">취소처리<br>[환불대기]</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk4">
+                                                        <label for="chk4" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="text-nowrap">2020.04.05 12:19</td>
+                                                <td class="text-nowrap">2020.04.05 18:10</td>
+                                                <td class="text-nowrap">2020.04.04 12:10</td>
+                                                <td class="text-nowrap"><a href="#">6854555556</a></td>
+                                                <td class="text-nowrap">
+                                                    홍길동<br>
+                                                    (<a href="#">abc@gmail.com</a>)
+                                                </td>
+                                                <td class="text-nowrap">a1234</td>
+                                                <td class="text-nowrap">
+                                                    <a href="#">코즈볼 a1외 2건</a><br>
+                                                    <span class="text-danger">(일반)</span>
+                                                </td>
+                                                <td class="text-nowrap">웹 PG</td>
+                                                <td class="text-nowrap text-right">30,500원</td>
+                                                <td class="text-nowrap text-right">2.500원</td>
+                                                <td class="text-nowrap text-right">33,000원</td>
+                                                <td class="text-nowrap">계</td>
+                                                <td class="text-nowrap">취소처리<br>[환불보류]</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="custom-checkbox custom-control without-label">
+                                                        <input class="custom-control-input" type="checkbox" id="chk4">
+                                                        <label for="chk4" class="custom-control-label"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="text-nowrap">2020.04.05 12:19</td>
+                                                <td class="text-nowrap">2020.04.05 18:10</td>
+                                                <td class="text-nowrap">2020.04.04 12:10</td>
+                                                <td class="text-nowrap"><a href="#">6854555556</a></td>
+                                                <td class="text-nowrap">
+                                                    홍길동<br>
+                                                    (<a href="#">abc@gmail.com</a>)
+                                                </td>
+                                                <td class="text-nowrap">a1234</td>
+                                                <td class="text-nowrap">
+                                                    <a href="#">[홍길동]코즈볼패키지</a><br>
+                                                    <span class="text-danger">(가상)</span>
+                                                </td>
+                                                <td class="text-nowrap">웹 PG</td>
+                                                <td class="text-nowrap text-right">30,500원</td>
+                                                <td class="text-nowrap text-right">2.500원</td>
+                                                <td class="text-nowrap text-right">33,000원</td>
+                                                <td class="text-nowrap">무</td>
+                                                <td class="text-nowrap">취소신청<br>[승인대기]</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-bottom">
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto form-group">
+                                            <label for="">선택주문</label>
+                                            <select name="" id="" class="form-control d-inline-block w-auto ml-1">
+                                                <option value="">취소처리[환불대기]</option>
+                                            </select>
+                                            <button type="button" class="btn btn-dark d-inline-block">일괄변경</button>
+                                        </div>
+                                        <div class="col-auto form-group">
+                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pagination-wrap">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                취소신청[승인대기]
+                            </div>
+
+                            <div class="tab-pane" id="t3" role="tabpanel">
+                                취소처리[환불보류]
+                            </div>
+
+                            <div class="tab-pane" id="t4" role="tabpanel">
+                                취소처리[환불대기]
+                            </div>
+
+                            <div class="tab-pane" id="t5" role="tabpanel">
+                                취소완료[환불없음]
+                            </div>
+
+                            <div class="tab-pane" id="t6" role="tabpanel">
+                                취소완료[환불완료]
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

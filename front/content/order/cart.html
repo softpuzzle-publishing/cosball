@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/sub.css">
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <a id="skip_navi" href="#container">본문 바로가기</a>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 페이지마다 상하 여백이 다름. 여백을 가질 경우 최상단/최하단 컨텐츠에 클래스 추가 -->
+                        <section class="content-top-padding">
+                            <div class="title-area row align-items-end justify-content-between m-0">
+                                <h3 class="title"><span>장바구니</span></h3>
+
+                                <nav class="breadcrumb col-auto p-0">
+                                    <ol>
+                                        <li class="breadcrumb-item"><a href="#;">홈</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">장바구니</a> <i></i></li>
+                                        <li class="breadcrumb-item"><a href="#;">주문/결제</a> <i></i></li>
+                                        <li class="breadcrumb-item active">주문완료 <i></i></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="table-util">
+                                <button type="button" class="btn btn-del"><i></i>선택상품삭제</button>
+                            </div>
+
+                            <div class="table-responsive cart-listn">
+                                <table class="table mb-0 table-transform" summary="장바구니 리스트">
+                                    <caption class="sr-only">장바구니 리스트</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox1">
+                                                    <label class="custom-control-label" for="checkbox1">전체선택</label>
+                                                </div>
+                                            </th>
+                                            <th class="text-center">상품정보</th>
+                                            <th class="text-center">수량</th>
+                                            <th class="text-center">상품금액</th>
+                                            <th class="text-center">주문</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="item-row">
+                                            <td rowspan="3">
+                                                <div class="my_picture">
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                        <label class="custom-control-label" for="checkbox2"></label>
+                                                    </div>
+                                                    <a href="../product/product_view.html"><span class="img"><img src="../../resources/images/temp/@product.png" alt="주름개선 기능성 안티에이징(Antiaging) 솔루션"></span></a>
+                                                </div>
+                                            </td>
+                                            <td class="text-left item-name">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center item-count">
+                                                <div class="spinner" data-max="99" data-min="1">
+                                                    <div class="spinner-box">
+                                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                                        <input type="tel" class="spinner-input" readonly="" value="1">
+                                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center item-price">
+                                                <i class="currecy_unit mr-1">KRW</i>
+                                                <span>216,000</span>
+                                                <button type="button" class="btn btn-del"><i></i></button>
+                                            </td>
+                                            <td class="text-center" rowspan="3">
+                                                <div class="btn-area flex-column">
+                                                    <div class="col-6 col-md-12">
+                                                        <button class="btn btn-outline-primary">주문하기</button>
+                                                    </div>
+                                                    <div class="col-6 col-md-12">
+                                                        <button class="btn btn-outline-dark">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="item-row">
+                                            <td class="text-left item-name">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center item-count">
+                                                <div class="spinner" data-max="99" data-min="1">
+                                                    <div class="spinner-box">
+                                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                                        <input type="tel" class="spinner-input" readonly="" value="1">
+                                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center item-price">
+                                                <i class="currecy_unit mr-1">KRW</i>
+                                                <span>216,000</span>
+                                                <button type="button" class="btn btn-del"><i></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr class="item-row">
+                                            <td class="text-left item-name">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center item-count">
+                                                <div class="spinner" data-max="99" data-min="1">
+                                                    <div class="spinner-box">
+                                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                                        <input type="tel" class="spinner-input" readonly="" value="1">
+                                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center item-price">
+                                                <i class="currecy_unit mr-1">KRW</i>
+                                                <span>216,000</span>
+                                                <button type="button" class="btn btn-del"><i></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-light">
+                                            <td colspan="5" class="text-right">
+                                                <div class="my_total">
+                                                    <div>
+                                                        <strong class="mr-2 total_t">상품금액</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong>300,000</strong></span>
+                                                    </div>
+                                                    <span class="plus"><img src="../../resources/images/icon-plus.svg" alt="+"></span>
+                                                    <div>
+                                                        <strong class="mr-2 total_t">배송비</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong>2,500</strong></span>
+                                                    </div>
+                                                    <span class="sum"><img src="../../resources/images/icon-sum.svg" alt="="></span>
+                                                    <div class="total_line">
+                                                        <strong class="mr-2 total_t">주문합계</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="text-danger">302,500</strong></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="item-row">
+                                            <td rowspan="2">
+                                                <div class="my_picture">
+                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox" class="custom-control-input" id="checkbox2">
+                                                        <label class="custom-control-label" for="checkbox2"></label>
+                                                    </div>
+                                                    <a href="../product/product_view.html"><span class="img"><img src="../../resources/images/temp/@product.png" alt="주름개선 기능성 안티에이징(Antiaging) 솔루션"></span></a>
+                                                </div>
+                                            </td>
+                                            <td class="text-left item-name">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center item-count">
+                                                <div class="spinner" data-max="99" data-min="1">
+                                                    <div class="spinner-box">
+                                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                                        <input type="tel" class="spinner-input" readonly="" value="1">
+                                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center item-price">
+                                                <i class="currecy_unit mr-1">KRW</i>
+                                                <span>216,000</span>
+                                                <button type="button" class="btn btn-del"><i></i></button>
+                                            </td>
+                                            <td class="text-center" rowspan="2">
+                                                <div class="btn-area flex-column">
+                                                    <div class="col-6 col-md-12">
+                                                        <button class="btn btn-outline-primary">주문하기</button>
+                                                    </div>
+                                                    <div class="col-6 col-md-12">
+                                                        <button class="btn btn-outline-dark">삭제</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="item-row">
+                                            <td class="text-left item-name">주름개선 기능성 안티에이징(Antiaging) 솔루션</td>
+                                            <td class="text-center item-count">
+                                                <div class="spinner" data-max="99" data-min="1">
+                                                    <div class="spinner-box">
+                                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                                        <input type="tel" class="spinner-input" readonly="" value="1">
+                                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-center item-price">
+                                                <i class="currecy_unit mr-1">KRW</i>
+                                                <span>216,000</span>
+                                                <button type="button" class="btn btn-del"><i></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr class="bg-light">
+                                            <td colspan="5" class="text-right">
+                                                <div class="my_total">
+                                                    <div>
+                                                        <strong class="mr-2 total_t">상품금액</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong>300,000</strong></span>
+                                                    </div>
+                                                    <span class="plus"><img src="../../resources/images/icon-plus.svg" alt="+"></span>
+                                                    <div>
+                                                        <strong class="mr-2 total_t">배송비</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong>2,500</strong></span>
+                                                    </div>
+                                                    <span class="sum"><img src="../../resources/images/icon-sum.svg" alt="="></span>
+                                                    <div class="total_line">
+                                                        <strong class="mr-2 total_t">주문합계</strong>
+                                                        <span class="total_c"><i class="currecy_unit mr-1">KRW</i> <strong class="text-danger">302,500</strong></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="section-payment-calc m-t-40">
+                            <div class="pay-sum row row-20 align-items-center">
+                                <div class="col-12 col-md">
+                                    <div class="detail row row-0 align-items-center">
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">1,000원</span>
+                                            <span class="info">상품 금액</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="plus"><img src="../../resources/images/icon-calc-plus.svg" alt="+"></i>
+                                        </div>
+                                        <div class="col">
+                                            <span class="exch">KRW</span>
+                                            <span class="price">2,500원</span>
+                                            <span class="info">배송비</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <i class="sum"><img src="../../resources/images/icon-calc-sum.svg" alt="="></i>
+                                </div>
+                                <div class="col-12 col-md-auto">
+                                    <div class="result">
+                                        <span class="exch">KRW</span>
+                                        <span class="price">1,000원</span>
+                                        <span class="info">전체결제금액</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="mt-5 content-bottom-padding">
+                            <div class="btn-area">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-dark">선택상품주문</button>
+                                </div>
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary">전체주문</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+</body>
+</html>

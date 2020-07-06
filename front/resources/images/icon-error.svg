@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="95px" viewBox="0 0 100 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_error</title>
+    <defs>
+        <path d="M34.2248975,0 L42.6711025,0 C44.5340564,7.40794395e-15 46.1871734,1.19426127 46.7724063,2.96290476 L76.896,94 L76.896,94 L0,94 L30.1235937,2.96290476 C30.7088266,1.19426127 32.3619436,-1.19069501e-15 34.2248975,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_error" transform="translate(1.000000, 0.000000)">
+            <g>
+                <g id="Rectangle" transform="translate(10.960000, 0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <rect fill="#FF5252" mask="url(#mask-2)" x="6.912" y="34.56" width="63.072" height="29.376"></rect>
+                </g>
+                <path d="M53.6711025,1 L45.2248975,1 C44.5090402,1 43.8334988,1.22945297 43.2807014,1.62881036 C42.7279041,2.02816774 42.2978507,2.59742954 42.0729696,3.27704718 L12.3842172,93 L86.5117828,93 L56.8230304,3.27704718 C56.5981493,2.59742954 56.1680959,2.02816774 55.6152986,1.62881036 C55.0625012,1.22945297 54.3869598,1 53.6711025,1 Z" id="Rectangle-Copy" stroke="#333333" stroke-width="2"></path>
+                <line x1="-1.40445156e-13" y1="93.5" x2="97.952" y2="93.5" id="Line" stroke="#333333" stroke-width="2" stroke-linecap="square"></line>
+            </g>
+        </g>
+    </g>
+</svg>
