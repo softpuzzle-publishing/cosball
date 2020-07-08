@@ -34,11 +34,14 @@
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
-  position: relative;
   width: auto;
   margin: $modal-dialog-margin;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   // When fading in the modal, animate it to slide down
   .modal.fade & {
@@ -46,7 +49,7 @@
     transform: $modal-fade-transform;
   }
   .modal.show & {
-    transform: $modal-show-transform;
+    //transform: $modal-show-transform;
   }
 
   // When trying to close, animate focus to scale
@@ -173,6 +176,8 @@
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
   padding: $modal-inner-padding;
+  max-height: calc(85vh - 200px);
+  overflow-x: hidden;
 }
 
 // Footer (for actions)
@@ -183,7 +188,7 @@
   //justify-content: center; // Right align buttons with flex property because text-align doesn't work on flex items
   //padding-bottom: 1.875rem;
   //padding-top: 0;
-  padding: 50px 0;
+  padding: 50px $modal-inner-padding;
 
   //border-top: $modal-footer-border-width solid $modal-footer-border-color;
   @include border-bottom-radius($modal-content-inner-border-radius);
@@ -214,7 +219,7 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
-    margin: $modal-dialog-margin-y-sm-up auto;
+    //margin: $modal-dialog-margin-y-sm-up auto;
   }
 
   .modal-dialog-scrollable {
@@ -280,5 +285,8 @@
   .modal-header .close i{width: 18px;height: 18px;}
   .modal-title {
     font-size: 1.12rem;
+  }
+  .modal-body{
+    max-height: calc(85vh - 130px);
   }
 }

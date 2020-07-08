@@ -111,6 +111,11 @@
             }
         },
         gnb : function(){
+            $('#gnb').on('mouseenter',function(e){
+                $('html').addClass('hover-gnb');
+            }).on('mouseleave',function(e){
+                $('html').removeClass('hover-gnb');
+            });
             $('#gnb .dep1').on('mouseenter',function(e){
                 if(Init.breakpoint){
                     $('html').addClass('open-submenu');
@@ -167,6 +172,8 @@
             $('#gnb').append($('.header-top .lang').clone());
             $('#btn-menu').on('click',function(e){
                 e.preventDefault();
+                $('#gnb .dep1').removeClass('active');
+                $('#gnb .current').addClass('active');
                 $('html').addClass('open-side');
             });
             $('#btn-menu-close, #header-dim').on('click',function(e){
@@ -190,9 +197,10 @@
         },
         scrolling: function(){
             var scrollTop = $(window).scrollTop();
-
             var offsetTop = $('.product-detail>.detail .btn-area').offset().top;
             offsetTop = Number(offsetTop);
+            var tabWrapTop = $('.tab').offset().top - $('#header').height();
+            var tabTop = $('.detail-tab').offset().top;
 
             if(scrollTop > offsetTop){
                 $('html').addClass('is-bottom-floating');
@@ -201,9 +209,23 @@
                 $('html').removeClass('is-bottom-floating');
                 $('#footer-block').css('padding-bottom','0');
             }
+
+            if(scrollTop > tabWrapTop){
+                $('html').addClass('is-header-hidden');
+            }else{
+                $('html').removeClass('is-header-hidden');
+            }
+            console.log($('.tab .nav').offset().top);
+            if(scrollTop > tabTop){
+                $('html').addClass('is-tab-floating');
+            }else{
+                $('html').removeClass('is-tab-floating');
+            }
         },
         toggle: function(){
-            $('.buy-bottom .toggler').on('click',function(){
+            $('.buy-bottom .toggler').on('click',function(e){
+                e.preventDefault();
+                console.log(1);
                 if($('html').hasClass('is-bottom-floating-fold')){
                     $('#footer-block').css('padding-bottom','0 !important');
                     $('html').removeClass('is-bottom-floating-fold');
