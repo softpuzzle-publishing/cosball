@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
-    <link rel="stylesheet" href="../../resources/css/sub.css">
+
     <link rel="stylesheet" href="../../resources/css/main.css">
     <!-- jquery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
@@ -302,8 +302,10 @@
                         </section>
 
                         <section class="mt-5 content-bottom-padding">
-                            <div class="view-btm-btn text-center">
-                                <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#pay-error">결제하기</button>
+                            <div class="btn-area">
+                                <div class="col-6 col-md-auto">
+                                    <button class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#pay-error">결제하기</button>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -317,7 +319,7 @@
 
     <!-- modal : 나의 배송 주소록 -->
     <div class="modal" tabindex="-1" role="dialog" id="my-address">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">나의 배송 주소록</h5>
@@ -427,7 +429,7 @@
 
     <!-- modal : 결제 오류 및 실패 -->
     <div class="modal" tabindex="-1" role="dialog" id="pay-error">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">결제 오류 및 실패</h5>

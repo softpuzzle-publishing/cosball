@@ -43,7 +43,7 @@
             <div class="content-wrapper">
                 <div id="menutree">
                     <span data-depth1 hidden>볼페이관리</span>
-                    <span data-depth2 hidden>환율조정</span>
+                    <span data-depth2 hidden>환율관리</span>
                 </div>
 
                 <div class="content-header">
@@ -53,7 +53,7 @@
                                 <h1 class="m-0" id="page-title"></h1> <!-- title -->
                             </div>
                             <div class="col-auto">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">저장</button>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">엑셀 다운로드</button>
                             </div>
                         </div>
                     </div>
@@ -63,103 +63,198 @@
                     <div class="container-fluid">
 
                         <!-- content 시작 -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">설정</h3>
-                            </div>
-                            <div class="card-body">
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">환율</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">거래소 환율</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
                                 <div class="text-right mb-2">
-                                    기준일시 <span class="text-danger">2020-01-0115:00:15</span>
-                                    <button type="button" class="btn btn-sm btn-secondary ml-2"><i class="fas fa-sync-alt"></i> 업데이트</button>
+                                    <i class="fas fa-info-circle text-danger mr-1"></i>
+                                    산업은행 환율을 기준으로하며 매일 00시에 업데이트됩니다.
                                 </div>
-                                <div class="table-responsive">
-                                    <table class="table table-center table-hover table-bordered table-valign-middle">
-                                        <thead>
-                                            <tr>
-                                                <th>번호</th>
-                                                <th>화폐</th>
-                                                <th>환율</th>
-                                                <th>환율조정</th>
-                                                <th>최종적용환율</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>KRW</td>
-                                                <td>1 KRW = 1 KRW</td>
-                                                <td>
-                                                    <div class="form-inline justify-content-center">
-                                                        <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                            <input type="checkbox" class="custom-control-input switch_chk2" id="switch1" checked>
-                                                            <label class="custom-control-label" for="switch1">자동</label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>기준일자</label>
+                                                    <div class="row row-10 align-items-center">
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
                                                         </div>
-                                                        <input type="text" class="form-control text-right" disabled>
-                                                    </div>
-                                                </td>
-                                                <td class="text-right">1 KRW</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>JPY</td>
-                                                <td>1 JPY = 11.36 KRW</td>
-                                                <td>
-                                                    <div class="form-inline justify-content-center">
-                                                        <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                            <input type="checkbox" class="custom-control-input switch_chk2" id="switch2">
-                                                            <label class="custom-control-label" for="switch2">수동</label>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
                                                         </div>
-                                                        <input type="text" class="form-control text-right" value="15.99">
-                                                    </div>
-                                                </td>
-                                                <td class="text-right"><span class="text-danger">15.99</span> KRW</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>USD</td>
-                                                <td>1USD=1,248.90 KRW</td>
-                                                <td>
-                                                    <div class="form-inline justify-content-center">
-                                                        <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                            <input type="checkbox" class="custom-control-input switch_chk2" id="switch3" checked>
-                                                            <label class="custom-control-label" for="switch3">자동</label>
+                                                        <div class="col-md">
+                                                            <div class="form-inline">
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p1" checked>
+                                                                    <label for="p1" class="custom-control-label">오늘</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                                    <label for="p2" class="custom-control-label">어제</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                                    <label for="p3" class="custom-control-label">1개월</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                                    <label for="p4" class="custom-control-label">3개월</label>
+                                                                </span>
+                                                            </div>
                                                         </div>
-                                                        <input type="text" class="form-control text-right" disabled>
                                                     </div>
-                                                </td>
-                                                <td class="text-right">1,248.90 KRW</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>CNY</td>
-                                                <td>1CNY=175.61 KRW</td>
-                                                <td>
-                                                    <div class="form-inline justify-content-center">
-                                                        <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                            <input type="checkbox" class="custom-control-input switch_chk2" id="switch4" checked>
-                                                            <label class="custom-control-label" for="switch4">자동</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                            <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">설정</h3>
+                                        <div class="float-right small"><span class="text-danger">※</span> 적용기간 : 2020-01-04 ~ 2020-01-04</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2">기준일자</th>
+                                                        <th colspan="4">환율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>KRW</th>
+                                                        <th>USD</th>
+                                                        <th>CNY</th>
+                                                        <th>JPY</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2020-01-04</td>
+                                                        <td>1</td>
+                                                        <td>1038.01</td>
+                                                        <td>168.01</td>
+                                                        <td>11.01</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="text-right mb-2">
+                                    <i class="fas fa-info-circle text-danger mr-1"></i>
+                                    00 거래소를 기준으로하며 10분마다 저장합니다
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md">
+                                                <div class="form-group">
+                                                    <label>기준일자</label>
+                                                    <div class="row row-10 align-items-center">
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
                                                         </div>
-                                                        <input type="text" class="form-control text-right" disabled>
+                                                        <div class="col-auto">~</div>
+                                                        <div class="col col-md-3">
+                                                            <input type="text" class="form-control" data-event="datepicker">
+                                                        </div>
+                                                        <div class="col-md">
+                                                            <div class="form-inline">
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p1" checked>
+                                                                    <label for="p1" class="custom-control-label">오늘</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p2">
+                                                                    <label for="p2" class="custom-control-label">어제</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p3">
+                                                                    <label for="p3" class="custom-control-label">1개월</label>
+                                                                </span>
+                                                                <span class="custom-control custom-radio custom-control-inline">
+                                                                    <input class="custom-control-input" type="radio" name="period" id="p4">
+                                                                    <label for="p4" class="custom-control-label">3개월</label>
+                                                                </span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </td>
-                                                <td class="text-right">175.61 KRW</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
+                                            <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">거래소 환율</h3>
+                                        <div class="float-right small"><span class="text-danger">※</span> 적용기간 : 2020-01-04 ~ 2020-01-04</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2">기준일자</th>
+                                                        <th colspan="5">환율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>COSBALL</th>
+                                                        <th>KRW</th>
+                                                        <th>USD</th>
+                                                        <th>CNY</th>
+                                                        <th>JPY</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2020-01-04</td>
+                                                        <td>1</td>
+                                                        <td>300</td>
+                                                        <td>1038.01</td>
+                                                        <td>168.01</td>
+                                                        <td>11.01</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card">
+
+                        <!-- <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">관리자 메모</h3>
                             </div>
                             <div class="card-body">
                                 <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">환율조정이력</h3>
                             </div>
@@ -230,7 +325,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- content 끝 -->
 
                     </div>
@@ -247,34 +342,6 @@
 
     </div>
     <!-- ./wrapper -->
-
-    <!-- modal : OTP 인증 -->
-    <div class="modal fade" id="modalOtp">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">OTP 인증</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="text-center">OTP 인증번호를 입력하세요.</div>
-                    <div class="m-1">
-                        <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
-                    </div>
-                    <div class="text-danger">
-                        <i class="fas fa-info-circle"></i>
-                        <span>인증번호가 일치하지 않습니다. 다시 입력하세요.</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- AdminLTE App -->
     <script src="../../resources/js/adminlte.js"></script>

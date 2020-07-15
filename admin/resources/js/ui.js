@@ -119,6 +119,15 @@ $(document).ready(function () {
         }
     });
 
+    //적용, 미적용 텍스트
+    $('.switch_chk3').click(function(){
+        if($(this).is(":checked") == true) {
+            $(this).siblings("label").text("적용");
+        } else {
+           $(this).siblings("label").text("미적용");
+        }
+    });
+
     //메뉴트리 아이콘 변화
     $(".role_tree").click(function(){
         if ($(this).hasClass('collapsed')) {

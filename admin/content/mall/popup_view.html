@@ -55,7 +55,7 @@
                             <div class="col-auto">
                                 <button type="button" class="btn btn-gray">목록</button>
                                 <button type="button" class="btn btn-secondary">삭제</button>
-                                <button type="button" class="btn btn-secondary">저장</button>
+                                <button type="button" class="btn btn-secondary">기본설정저장</button>
                             </div>
                         </div>
                     </div>
@@ -65,11 +65,14 @@
                     <div class="container-fluid">
 
                         <!-- content 시작 -->
+                        <div class="text-right mb-2">
+                            <span class="text-danger">※</span> 필수입력항목
+                        </div>
                         <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">기본설정</h3>
+                            </div>
                             <div class="card-body">
-                                <div class="text-right mb-2">
-                                    <span class="text-danger">※</span> 필수입력항목
-                                </div>
                                 <table class="table table-bordered resp_table">
                                     <caption>팝업관리 상세/등록</caption>
                                     <colgroup>
@@ -87,27 +90,6 @@
                                                 <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
                                                     <input class="custom-control-input" type="checkbox" id="l2">
                                                     <label for="l2" class="custom-control-label"><span class="badge bg-black">APP</span></label>
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>언어설정 <span class="text-danger">※</span></th>
-                                            <td>
-                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
-                                                    <input class="custom-control-input" type="checkbox" id="l3">
-                                                    <label for="l3" class="custom-control-label"><span class="badge bg-black">KR</span></label>
-                                                </span>
-                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
-                                                    <input class="custom-control-input" type="checkbox" id="l4">
-                                                    <label for="l4" class="custom-control-label"><span class="badge bg-black">EN</span></label>
-                                                </span>
-                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
-                                                    <input class="custom-control-input" type="checkbox" id="l5">
-                                                    <label for="l5" class="custom-control-label"><span class="badge bg-black">CN</span></label>
-                                                </span>
-                                                <span class="custom-control custom-checkbox custom-control-inline mt-1 mb-1">
-                                                    <input class="custom-control-input" type="checkbox" id="l6">
-                                                    <label for="l6" class="custom-control-label"><span class="badge bg-black">JP</span></label>
                                                 </span>
                                             </td>
                                         </tr>
@@ -137,66 +119,75 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th>팝업제목 <span class="text-danger">※</span></th>
-                                            <td>
-                                                <div class="row align-items-center mb-2">
-                                                    <div class="col-md-auto">
-                                                        <span class="badge bg-black">KR</span>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="row align-items-center">
-                                                    <div class="col-md-auto">
-                                                        <span class="badge bg-black">EN</span>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                    <div class="col-md-auto">
-                                                        <span class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" id="same1">
-                                                            <label for="same1" class="custom-control-label">국문과 동일</label>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>팝업내용 <span class="text-danger">※</span></th>
-                                            <td>
-                                                <div class="row align-items-center mb-2">
-                                                    <div class="col-md-auto">
-                                                        <span class="badge bg-black">KR</span>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="row align-items-center">
-                                                    <div class="col-md-auto">
-                                                        <span class="badge bg-black">EN</span>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="col-md-auto">
-                                                        <span class="custom-control custom-checkbox">
-                                                            <input class="custom-control-input" type="checkbox" id="same2">
-                                                            <label for="same2" class="custom-control-label">국문과 동일</label>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                                 <div class="mt-3">
                                     <i class="fas fa-info-circle text-danger mr-1"></i> 팝업은 <span class="text-danger">1개만 설정</span>이 가능합니다.<br>
                                     설정된 팝업 기간이 중복되는 상황일 경우 <span class="text-danger">최근에 등록된 팝업을 우선으로 표시</span>합니다.
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">언어설정</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-valign-middle resp_table">
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>언어 선택</th>
+                                            <td>
+                                                <select name="" id="" class="form-control d-inline-block w-auto mr-3">
+                                                    <option value="">한국어(KR)</option>
+                                                    <option value="">영어(EN)</option>
+                                                    <option value="">중국어(CN)</option>
+                                                    <option value="">일본어(JP)</option>
+                                                </select>
+                                                <div class="form-inline d-inline-block">
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="post" id="p1">
+                                                        <label for="p1" class="custom-control-label">사용함</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio custom-control-inline">
+                                                        <input class="custom-control-input" type="radio" name="post" id="p2" checked>
+                                                        <label for="p2" class="custom-control-label">사용안함</label>
+                                                    </span>
+                                                </div>
+                                                <button type="button" class="btn btn-info d-inline-block">저장</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">상세정보</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered resp_table">
+                                    <caption>팝업관리 상세/등록</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>팝업제목 <span class="text-danger">※</span></th>
+                                            <td><input type="text" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>팝업내용 <span class="text-danger">※</span></th>
+                                            <td><textarea name="" id="" cols="" rows="3" class="form-control"></textarea></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <!-- content 끝 -->

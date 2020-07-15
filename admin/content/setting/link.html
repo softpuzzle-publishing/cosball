@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>설정</span>
+                    <span data-depth2 hidden>링크관리</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+
+                        <!-- content 시작 -->
+                        <!-- <div class="text-right mb-2">
+                            <span class="text-danger">※</span> 필수입력항목
+                        </div> -->
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">코즈볼 서비스 앱</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <caption>코즈볼 서비스 앱</caption>
+                                        <thead>
+                                            <th>번호</th>
+                                            <th>버튼명</th>
+                                            <th>설명</th>
+                                            <th>링크주소</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>이용약관</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>고객센터</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //card -->
+
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">볼페이포스</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <caption>볼페이포스</caption>
+                                        <thead>
+                                            <th>번호</th>
+                                            <th>버튼명</th>
+                                            <th>설명</th>
+                                            <th>링크주소</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>이용약관</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>고객센터</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //card -->
+
+                        <!-- card -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">코즈볼 서비스 웹</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle">
+                                        <caption>코즈볼 서비스 웹</caption>
+                                        <thead>
+                                            <th>번호</th>
+                                            <th>버튼명</th>
+                                            <th>설명</th>
+                                            <th>링크주소</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>서비스 이용약관</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>고객센터</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>개인정보처리방침</td>
+                                                <td><input type="text" class="form-control"></td>
+                                                <td><input type="text" class="form-control"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //card -->
+
+                        <!-- content 끝 -->
+
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

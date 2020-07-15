@@ -3,6 +3,29 @@
     #header : 1001
     #dim : 1002
 */
+
+/* scrollbar */
+/* chrome */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    /* box-shadow: inset 0px 0px 5px white; */
+}
+/* ie */
+html {
+    scrollbar-color: $primary transparent;
+    scrollbar-width: thin;
+}
+
 html,
 body{
     height: 100%;
@@ -12,7 +35,7 @@ body{
     padding-top: 200px;
 }
 #wrap{
-    position: relative;display: flex;flex-direction: column;justify-content: space-between;flex-wrap: nowrap;min-height: 100vh;
+    position: relative;display: flex;flex-direction: column;justify-content: space-between;flex-wrap: nowrap;
 }
 #container-block{flex-grow: 1;}
 

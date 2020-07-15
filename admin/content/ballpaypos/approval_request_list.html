@@ -65,7 +65,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label>추천인코드</label>
+                                            <label>볼코드</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
@@ -148,21 +148,24 @@
                             <table class="table table-center table-hover table-bordered table-valign-middle">
                                 <thead>
                                     <tr>
-                                        <th>
+                                        <th rowspan="2">
                                             <span class="custom-checkbox custom-control without-label">
                                                 <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
                                                 <label for="allchk" class="custom-control-label"></label>
                                             </span>
                                         </th>
-                                        <th>번호</th>
-                                        <th>아이디(이메일)</th>
-                                        <th>AccountID</th>
-                                        <th>추천인코드</th>
-                                        <th>회원명</th>
-                                        <th>요청일</th>
-                                        <th>동의여부</th>
+                                        <th rowspan="2">번호</th>
+                                        <th rowspan="2">아이디(이메일)</th>
+                                        <th rowspan="2">AccountID</th>
+                                        <th rowspan="2">볼코드</th>
+                                        <th rowspan="2">요청일</th>
+                                        <th rowspan="2">동의여부</th>
+                                        <th colspan="2">상태</th>
+                                        <th rowspan="2">진행상태</th>
+                                    </tr>
+                                    <tr>
                                         <th>회원상태</th>
-                                        <th>진행상태</th>
+                                        <th>패널티상태</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -177,10 +180,10 @@
                                         <td>abc@gmail.com</td>
                                         <td>a_1234567</td>
                                         <td>ABC0123</td>
-                                        <td>홍길동</td>
                                         <td>2020-01-0115:15:15</td>
                                         <td>Y</td>
                                         <td>패널티</td>
+                                        <td>보내기금지</td>
                                         <td>대기</td>
                                     </tr>
                                     <tr>
@@ -194,45 +197,11 @@
                                         <td>abc@gmail.com</td>
                                         <td>a_1234567</td>
                                         <td>ABC0123</td>
-                                        <td>홍길동</td>
                                         <td>2020-01-0115:15:15</td>
                                         <td>Y</td>
-                                        <td>정상</td>
+                                        <td>패널티</td>
+                                        <td>보내기금지</td>
                                         <td>대기</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk3">
-                                                <label for="chk3" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>2</td>
-                                        <td>abc@gmail.com</td>
-                                        <td>a_1234567</td>
-                                        <td>ABC0123</td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-0115:15:15</td>
-                                        <td>Y</td>
-                                        <td>보내기 화이트리스트</td>
-                                        <td>보류</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk3">
-                                                <label for="chk3" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>1</td>
-                                        <td>abc@gmail.com</td>
-                                        <td>a_1234567</td>
-                                        <td>ABC0123</td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-0115:15:15</td>
-                                        <td>Y</td>
-                                        <td>교환금지</td>
-                                        <td>반려</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -242,7 +211,7 @@
                                 <div class="col-auto form-group">
                                     <div class="row align-items-center">
                                         <div class="col-sm-auto">
-                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalLabel">선택회원 승인처리</button>
+                                            <button type="button" class="btn btn-info">선택회원 승인처리</button>
                                         </div>
                                         <div class="col-sm-auto">
                                             <i class="fas fa-info-circle text-danger mr-1"></i> 회원상태가 <span class="text-danger">'패널티'</span> 인 경우, <span class="text-danger">판매처회원승인이 불가능</span>합니다.
@@ -281,80 +250,6 @@
 
     </div>
     <!-- ./wrapper -->
-
-    <!-- modal : 라벨 -->
-    <div class="modal fade" id="modalLabel">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">라벨</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l1">
-                            <label for="l1" class="custom-control-label">1차 라벨 A</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l2">
-                            <label for="l2" class="custom-control-label">1차 라벨 A>2차 라벨 A</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l3">
-                            <label for="l3" class="custom-control-label">1차 라벨 A>2차 라벨 B</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l4">
-                            <label for="l4" class="custom-control-label">등급</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l5">
-                            <label for="l5" class="custom-control-label">등급 >1등급</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l6">
-                            <label for="l6" class="custom-control-label">등급 >2등급</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l7">
-                            <label for="l7" class="custom-control-label">등급 >3등급</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l8">
-                            <label for="l8" class="custom-control-label">등급 >4등급</label>
-                        </span>
-                    </div>
-                    <div class="form-group">
-                        <span class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" name="labelChk" id="l9">
-                            <label for="l9" class="custom-control-label">등급 >5등급</label>
-                        </span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">저장</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- AdminLTE App -->
     <script src="../../resources/js/adminlte.js"></script>

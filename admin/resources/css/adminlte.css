@@ -4303,13 +4303,13 @@ input[type="button"].btn-block {
 
 .custom-control-right .custom-control-label::after {
   left: auto;
-  right: calc(-2.25rem + 2px);
+  right: calc(-1.5rem + 2px);
 }
 
 .custom-control-right .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #f8f9fa;
-  -webkit-transform: translateX(-0.75rem);
-          transform: translateX(-0.75rem);
+  -webkit-transform: translateX(0.75rem);
+          transform: translateX(0.75rem);
 }
 
 .custom-select {

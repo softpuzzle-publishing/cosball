@@ -63,138 +63,106 @@
                     <div class="container-fluid">
 
                         <!-- content 시작 -->
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">보내기 지갑 관리</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">받는 지갑 관리</a>
+                            </li>
+                        </ul>
 
-                        <!-- 자금계정지갑정보 시작 -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">자금계정지갑정보</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="text-right mb-2">
-                                    <span class="text-danger">※</span> 필수입력항목
-                                </div>
-                                <table class="table table-bordered">
-                                    <caption>보안질문관리 상세/등록</caption>
-                                    <colgroup>
-                                        <col style="width:140px">
-                                        <col>
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>지갑명</th>
-                                            <td>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="자금계정관리지갑">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>지갑주소</th>
-                                            <td>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>OPT 인증 <span class="text-danger">※</span></th>
-                                            <td>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요">
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- 자금계정지갑정보 끝 -->
-
-                        <!-- 변경이력 시작 -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">변경이력</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-top">
-                                    <div class="row justify-content-between align-items-end">
-                                        <div class="col-auto">
-                                            총 <span class="text-danger">2</span>건
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="form-control d-inline-block w-auto">
-                                                <option value="">10개</option>
-                                            </select>
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">지갑정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>지갑정보</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Account ID</th>
+                                                        <th>토큰종류</th>
+                                                        <th>보유토큰</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="5">Bc_12345</td>
+                                                        <td>COSBALL</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSKRW</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSUSD</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSCNY</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSJPY</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="table-responsive">
-                                    <table class="table table-center table-hover table-bordered table-valign-middle">
-                                        <thead>
-                                            <tr>
-                                                <th>번호</th>
-                                                <th>지갑명</th>
-                                                <th>지갑주소</th>
-                                                <th>토큰보유량</th>
-                                                <th>변경일시</th>
-                                                <th>변경자 아이디</th>
-                                                <th>변경자</th>
-                                                <th>접속 IP</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>자금계정관리지갑</td>
-                                                <td>0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B</td>
-                                                <td>500,000</td>
-                                                <td>2020-01-01 15:00:01</td>
-                                                <td>admin@gmail.com</td>
-                                                <td>홍길동</td>
-                                                <td>192.168.1.1</td>
-                                            </tr>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>자금계정관리지갑</td>
-                                                <td>0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B</td>
-                                                <td>500,000</td>
-                                                <td>2020-01-01 15:00:01</td>
-                                                <td>admin@gmail.com</td>
-                                                <td>홍길동</td>
-                                                <td>192.168.1.1</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="table-bottom">
-                                    <div class="row justify-content-between">
-                                        <div class="col-auto form-group">
-                                        </div>
-                                        <div class="col-auto form-group">
-                                            <button type="button" class="btn btn-info">엑셀다운로드</button>
+                            </div>
+
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">지갑정보</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>지갑정보</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Account ID</th>
+                                                        <th>토큰종류</th>
+                                                        <th>보유토큰</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="5">Bc_12345</td>
+                                                        <td>COSBALL</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSKRW</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSUSD</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSCNY</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>COSJPY</td>
+                                                        <td class="text-right">1,000.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pagination-wrap">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
-                        <!-- 변경이력 끝 -->
                         <!-- content 끝 -->
 
                     </div>

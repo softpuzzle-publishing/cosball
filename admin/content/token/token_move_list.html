@@ -63,34 +63,68 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md">
+                                    <div class="col">
                                         <div class="form-group">
-                                            <label>기간</label>
+                                            <label>구분</label>
+                                            <div class="row row-10">
+                                                <div class="col-3">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">Account ID</option>
+                                                        <option value="">아이디</option>
+                                                        <option value="">보낸 지갑주소</option>
+                                                        <option value="">받은 지갑주소</option>
+                                                        <option value="">TX ID</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label>거래종류</label>
                                             <div class="row row-10 align-items-center">
-                                                <div class="col col-md-3">
-                                                    <input type="text" class="form-control" data-event="datepicker">
-                                                </div>
-                                                <div class="col-auto">~</div>
-                                                <div class="col col-md-3">
-                                                    <input type="text" class="form-control" data-event="datepicker">
-                                                </div>
                                                 <div class="col-md">
                                                     <div class="form-inline">
                                                         <span class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio" name="period" id="p1">
-                                                            <label for="p1" class="custom-control-label">오늘</label>
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t1">
+                                                            <label for="t1" class="custom-control-label">전체</label>
                                                         </span>
                                                         <span class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio" name="period" id="p2">
-                                                            <label for="p2" class="custom-control-label">어제</label>
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t2">
+                                                            <label for="t2" class="custom-control-label">보내기</label>
                                                         </span>
                                                         <span class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio" name="period" id="p3">
-                                                            <label for="p3" class="custom-control-label">1개월</label>
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t3">
+                                                            <label for="t3" class="custom-control-label">받기</label>
                                                         </span>
                                                         <span class="custom-control custom-radio custom-control-inline">
-                                                            <input class="custom-control-input" type="radio" name="period" id="p4">
-                                                            <label for="p4" class="custom-control-label">3개월</label>
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t4">
+                                                            <label for="t4" class="custom-control-label">교환</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t5">
+                                                            <label for="t5" class="custom-control-label">에어드랍</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t6">
+                                                            <label for="t6" class="custom-control-label">환불</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t7">
+                                                            <label for="t7" class="custom-control-label">구매</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t8">
+                                                            <label for="t8" class="custom-control-label">판매처 리워드</label>
+                                                        </span>
+                                                        <span class="custom-control custom-radio custom-control-inline">
+                                                            <input class="custom-control-input" type="radio" name="choice" id="t9">
+                                                            <label for="t9" class="custom-control-label">이벤트 마이닝</label>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -99,21 +133,9 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col">
                                         <div class="form-group">
-                                            <label>아이디(이메일)</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Account ID</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>토큰선택</label>
+                                            <label>토큰종류</label>
                                             <div class="row row-10 align-items-center">
                                                 <div class="col-md">
                                                     <div class="form-inline">
@@ -171,70 +193,38 @@
                                 <thead>
                                     <tr>
                                         <th>번호</th>
-                                        <th>아이디(이메일)</th>
                                         <th>AccountID</th>
-                                        <th>TXID</th>
-                                        <th>토큰명</th>
+                                        <th>거래종류</th>
+                                        <th>토큰종류</th>
                                         <th>수량</th>
                                         <th>수수료</th>
-                                        <th>보낸 지갑주소</th>
-                                        <th>받는 지갑주소</th>
-                                        <th>실행일시</th>
+                                        <th>신청일시</th>
+                                        <th>처리완료일시</th>
                                         <th>상태</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>4</td>
-                                        <td><a href="token_move_list.html">aaa@aaa.com</a></td>
+                                        <td>1</td>
                                         <td>a_1234567</td>
-                                        <td>tx_ID_1234567</td>
+                                        <td>보내기</td>
                                         <td>COSBALL</td>
-                                        <td>10,000</td>
+                                        <td class="text-info text-right">- 10,000</td>
                                         <td>0</td>
-                                        <td>0xAb5801a7D3…</td>
-                                        <td>0xAb5801a7D3…</td>
                                         <td>2020-01-01 10:00:00</td>
-                                        <td>성공</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td><a href="token_move_list.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>tx_ID_1234567</td>
-                                        <td>COSKRW</td>
-                                        <td>10,000</td>
-                                        <td>0</td>
-                                        <td>0xAb5801a7D3…</td>
-                                        <td>0xAb5801a7D3…</td>
                                         <td>2020-01-01 10:00:00</td>
-                                        <td>실패</td>
+                                        <td>신청</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td><a href="token_move_list.html">aaa@aaa.com</a></td>
                                         <td>a_1234567</td>
-                                        <td>tx_ID_1234567</td>
-                                        <td>COSUSD</td>
-                                        <td>10,000</td>
+                                        <td>보내기</td>
+                                        <td>COSBALL</td>
+                                        <td class="text-danger text-right">10,000</td>
                                         <td>0</td>
-                                        <td>0xAb5801a7D3…</td>
-                                        <td>0xAb5801a7D3…</td>
                                         <td>2020-01-01 10:00:00</td>
-                                        <td>성공</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td><a href="token_move_list.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>tx_ID_1234567</td>
-                                        <td>COSJPY</td>
-                                        <td>10,000</td>
-                                        <td>0</td>
-                                        <td>0xAb5801a7D3…</td>
-                                        <td>0xAb5801a7D3…</td>
-                                        <td>2020-01-01 10:00:00</td>
-                                        <td>실패</td>
+                                        <td>-</td>
+                                        <td>처리완료</td>
                                     </tr>
                                 </tbody>
                             </table>

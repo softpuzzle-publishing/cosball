@@ -53,7 +53,7 @@
                                 <h1 class="m-0" id="page-title"></h1> <!-- title -->
                             </div>
                             <div class="col-auto">
-                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">저장</button>
+                                <button type="button" class="btn btn-secondary">변경내역 엑셀 다운로드</button>
                             </div>
                         </div>
                     </div>
@@ -74,11 +74,11 @@
                                 <table class="table table-bordered resp_table">
                                     <caption>리워드설정 등록</caption>
                                     <colgroup>
-                                        <col style="width:150px">
+                                        <col style="width:180px">
                                         <col>
                                     </colgroup>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <th>일 최대 지급 <span class="text-danger">※</span></th>
                                             <td>
                                                 <div class="row align-items-center">
@@ -125,27 +125,44 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                         <tr>
                                             <th>피부정보제공 지급 <span class="text-danger">※</span></th>
                                             <td>
-                                                <div class="row align-items-center">
+                                                <div class="row align-items-center justify-content-between">
                                                     <div class="col-sm-auto m-1">
-                                                        <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-2">개
-                                                    </div>
-                                                    <div class="col-sm-auto">
-                                                        <div class="row form-inline">
-                                                            <div class="col-md-auto">
-                                                                <span class="m-1">적용일시</span>
-                                                                <input type="text" class="form-control m-1" data-event="datepicker">
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00시</option>
-                                                                </select>
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00분</option>
-                                                                </select>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-auto">
+                                                                <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-1">개
+                                                            </div>
+                                                            <div class="col-sm-auto">
+                                                                <input type="text" class="form-control text-right text-danger w-auto d-inline-block my-1">개
+                                                            </div>
+                                                            <div class="col-sm-auto">
+                                                                <i class="fas fa-info-circle text-danger mr-1"></i>
+                                                                피부정보제공시 설정된 범위 안에서 리워드가 랜덤 지급됩니다.
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-sm-auto m-1">
+                                                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">저장</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>피부정보제공 지급 횟수 <span class="text-danger">※</span></th>
+                                            <td>
+                                                <div class="row align-items-center justify-content-between">
+                                                    <div class="col-sm-auto m-1">
+                                                        <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-1">회
+                                                        <div class="d-inline-block m-1">
+                                                            <i class="fas fa-info-circle text-danger mr-1"></i>
+                                                            피부정보 제공 시 하루동안 리워드 지급이 가능한 횟수를 지정합니다.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-auto m-1">
+                                                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">저장</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -153,47 +170,19 @@
                                         <tr>
                                             <th>신규회원가입 지급 <span class="text-danger">※</span></th>
                                             <td>
-                                                <div class="row align-items-center">
+                                                <div class="row align-items-center justify-content-between">
                                                     <div class="col-sm-auto m-1">
-                                                        <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-2">개
-                                                    </div>
-                                                    <div class="col-sm-auto">
-                                                        <div class="row form-inline">
-                                                            <div class="col-md-auto">
-                                                                <span class="m-1">적용일시</span>
-                                                                <input type="text" class="form-control m-1" data-event="datepicker">
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00시</option>
-                                                                </select>
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00분</option>
-                                                                </select>
+                                                        <div class="row">
+                                                            <div class="col-sm-auto">
+                                                                <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-1">개
+                                                            </div>
+                                                            <div class="col-sm-auto">
+                                                                <input type="text" class="form-control text-right text-danger w-auto d-inline-block my-1 mr-1">개
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>신규회원가입 지급 <span class="text-danger">※</span><br>(추천인 코드 등록시)</th>
-                                            <td>
-                                                <div class="row align-items-center">
                                                     <div class="col-sm-auto m-1">
-                                                        <input type="text" class="form-control text-right text-danger w-auto d-inline-block mr-2">개
-                                                    </div>
-                                                    <div class="col-sm-auto">
-                                                        <div class="row form-inline">
-                                                            <div class="col-md-auto">
-                                                                <span class="m-1">적용일시</span>
-                                                                <input type="text" class="form-control m-1" data-event="datepicker">
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00시</option>
-                                                                </select>
-                                                                <select name="" id="" class="form-control m-1">
-                                                                    <option value="">00분</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
+                                                        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">저장</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -203,7 +192,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
+                        <!-- <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">변경이력</h3>
                             </div>
@@ -276,7 +265,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- content 끝 -->
 
                     </div>

@@ -49,7 +49,7 @@
         </div>
     </div>
     <div id="header-dim"></div>
-    <nav id="gnb">
+    <nav id="gnb" class="gnb">
         <div class="mobile-utils d-lg-none">
             <div class="member"><i class="icon-logo"></i> 코즈볼회원수 <strong>129,720</strong></div>
             <div class="row">
@@ -57,7 +57,7 @@
                 <!-- <div class="col"><a href="javascript:;"><i class="icon-login"></i><span>로그인</span></a></div> -->
                 <!-- 로그인 후 -->
                 <div class="col"><a href="javascript:;"><i class="icon-logout"></i><span>로그아웃</span></a></div>
-                <div class="col"><a href="javascript:;"><i class="icon-mypage"></i><span>마이페이지</span></a></div>
+                <div class="col"><a href="javascript:;" id="btn-mypage"><i class="icon-mypage"></i><span>마이페이지</span></a></div>
             </div>
         </div>
         <div class="container">
@@ -287,4 +287,74 @@
             <button type="button" id="btn-menu-close"><i class="icon-close-white"><span class="sr-only">전체메뉴 닫기</span></i></button>
         </div>
     </nav>
+    <nav id="gnb-mypage" class="gnb">
+        <div class="mobile-utils d-lg-none">
+            <div class="member"><i class="icon-logo"></i> 코즈볼회원수 <strong>129,720</strong></div>
+            <div class="row gnb-mypage-util">
+                <div class="col">
+                    <div class="my-close">
+                        <a href="javascript:;" id="btn-mypage-close"><i class="icon-back"></i><i class="icon-mypage"></i><span>마이페이지</span></a>
+                    </div>
+                    <div class="my-ballcode">
+                        <div>나의 볼코드</div>
+                        <div class="code">
+                            <span><strong>ABC</strong>0001</span>
+                            <button class="btn btn-xs btn-outline-gray btn-user-size">복사</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="gnb-menu">
+                <li class="dep1 current"> <!-- 현재 활성화 메뉴에 current 추가 -->
+                    <a href="#;"><span>나의 쇼핑몰 이용내역</span></a>
+                    <div class="sub-layer">
+                        <div class="container">
+                            <div class="inner">
+                                <div class="dep2">
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <span class="name">주문 배송 현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="name">취소/반품 현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="name">교환 현황</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="name">장바구니</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dep1 no-sub">
+                    <a href="#;"><span>배송지관리</span></a>
+                </li>
+                <li class="dep1 no-sub">
+                    <a href="#;"><span>고객센터</span></a>
+                </li>
+                <li class="dep1 no-sub">
+                    <a href="#;"><span>이용약관</span></a>
+                </li>
+                <li class="dep1 no-sub">
+                    <a href="#;"><span>개인정보처리방침</span></a>
+                </li>
+            </ul>
+        </div>
+        <span class="bar"></span>
+    </nav>
+
 </header>

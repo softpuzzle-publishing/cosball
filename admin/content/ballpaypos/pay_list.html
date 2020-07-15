@@ -126,12 +126,12 @@
                                     </div>
                                 </div>
                                 <div class="row row-10 align-items-center">
-                                    <div class="col-md">
+                                    <!-- <div class="col-md">
                                         <div class="form-group">
                                             <label>결제금액(원)</label>
                                             <input type="text" class="form-control">
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md">
                                         <div class="form-group">
                                             <label>결제토큰수</label>
@@ -203,44 +203,24 @@
                                         <th>번호</th>
                                         <th>AccountID</th>
                                         <th>아이디(이메일)</th>
+                                        <th>Character ID</th>
                                         <th>상태</th>
-                                        <th>결제토큰종류</th>
-                                        <th>결제금액</th>
-                                        <th>결제토큰수</th>
+                                        <th>결제코드</th>
+                                        <th>토큰종류</th>
+                                        <th>토큰수</th>
                                         <th>결제경로</th>
                                         <th>결제일시</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>4</td>
-                                        <td>a_1234567</td>
-                                        <td class="text-left">abc123@naver.com</td>
-                                        <td>성공</td>
-                                        <td>COSKRW</td>
-                                        <td class="text-right">1,000KRW</td>
-                                        <td class="text-right">1,000</td>
-                                        <td>볼페이</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>a_1234567</td>
-                                        <td class="text-left">abc123@naver.com</td>
-                                        <td>실패</td>
-                                        <td>COSUSD</td>
-                                        <td class="text-right">1,000KRW</td>
-                                        <td class="text-right">1,000</td>
-                                        <td>볼페이POS</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                    <tr>
                                         <td>2</td>
                                         <td>a_1234567</td>
                                         <td class="text-left">abc123@naver.com</td>
+                                        <td>C_12345</td>
                                         <td>성공</td>
+                                        <td>30012000</td>
                                         <td>COSJYP</td>
-                                        <td class="text-right">1,000KRW</td>
                                         <td class="text-right">1,000</td>
                                         <td>볼페이</td>
                                         <td>2020-01-01 15:00:00</td>
@@ -249,9 +229,10 @@
                                         <td>1</td>
                                         <td>a_1234567</td>
                                         <td class="text-left">abc123@naver.com</td>
+                                        <td>C_12345</td>
                                         <td>실패</td>
+                                        <td>30012000</td>
                                         <td>COSCNY</td>
-                                        <td class="text-right">1,000KRW</td>
                                         <td class="text-right">1,000</td>
                                         <td>볼페이POS</td>
                                         <td>2020-01-01 15:00:00</td>

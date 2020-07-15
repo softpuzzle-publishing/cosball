@@ -73,10 +73,10 @@
                                 <table class="table table-bordered resp_table">
                                     <caption hidden>회원정보 상세</caption>
                                     <colgroup>
-                                        <col style="width:140px">
-                                        <col>
-                                        <col style="width:140px">
-                                        <col>
+                                        <col style="width:15%">
+                                        <col style="width:35%">
+                                        <col style="width:15%">
+                                        <col style="width:35%">
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -98,43 +98,14 @@
                                             <td>a_1234567</td>
                                         </tr>
                                         <tr>
-                                            <th>이름</th>
-                                            <td><input type="text" class="form-control"></td>
                                             <th>아이디(이메일)</th>
                                             <td>
                                                 <div class="form-inline">
                                                     <input type="text" class="form-control w-auto d-inline-block" value="abc123@naver.com">
                                                     <button type="button" class="btn btn-gray btn-sm ml-2">중복체크</button>
+                                                    <button type="button" class="btn btn-gray btn-sm ml-2">저장</button>
                                                 </div>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <th>국적</th>
-                                            <td>
-                                                <div class="form-inline">
-                                                    <select name="" id="" class="form-control w-auto d-inline-block">
-                                                        <option value="">KOR</option>
-                                                    </select>
-                                                    <a href="https://ko.wikipedia.org/wiki/ISO_3166-1_alpha-3#국가_코드" target="_blank" class="btn btn-gray btn-sm ml-2">국가코드 전체보기 <i class="fas fa-external-link-alt ml-1"></i></a>
-                                                </div>
-                                            </td>
-                                            <th>성별</th>
-                                            <td>
-                                                <div class="form-inline">
-                                                    <span class="custom-control custom-radio">
-                                                        <input class="custom-control-input" type="radio" name="gender" id="g1" checked>
-                                                        <label for="g1" class="custom-control-label">남성</label>
-                                                    </span>
-                                                    <span class="custom-control custom-radio ml-3">
-                                                        <input class="custom-control-input" type="radio" name="gender" id="g2">
-                                                        <label for="g2" class="custom-control-label">여성</label>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>생년월일</th>
-                                            <td><input type="text" class="form-control" data-event="datepicker"></td>
                                             <th>비밀번호 초기화</th>
                                             <td><button type="button" class="btn btn-gray btn-sm">비밀번호 초기화</button></td>
                                         </tr>
@@ -208,27 +179,6 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <!-- <tr>
-                                            <th>닉모닉코드</th>
-                                            <td colspan="3">
-                                                <div class="row mnemonicCode">
-                                                    <div class="col">apple 1</div>
-                                                    <div class="col">apple 2</div>
-                                                    <div class="col">apple 3</div>
-                                                    <div class="col">apple 4</div>
-                                                    <div class="col">apple 5</div>
-                                                    <div class="col">apple 6</div>
-                                                </div>
-                                                <div class="row mnemonicCode">
-                                                    <div class="col">apple 7</div>
-                                                    <div class="col">apple 8</div>
-                                                    <div class="col">apple 9</div>
-                                                    <div class="col">apple 10</div>
-                                                    <div class="col">apple 11</div>
-                                                    <div class="col">apple 12</div>
-                                                </div>
-                                            </td>
-                                        </tr> -->
                                         <tr>
                                             <th>복구코드</th>
                                             <td colspan="3">34o345%#skdf</td>
@@ -260,6 +210,57 @@
                                             <th>수정자</th>
                                             <td>홍길동</td>
                                         </tr>
+                                        <!-- <tr>
+                                            <th>국적</th>
+                                            <td>
+                                                <div class="form-inline">
+                                                    <select name="" id="" class="form-control w-auto d-inline-block">
+                                                        <option value="">KOR</option>
+                                                    </select>
+                                                    <a href="https://ko.wikipedia.org/wiki/ISO_3166-1_alpha-3#국가_코드" target="_blank" class="btn btn-gray btn-sm ml-2">국가코드 전체보기 <i class="fas fa-external-link-alt ml-1"></i></a>
+                                                </div>
+                                            </td>
+                                            <th>성별</th>
+                                            <td>
+                                                <div class="form-inline">
+                                                    <span class="custom-control custom-radio">
+                                                        <input class="custom-control-input" type="radio" name="gender" id="g1" checked>
+                                                        <label for="g1" class="custom-control-label">남성</label>
+                                                    </span>
+                                                    <span class="custom-control custom-radio ml-3">
+                                                        <input class="custom-control-input" type="radio" name="gender" id="g2">
+                                                        <label for="g2" class="custom-control-label">여성</label>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>생년월일</th>
+                                            <td><input type="text" class="form-control" data-event="datepicker"></td>
+                                            <th>비밀번호 초기화</th>
+                                            <td><button type="button" class="btn btn-gray btn-sm">비밀번호 초기화</button></td>
+                                        </tr> -->
+                                        <!-- <tr>
+                                            <th>닉모닉코드</th>
+                                            <td colspan="3">
+                                                <div class="row mnemonicCode">
+                                                    <div class="col">apple 1</div>
+                                                    <div class="col">apple 2</div>
+                                                    <div class="col">apple 3</div>
+                                                    <div class="col">apple 4</div>
+                                                    <div class="col">apple 5</div>
+                                                    <div class="col">apple 6</div>
+                                                </div>
+                                                <div class="row mnemonicCode">
+                                                    <div class="col">apple 7</div>
+                                                    <div class="col">apple 8</div>
+                                                    <div class="col">apple 9</div>
+                                                    <div class="col">apple 10</div>
+                                                    <div class="col">apple 11</div>
+                                                    <div class="col">apple 12</div>
+                                                </div>
+                                            </td>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -280,7 +281,11 @@
                                                         <label for="allchk" class="custom-control-label"></label>
                                                     </span>
                                                 </th>
-                                                <th>CharacterID</th>
+                                                <th>Character ID</th>
+                                                <th>이름</th>
+                                                <th>국적</th>
+                                                <th>생년월일</th>
+                                                <th>성별</th>
                                                 <th>피부측정횟수</th>
                                                 <th>생성일시</th>
                                                 <th>삭제</th>
@@ -295,6 +300,10 @@
                                                     </span>
                                                 </td>
                                                 <td>c1231</td>
+                                                <td>엄마</td>
+                                                <td>KOR</td>
+                                                <td>1999.04.22</td>
+                                                <td>여</td>
                                                 <td>15회</td>
                                                 <td>2020-01-01 15:00:00</td>
                                                 <td><a href="">삭제</a></td>

@@ -52,7 +52,7 @@
                                 <h1 class="m-0" id="page-title"></h1> <!-- title -->
                             </div>
                             <div class="col-auto">
-                                <button type="button" class="btn btn-secondary">저장</button>
+                                <!-- <button type="button" class="btn btn-secondary">저장</button> -->
                             </div>
                         </div>
                     </div>
@@ -62,191 +62,154 @@
                     <div class="container-fluid">
 
                         <!-- content 시작 -->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-auto">
-                                        <div class="form-group">
-                                            <label>구분</label>
-                                            <div class="form-inline">
-                                                <span class="custom-control custom-radio custom-control-inline">
-                                                    <input class="custom-control-input" type="radio" name="period" id="p1">
-                                                    <label for="p1" class="custom-control-label">전체</label>
-                                                </span>
-                                                <span class="custom-control custom-radio custom-control-inline">
-                                                    <input class="custom-control-input" type="radio" name="period" id="p2">
-                                                    <label for="p2" class="custom-control-label">스킨톤</label>
-                                                </span>
-                                                <span class="custom-control custom-radio custom-control-inline">
-                                                    <input class="custom-control-input" type="radio" name="period" id="p3">
-                                                    <label for="p3" class="custom-control-label">무엇을 개선하고 싶습니까?</label>
-                                                </span>
-                                                <span class="custom-control custom-radio custom-control-inline">
-                                                    <input class="custom-control-input" type="radio" name="period" id="p4">
-                                                    <label for="p4" class="custom-control-label">현재 진행중인 피부문제</label>
-                                                </span>
-                                            </div>
-                                        </div>
+                        <ul class="nav nav-tabs my-tabs trans_tab tab_div3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab" aria-controls="t1" aria-selected="true">스킨톤</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab" aria-controls="t2" aria-selected="false">무엇을 개선하고 싶습니까?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#t3" role="tab" aria-controls="t3" aria-selected="false">현재 진행중인 피부문제</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="t1" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">남성</h3>
                                     </div>
-                                    <div class="col-lg">
-                                        <div class="form-group">
-                                            <label>항목명</label>
-                                            <div class="row row-10">
-                                                <div class="col">
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>스킨톤 - 남성</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>한국어</th>
+                                                        <th>영어</th>
+                                                        <th>중국어</th>
+                                                        <th>일본어</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>하양</td>
+                                                        <td>Light</td>
+                                                        <td>珍珠白</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>아이보리</td>
+                                                        <td>Fair</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <button type="button" class="btn btn-dark"><i class="fas fa-search"></i> 검색</button>
-                                    <button type="button" class="btn btn-gray"><i class="fas fa-undo"></i> 초기화</button>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">여성</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>스킨톤 - 여성</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>한국어</th>
+                                                        <th>영어</th>
+                                                        <th>중국어</th>
+                                                        <th>일본어</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>하양</td>
+                                                        <td>Light</td>
+                                                        <td>珍珠白</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>아이보리</td>
+                                                        <td>Fair</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t2" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">무엇을 개선하고 싶습니까?</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>무엇을 개선하고 싶습니까?</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>한국어</th>
+                                                        <th>영어</th>
+                                                        <th>중국어</th>
+                                                        <th>일본어</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>주근깨</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="t3" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">현재 진행중인 피부 문제</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-center table-hover table-bordered table-valign-middle">
+                                                <caption>현재 진행중인 피부 문제</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>번호</th>
+                                                        <th>한국어</th>
+                                                        <th>영어</th>
+                                                        <th>중국어</th>
+                                                        <th>일본어</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>여드름</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="table-top">
-                            <div class="row justify-content-between align-items-end">
-                                <div class="col-auto">
-                                    총 <span class="text-danger">478</span>건 (전체 1,000건 /검색결과 4건)
-                                </div>
-                                <div class="col-auto">
-                                    <select name="" id="" class="form-control d-inline-block w-auto">
-                                        <option value="">사용여부 전체</option>
-                                        <option value="">사용</option>
-                                        <option value="">중지</option>
-                                    </select>
-                                    <select name="" id="" class="form-control d-inline-block w-auto">
-                                        <option value="">10개</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-center table-hover table-bordered table-valign-middle">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="allchk" data-check="all">
-                                                <label for="allchk" class="custom-control-label"></label>
-                                            </span>
-                                        </th>
-                                        <th>번호</th>
-                                        <th>구분</th>
-                                        <th>항목명</th>
-                                        <th>사용여부</th>
-                                        <th>변경자</th>
-                                        <th>최종변경일시</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td>스킨톤</td>
-                                        <td><input type="text" class="form-control"></td>
-                                        <td>
-                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch1">
-                                                <label class="custom-control-label" for="switch1">중지</label>
-                                            </div>
-                                        </td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td>스킨톤</td>
-                                        <td><input type="text" class="form-control"></td>
-                                        <td>
-                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch2">
-                                                <label class="custom-control-label" for="switch2">중지</label>
-                                            </div>
-                                        </td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td>무엇을 개선하고 싶습니까?</td>
-                                        <td><input type="text" class="form-control"></td>
-                                        <td>
-                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch3">
-                                                <label class="custom-control-label" for="switch3">중지</label>
-                                            </div>
-                                        </td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td>현재 진행중인 피부문제</td>
-                                        <td><input type="text" class="form-control"></td>
-                                        <td>
-                                            <div class="custom-control custom-switch custom-control-inline custom-control-right">
-                                                <input type="checkbox" class="custom-control-input switch_chk" id="switch4">
-                                                <label class="custom-control-label" for="switch4">중지</label>
-                                            </div>
-                                        </td>
-                                        <td>홍길동</td>
-                                        <td>2020-01-01 15:00:00</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-bottom">
-                            <div class="row justify-content-between">
-                                <div class="col-auto form-group">
-                                    <label for="">선택항목</label>
-                                    <select name="" id="" class="form-control d-inline-block w-auto ml-1">
-                                        <option value="">사용</option>
-                                        <option value="">중지</option>
-                                    </select>
-                                    <button type="button" class="btn btn-dark d-inline-block" data-toggle="modal" data-target="#modalOtp">일괄변경</button>
-                                </div>
-                                <div class="col-auto form-group">
-                                    <button type="button" class="btn btn-info">엑셀다운로드</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination-wrap">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
-                            </ul>
-                        </div>
+
                         <!-- content 끝 -->
 
                     </div>
@@ -264,32 +227,6 @@
     </div>
     <!-- ./wrapper -->
 
-    <div class="modal fade" id="modalOtp">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">OTP 인증</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="text-center">OTP 인증번호를 입력하세요.</div>
-                    <div class="m-1">
-                        <input type="text" class="form-control" placeholder="6자리 숫자를 입력하세요.">
-                    </div>
-                    <div class="text-danger">
-                        <i class="fas fa-info-circle"></i>
-                        <span>인증번호가 일치하지 않습니다. 다시 입력하세요.</span>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="reset" class="btn btn-gray" data-dismiss="modal">취소</button>
-                    <button type="button" class="btn btn-primary">확인</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- AdminLTE App -->
     <script src="../../resources/js/adminlte.js"></script>

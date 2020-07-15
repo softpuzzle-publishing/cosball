@@ -67,7 +67,7 @@
     .search-close{margin-left: 40px;}
 }
 
-#gnb{
+.gnb{
     background-color: rgba(255, 255, 255, 0.7);position: absolute;left: 0;bottom: 0;width: 100%;height: 60px;
     .bar{position: absolute;height: 5px;background: $primary;bottom: 0;transition-duration: .1s;}
     .menu-close{display: none;}
@@ -132,7 +132,7 @@ html.is-compacted{
             h1{width: 163px;height: 23px;}
         }
     }
-    #gnb{
+    .gnb{
         background: rgba(255, 255, 255, 1);height: 70px;
     }
     .gnb-menu {
@@ -145,7 +145,7 @@ html.open-search{
     .search-wrapper{display: block;}
 }
 html.open-submenu{
-    #gnb{
+    .gnb{
         background: rgba(255, 255, 255, 1);
         .bar{transition-duration: .25s;}
     }
@@ -203,7 +203,7 @@ html.open-submenu{
         .search-button{margin-left: 15px;}
         .search-close{margin-left: 13px;}
     }
-    #gnb{
+    .gnb{
         width: 300px;height: 100% !important;position: fixed;top:0;left: -100%;bottom: auto;z-index: 100;background: rgba(255,255,255,1);padding-bottom: 56px;padding-top: 112px;transform: none !important;
         > .container{padding-left: 0;padding-right: 0;height: 100%;overflow: auto;}
         .bar{display: none;}
@@ -277,7 +277,7 @@ html.open-submenu{
     }
     html.open-side{
         overflow: hidden;width: 100%;height: 100vh;
-        #gnb{
+        .gnb{
             left: 0;
             .menu-close{display: block;}
         }
@@ -297,3 +297,24 @@ html.open-submenu{
     }
 }
 
+/* gnb-mypage */
+#gnb-mypage { display:none; }
+
+@media (max-width: 991.98px) {
+    .gnb-menu .dep2 > ul > li { max-width:100%; }
+    .gnb-menu .dep1.no-sub > a::before { display:none; }
+
+    #gnb-mypage { display:block; left:-100%; z-index:101; padding-top:163px; }
+    #gnb-mypage.active { left:0; }
+
+    .gnb-mypage-util { background:#f7f7f7; border-bottom:1px solid #f4f4f4; }
+    .gnb-mypage-util .my-close { height:56px; padding:0 18px; }
+    .gnb-mypage-util .my-close a { justify-content:flex-start !important; }
+    .gnb-mypage-util .icon-back { width:17px; height:14px; background:url(../../resources/images/btn-back.svg) no-repeat;; }
+
+    .my-ballcode { background:#f7f7f7; height:51px; padding:0 18px; border-top:1px solid #fff; border-bottom:1px solid #f4f4f4; font-size:12px; font-weight:100; color:#333; display:flex; justify-content:space-between; align-items:center;
+    }
+    .my-ballcode .code span { font-size:16px; font-weight:500; line-height:1.5; color:#111; margin-right:3px; }
+    .my-ballcode .code strong { color:#985fff; font-weight:500; }
+    .my-ballcode .btn-user-size { min-width:auto; padding:3px 6px 3px 5px; position:relative; top:-2px; }
+}

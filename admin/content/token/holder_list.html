@@ -53,10 +53,8 @@
                                 <h1 class="m-0" id="page-title"></h1> <!-- title -->
                             </div>
                             <div class="col-auto">
-                                <button type="button" class="btn btn-secondary">전체교환금지해제</button>
-                                <button type="button" class="btn btn-secondary">전체보내기금지해제</button>
-                                <button type="button" class="btn btn-secondary">전체교환금지</button>
-                                <button type="button" class="btn btn-secondary">전체보내기금지</button>
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOtp">전체보내기금지해제</button>
+                                <button type="button" class="btn btn-gray">전체보내기금지</button>
                             </div>
                         </div>
                     </div>
@@ -120,15 +118,23 @@
                                     <div class="col-md">
                                         <div class="form-group">
                                             <label>상태</label>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">전체</option>
-                                                <option value="">정상</option>
-                                                <option value="">패널티</option>
-                                                <option value="">보내기 금지</option>
-                                                <option value="">교환 금지</option>
-                                                <option value="">보내기 화이트리스트</option>
-                                                <option value="">교환 화이트리스트</option>
-                                            </select>
+                                            <div class="form-row align-items-center">
+                                                <div class="form-group col-md">
+                                                    <select name="" id="" class="form-control">
+                                                        <option value="">전체</option>
+                                                        <option value="">정상</option>
+                                                        <option value="">패널티</option>
+                                                        <option value="">탈퇴신청</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md">
+                                                    <select name="" id="" class="form-control col-md">
+                                                        <option value="">전체</option>
+                                                        <option value="">보내기 금지</option>
+                                                        <option value="">보내기 허용</option>>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md">
@@ -180,75 +186,38 @@
                                         <th rowspan="2">번호</th>
                                         <th rowspan="2">아이디(이메일)</th>
                                         <th rowspan="2">Account ID</th>
-                                        <th rowspan="2">지갑주소</th>
                                         <th colspan="2">인증설정여부</th>
                                         <th colspan="2">보유 토큰</th>
-                                        <th rowspan="2">상태</th>
+                                        <th colspan="2">상태</th>
+                                        <th rowspan="2">가입일</th>
                                     </tr>
                                     <tr>
                                         <th>OTP</th>
                                         <th>PIN</th>
                                         <th>COSBALL</th>
-                                        <th>스테이블</th>
+                                        <th>대기수량</th>
+                                        <th>회원상태</th>
+                                        <th>패널티상태</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>
                                             <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
+                                                <input class="custom-control-input" type="checkbox" id="chk2">
+                                                <label for="chk2" class="custom-control-label"></label>
                                             </span>
                                         </td>
-                                        <td>4</td>
+                                        <td>2</td>
                                         <td><a href="holder_view.html">aaa@aaa.com</a></td>
                                         <td>a_1234567</td>
-                                        <td><span class="text-danger">외부지갑 미생성</span></td>
                                         <td>Y</td>
-                                        <td>Y</td>
-                                        <td>10,000 COSBALL</td>
-                                        <td>
-                                            10,000 COSKRW <br>10,000 COSUSD <br>0 COSCNY <br>0 COSJPY
-                                        </td>
+                                        <td>N</td>
+                                        <td>10,000</td>
+                                        <td><span class="text-danger">100.00</span></td>
                                         <td>정상</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td><a href="holder_view.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>0xAb5801a7D398351b8bE11C439e05C55</td>
-                                        <td>Y</td>
-                                        <td>Y</td>
-                                        <td>10,000 COSBALL</td>
-                                        <td>
-                                            10,000 COSKRW <br>10,000 COSUSD <br>0 COSCNY <br>0 COSJPY
-                                        </td>
-                                        <td>패널티</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td><a href="holder_view.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>0xAb5801a7D398351b8bE11C439e05C55</td>
-                                        <td>Y</td>
-                                        <td>Y</td>
-                                        <td>10,000 COSBALL</td>
-                                        <td>
-                                            10,000 COSKRW <br>10,000 COSUSD <br>0 COSCNY <br>0 COSJPY
-                                        </td>
                                         <td>보내기금지</td>
+                                        <td>2020.01.01 10:00:00</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -257,36 +226,16 @@
                                                 <label for="chk1" class="custom-control-label"></label>
                                             </span>
                                         </td>
-                                        <td>4</td>
+                                        <td>1</td>
                                         <td><a href="holder_view.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>0xAb5801a7D398351b8bE11C439e05C55</td>
+                                        <td>b_1234567</td>
                                         <td>Y</td>
                                         <td>Y</td>
-                                        <td>10,000 COSBALL</td>
-                                        <td>
-                                            10,000 COSKRW <br>10,000 COSUSD <br>0 COSCNY <br>0 COSJPY
-                                        </td>
-                                        <td>교환금지</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="custom-checkbox custom-control without-label">
-                                                <input class="custom-control-input" type="checkbox" id="chk1">
-                                                <label for="chk1" class="custom-control-label"></label>
-                                            </span>
-                                        </td>
-                                        <td>4</td>
-                                        <td><a href="holder_view.html">aaa@aaa.com</a></td>
-                                        <td>a_1234567</td>
-                                        <td>0xAb5801a7D398351b8bE11C439e05C55</td>
-                                        <td>Y</td>
-                                        <td>Y</td>
-                                        <td>10,000 COSBALL</td>
-                                        <td>
-                                            10,000 COSKRW <br>10,000 COSUSD <br>0 COSCNY <br>0 COSJPY
-                                        </td>
-                                        <td>정상</td>
+                                        <td>10,000</td>
+                                        <td><span class="text-danger">100.00</span></td>
+                                        <td>탈퇴신청</td>
+                                        <td>-</td>
+                                        <td>2020.01.01 10:00:00</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -297,9 +246,7 @@
                                     <label for="">선택항목</label>
                                     <select name="" id="" class="form-control d-inline-block w-auto ml-1">
                                         <option value="">선택 보내기 금지</option>
-                                        <option value="">선택 교환 금지</option>
-                                        <option value="">선택 패널티 설정</option>
-                                        <option value="">선택 패널티 해제</option>
+                                        <option value="">선택 보내기 허용</option>
                                     </select>
                                     <button type="button" class="btn btn-dark d-inline-block" data-toggle="modal" data-target="#modalOtp">일괄변경</button>
                                 </div>
