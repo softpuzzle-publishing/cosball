@@ -1,0 +1,14 @@
+.table tr td{
+  color: #333333;
+}
+.table tr th{
+  width: 200px;
+  height: 48px;
+  background-color: #f7f7f7;
+}
+.transaction_id{
+  background-color: #f7f7f7;
+}
+.table tr .id-data{
+  color: #666666;
+}

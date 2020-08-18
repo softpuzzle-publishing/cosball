@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title>COSBALL</title>
+  <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+  <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../resources/css/style.css">
+  <link rel="stylesheet" href="../../resources/css/delegate.css">
+  <!-- jquery -->
+  <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+  <!-- jquery ui -->
+  <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- bootstrap -->
+  <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ui 관련 -->
+  <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header-block">
+      <!-- header include -->
+      <div id="header">
+        <div class="header-top">
+          <div class="container">
+            <h1 class="logo"><a href=""><span class="sr-only">COSBALL</span></a></h1>
+            <div class="search">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Find a transcation, delegate or block" id="header-search">
+                <button type="submit" class="btn-submit"><i class="icon-search"></i><span class="sr-only">SEARCH</span></button>
+              </div>
+              <div class="search-result">
+                <div class="box">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 검색결과 없음 -->
+                    <li>
+                      <strong class="text-primary">No matching records found!</strong>
+                      <div class="row">
+                        <div class="col text-gray">If you are searching for an address, it might be not initialized yet.</div>
+                      </div>
+                    </li>
+                    <!-- //검색결과 없음 -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="gnb">
+              <ul>
+                <li><a href=""><span>Transactions</span></a></li>
+                <li><a href=""><span>Blocks</span></a></li>
+                <li><a href=""><span>Delegates</span></a></li>
+                <li><a href=""><span>Network</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto"><span>Height : </span>12,867,322</div>
+              <div class="col-auto"><span>Supply : </span>12,867,322</div>
+              <div class="col-auto"><span>COSKRW / BTC : </span>0.0012345</div>
+              <div class="col-auto"><span>COSKRW / USD : </span>1.12345</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-block">
+      <div class="container">
+        <div class="title-area row justify-content-between align-items-end">
+          <div class="col-auto d-flex align-items-center justify-content-center">
+            <h2 class="title">Delegate Monmitor</h2>
+            <div class="title-box d-flex align-items-center justify-content-center">
+              <p>101 active delegate</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Delegate Monmitor</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div id="content">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">DEDGATES</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text">1234</p>
+                <p class="active-delegates">
+                  101 active delegates<br />
+                  1757 delegates on stand by
+                </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">PEERS</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text">~34,172,158</p>
+                <p class="active-delegates">257 connected peers </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">LAST BLOCK</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text text-success"><a href="">abc123</a></p>
+                <p class="active-delegates">
+                  <a href=""><span class="text-success">7800717663059898078</span>
+                  </a><br />
+                  Forged by
+                </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">LATEST BLOCKS</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text text-success"><a href="">abc123</a></p>
+                <a href="" class="text-success">
+                  <p class="active-delegates≈">
+                    kushed.delegate • dakini • rooney • mrv • khitan • bioly • yuandian • redsn0w • phinx
+                  </p>
+                </a>
+              </div>
+
+            </div>
+            <div class="row align-items-center justify-content-start">
+              <div class="col-auto block-box block-box-sub">
+                <h3 class="block-box-text">BEST PRODUCTIVITY</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text">100 %</p>
+                <p class="active-delegates">
+                  By <a href="" class="text-success">abc</a>
+                </p>
+              </div>
+              <div class="col-auto block-box block-box-sub">
+                <h3 class="block-box-text">WORST PRODUCTIVITY</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="delegate-text">98.99 %</p>
+                <p class="active-delegates">
+                  By <a href="" class="text-success">def</a>
+                </p>
+              </div>
+              <div class="col-auto block-box block-box-sub">
+                <h3 class="block-box-text">BEST FORGER</h3>
+                <div class="block-box-text-boder"></div>
+                <a href="" class=" text-success">
+                  <p class="delegate-text">abc123</p>
+                </a>
+                <p class="active-delegates">
+                  411,189.89310014 COSKRW forged<br />
+                  since registration
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="tab m-t-40">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">Active Delegates <span class="badge badge-pill badge-primary">9999</span></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">Standly Delegates <span class="badge badge-pill badge-primary">9999</span></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false">Latest updates</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="tab-content">
+            <div class="tab-pane fade active show" id="t1" role="tabpanel">
+              <div class="container">
+                <div class="row align-items-center justify-content-between">
+                  <div class="col-auto delegate-tap-box text-center">
+                    <h3 class="pupple">999</h3>
+                    <button class="back-pupple">Forged block recently</button>
+                  </div>
+                  <div class="col-auto delegate-tap-box text-center">
+                    <h3 class="blue">999</h3>
+                    <button class="back-blue">Missed block recently</button>
+                  </div>
+                  <div class="col-auto delegate-tap-box text-center">
+                    <h3 class="mint">999</h3>
+                    <button class="back-mint">Not forging</button>
+                  </div>
+                  <div class="col-auto delegate-tap-box text-center">
+                    <h3 class="green">999</h3>
+                    <button class="back-green">In queue for forging</button>
+                  </div>
+                </div>
+
+                <div class="update-text d-flex align-items-center justify-content-center">
+                  <img src="../../resources/images/icon-check.png" alt="체크 아이콘">
+                  <p>101 / 101 Update-to-date</p>
+                </div>
+
+              </div>
+              <table class="table table-top">
+                <thead>
+                  <tr>
+                    <th class="text-center">Rank <img src="../../resources/images/btn-align-up.png" alt="정렬표시 방향이미지"></th>
+                    <th class="text-left">Id</th>
+                    <th class="text-left">Address</th>
+                    <th class="text-right">Forged</th>
+                    <th class="text-left">Fording time</th>
+                    <th class="text-center">Statis</th>
+                    <th class="text-center">Productivity</th>
+                    <th class="text-center">Approval</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-left"><a href="" class="text-success"> asdgg123</a></td>
+                    <td class="text-left">123456789003456789a</td>
+                    <td class="text-right">~999,000 COSKRW</td>
+                    <td class="text-left">99 min 99 sec</td>
+                    <td class="text-center">
+                      <a href="" class="tool" data-toggle="tooltip" data-html="true" data-placement="right" title="<p>Forging</p> <span>Last block forged @12345678999 minute ago</span>">
+                        <img src="../../resources/images/icon-status-pupple.png" alt="보라색버튼">
+                      </a>
+                    </td>
+                    <td class="text-right">99.99%</td>
+                    <td class="text-right">99.99%</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-left"><a href="" class="text-success"> asdgg123</a></td>
+                    <td class="text-left">123456789003456789a</td>
+                    <td class="text-right">~999,000 COSKRW</td>
+                    <td class="text-left">99 min 99 sec</td>
+                    <td class="text-center">
+                      <a href="" class="tool" data-toggle="tooltip" data-html="true" data-placement="right" title="<p>Awating Slot</p> <span>Last block forged @12345678999 minute ago</span>">
+                        <img src="../../resources/images/icon-status-puppleline.png" alt="보라색선 버튼">
+                      </a>
+
+                    </td>
+                    <td class="text-right">99.99%</td>
+                    <td class="text-right">99.99%</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+            <div class="tab-pane fade" id="t2" role="tabpanel">
+              <table class="table table-top">
+                <thead>
+                  <tr>
+                    <th class="text-center">Rank <img src="../../resources/images/btn-align-up.png" alt="정렬표시 방향이미지"></th>
+                    <th class="text-left">Id</th>
+                    <th class="text-left">Address</th>
+                    <th class="text-right">Productivity</th>
+                    <th class="text-right">Approval</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-left"><a href="" class="text-success"> asdgg123</a></td>
+                    <td class="text-left">123456789003456789a</td>
+                    <td class="text-right">99.99%</td>
+                    <td class="text-right">99.99%</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-left"><a href="" class="text-success"> asdgg123</a></td>
+                    <td class="text-left">123456789003456789a</td>
+                    <td class="text-right">99.99%</td>
+                    <td class="text-right">99.99%</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="t3" role="tabpanel">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-6">
+                  <p class="list-title remove-margin">LATEST VOTES</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Volter</th>
+                        <th class="text-left">Transaction</th>
+                        <th class="text-left">Time</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left"><a href="" class="text-success">1234567901234567890</a></td>
+                        <td class="text-left"><a href="" class="text-success">123456...123465</a></td>
+                        <td class="text-left">a few seconds ago</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left"><a href="" class="text-success">1234567901234567890</a></td>
+                        <td class="text-left"><a href="" class="text-success">123456...123465</a></td>
+                        <td class="text-left">2 hours ago</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                  <p class="list-title remove-margin">NEWWEST DELEGATES</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Volter</th>
+                        <th class="text-left">Transaction</th>
+                        <th class="text-left">Time</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left"><a href="" class="text-success">1234567901234567890</a></td>
+                        <td class="text-left"><a href="" class="text-success">123456...123465</a></td>
+                        <td class="text-left">a few seconds ago</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left"><a href="" class="text-success">1234567901234567890</a></td>
+                        <td class="text-left"><a href="" class="text-success">123456...123465</a></td>
+                        <td class="text-left">2 hours ago</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-block">
+      <div id="footer">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <div class="logo"><span class="sr-only">COSBALL</span></div>
+            </div>
+            <div class="col-auto">
+              <div class="copyright">Copyright 2020 COSBALL Corp. ALL Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#search-query').on('focus', function() {
+        $('#query-box1').addClass('show');
+      });
+      $('#btn-detail').on('click', function(e) {
+        e.preventDefault();
+        $('#query-box2').addClass('show');
+      });
+      $('.query-box .close').on('click', function() {
+        $(this).closest('.query-box').removeClass('show');
+      });
+
+      $('#header-search').on('click', function() {
+        $(this).closest('.search').find('.search-result').addClass('show');
+      });
+
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+
+
+
+      $('.tool').on('inserted.bs.tooltip', function () {
+        var tooltip = $(".tool").index(this);
+
+        if(tooltip == 0){
+          $('.tooltip-inner').removeClass('active');
+
+        }
+        if(tooltip == 1){
+          $('.tooltip-inner').addClass('active');
+
+        }
+
+      })
+
+
+
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3450px" height="271px" viewBox="0 0 3450 271" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg-img</title>
+    <defs>
+        <linearGradient x1="21.647%" y1="49.8191256%" x2="79.721%" y2="50.1808744%" id="linearGradient-1">
+            <stop stop-color="#7F60DB" offset="0%"></stop>
+            <stop stop-color="#D7477F" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 0.89 2110 0.89 2110 270.89 0 270.89"></polygon>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#DE16B7" offset="0%"></stop>
+            <stop stop-color="#075EB3" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-5" points="0 0.89 2110 0.89 2110 270.89 0 270.89"></polygon>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-7">
+            <stop stop-color="#5693CC" offset="0%"></stop>
+            <stop stop-color="#066FA0" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-8" points="0 0.89 2110 0.89 2110 270.89 0 270.89"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bg-img">
+            <g id="dyx7ubdw4a-link" fill="url(#linearGradient-1)" fill-rule="nonzero">
+                <polygon id="dyx7ubdw4a" points="0 0.89 3450 0.89 3450 270.89 0 270.89"></polygon>
+            </g>
+            <g id="Clipped" transform="translate(680.000000, 0.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <g id="dyx7ubdw4a"></g>
+                <path d="M591.966989,-57.4926265 L824.412697,-48.2204474 C853.026111,-47.0790682 875.976091,-24.1731755 877.172487,4.43799108 L877.411771,10.160334 C878.611201,38.8440449 856.330789,63.0691168 827.647078,64.2685466 C826.233173,64.32767 824.817444,64.3290311 823.403428,64.2726265 L590.95772,55.0004474 C562.344306,53.8590682 539.394326,30.9531755 538.19793,2.34200892 L537.958646,-3.38033402 C536.759216,-32.0640449 559.039628,-56.2891168 587.723339,-57.4885466 C589.137244,-57.54767 590.552973,-57.5490311 591.966989,-57.4926265 Z" id="Rectangle" fill="url(#linearGradient-4)" fill-rule="nonzero" opacity="0.4" mask="url(#mask-3)" transform="translate(707.685208, 3.390000) rotate(-30.000000) translate(-707.685208, -3.390000) "></path>
+            </g>
+            <g id="Clipped" transform="translate(680.000000, 0.000000)">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="dyx7ubdw4a"></g>
+                <path d="M343.807629,129.191966 L898.57894,151.321603 C924.591135,152.35922 945.454753,173.182759 946.542386,199.19291 L946.759917,204.39504 C947.850307,230.471141 927.595387,252.493934 901.519287,253.584324 C900.233919,253.638073 898.946892,253.63931 897.661423,253.588034 L342.890112,231.458397 C316.877917,230.42078 296.014299,209.597241 294.926666,183.58709 L294.709135,178.38496 C293.618745,152.308859 313.873665,130.286066 339.949765,129.195676 C341.235133,129.141927 342.52216,129.14069 343.807629,129.191966 Z" id="Rectangle" fill="url(#linearGradient-7)" fill-rule="nonzero" opacity="0.4" mask="url(#mask-6)" transform="translate(620.734526, 191.390000) rotate(-30.000000) translate(-620.734526, -191.390000) "></path>
+            </g>
+            <g id="Clipped" transform="translate(680.000000, 0.000000)">
+                <mask id="mask-9" fill="white">
+                    <use xlink:href="#path-8"></use>
+                </mask>
+                <g id="dyx7ubdw4a"></g>
+                <polygon id="Path" fill="#D8D8D8" fill-rule="nonzero" opacity="0.261" mask="url(#mask-9)" transform="translate(1251.713542, 138.938000) rotate(-30.000000) translate(-1251.713542, -138.938000) " points="806.071626 48.0148311 1691.22788 83.3234085 1697.35546 229.861169 812.199207 194.552592"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

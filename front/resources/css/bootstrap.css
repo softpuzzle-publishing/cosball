@@ -7328,10 +7328,14 @@ a.close.disabled {
 }
 
 .modal-dialog {
-  position: relative;
   width: auto;
   margin: 0.5rem;
   pointer-events: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .modal.fade .modal-dialog {
@@ -7348,11 +7352,6 @@ a.close.disabled {
     -webkit-transition: none;
     transition: none;
   }
-}
-
-.modal.show .modal-dialog {
-  -webkit-transform: none;
-          transform: none;
 }
 
 .modal.modal-static .modal-dialog {
@@ -7494,10 +7493,12 @@ a.close.disabled {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 1.875rem 1.875rem;
+  max-height: calc(85vh - 200px);
+  overflow-x: hidden;
 }
 
 .modal-footer {
-  padding: 50px 0;
+  padding: 50px 1.875rem 1.875rem;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
@@ -7518,7 +7519,6 @@ a.close.disabled {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto;
   }
   .modal-dialog-scrollable {
     max-height: calc(100% - 3.5rem);
@@ -7594,6 +7594,9 @@ a.close.disabled {
   }
   .modal-title {
     font-size: 1.12rem;
+  }
+  .modal-body {
+    max-height: calc(85vh - 130px);
   }
 }
 

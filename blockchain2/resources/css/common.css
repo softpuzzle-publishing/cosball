@@ -1,0 +1,75 @@
+/* ///box style */
+.block-box {
+  width: 261px;
+  height: 200px;
+  border-radius: 6px;
+  border: solid 3px #e5e5e5;
+  background-color: #ffffff;
+  padding: 22px 20px;
+  margin: 0 12px 6px 0;
+}
+
+.block-box-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+}
+.block-box-text span{
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666666;
+}
+.block-box-text-boder {
+  width: 221px;
+  height: 1px;
+  background-color: #e9e9e9;
+  margin: 6px 0 12px 0;
+}
+
+.title-box {
+  width: auto;
+  height: 27px;
+  border-radius: 13.5px;
+  background-color: #000000;
+  margin-left:8px;
+  padding : 0 14px;
+}
+.title-box p{
+    font-size: 16px;
+    color: #ffffff;
+}
+/* //table style */
+.list-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin: 40px 0 12px 0;
+}
+
+.list-title.remove-margin {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+.remove-margin{
+  margin: 0 0 12px 0 !important;
+}
+.table-bottom {
+  margin-bottom: 40px;
+}
+
+.table-title {
+  margin-bottom: 12px;
+}
+
+.active-delegates {
+  font-size: 12px;
+  color: #666666;
+  /* line-height: 1.5; */
+}
+
+.latest-transactions {
+  font-size: 19px;
+  font-weight: bold;
+}

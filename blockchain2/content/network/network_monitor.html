@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title>COSBALL</title>
+  <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+  <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../resources/css/style.css">
+  <link rel="stylesheet" href="../../resources/css/common.css">
+  <link rel="stylesheet" href="../../resources/css/network.css">
+  <!-- jquery -->
+  <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+  <!-- jquery ui -->
+  <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- bootstrap -->
+  <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ui 관련 -->
+  <script src="../../resources/js/ui.js"></script>
+  <!-- //google map api -->
+
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header-block">
+      <!-- header include -->
+      <div id="header">
+        <div class="header-top">
+          <div class="container">
+            <h1 class="logo"><a href=""><span class="sr-only">COSBALL</span></a></h1>
+            <div class="search">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Find a transcation, delegate or block" id="header-search">
+                <button type="submit" class="btn-submit"><i class="icon-search"></i><span class="sr-only">SEARCH</span></button>
+              </div>
+              <div class="search-result">
+                <div class="box">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 검색결과 없음 -->
+                    <li>
+                      <strong class="text-primary">No matching records found!</strong>
+                      <div class="row">
+                        <div class="col text-gray">If you are searching for an address, it might be not initialized yet.</div>
+                      </div>
+                    </li>
+                    <!-- //검색결과 없음 -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="gnb">
+              <ul>
+                <li><a href=""><span>Transactions</span></a></li>
+                <li><a href=""><span>Blocks</span></a></li>
+                <li><a href=""><span>Delegates</span></a></li>
+                <li><a href=""><span>Network</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto"><span>Height : </span>12,867,322</div>
+              <div class="col-auto"><span>Supply : </span>12,867,322</div>
+              <div class="col-auto"><span>COSKRW / BTC : </span>0.0012345</div>
+              <div class="col-auto"><span>COSKRW / USD : </span>1.12345</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-block">
+      <div class="container">
+        <div class="title-area row justify-content-between align-items-end">
+          <div class="col-auto d-flex align-items-center justify-content-center">
+            <h2 class="title">Network Monitor</h2>
+            <div class="title-box d-flex align-items-center justify-content-center">
+              <p>252 connected peers, last block forged a few seconds ago</p>
+            </div>
+          </div>
+          <div class="col-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Network Monitor</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div id="content">
+          <div class="container d-flex align-items-center">
+            <div class="row align-items-center">
+
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">CONNECTED PEERS</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="network-text">999/999</p>
+                <p class="active-delegates">0 disconnected peers</p>
+              </div>
+              <div class="col-auto block-box remove-margin">
+                <h3 class="block-box-text">BEST BLOCK</h3>
+                <div class="block-box-text-boder"></div>
+                <a href="" class="text-success">
+                  <p class="network-text">012345678946513278465</p>
+                </a>
+                <p class="active-delegates">257 connected peers </p>
+              </div>
+
+
+            </div>
+            <div class="row">
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">LAST BLOCK</h3>
+                <div class="block-box-text-boder"></div>
+                <a href="" class="text-success"><span class="network-text">7800717663059898078</span>
+                </a>
+                <p class="active-delegates">0 COSKRW from 0 transactions<br />a few seconds ago</p>
+              </div>
+              <div class="col-auto block-box remove-margin">
+                <h3 class="block-box-text">VOLUME <span>COSKRW</span></h3>
+                <div class="block-box-text-boder"></div>
+                <p class="network-text">554,274.88442956</p>
+                <p class="active-delegates">
+                  transferred within the last 24 hours
+                  from 425 transactions in 276 / 8640 blocks
+                </p>
+              </div>
+            </div>
+
+            <div class="row align-items-center justify-content-start">
+              <div id="google-map"></div>
+            </div>
+          </div>
+
+          <div class="container network-wrap">
+            <div class="row w-100">
+              <div class="col-6 text-center">
+                <div class="wrap-title">
+                  <h3>PLATFORMS</h3>
+                  <p>0 Peers on other platforms.</p>
+                </div>
+                <div class="flatform-wrap d-flex align-items-center">
+                  <div class="col-6 platform-box">
+                    <img src="../../resources/images/icon-platform-1.png" alt="플랫폼에 아이콘">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                  <div class="col-6 platform-box">
+                    <img src="../../resources/images/icon-platform-2.png" alt="플랫폼에 아이콘">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 text-center">
+                <div class="wrap-title">
+                  <h3>VERSIONS</h3>
+                  <p>80 Peers on other versions.</p>
+                </div>
+                <div class="flatform-wrap d-flex align-items-center justify-content-between">
+                  <div class="col-4 platform-box">
+                    <p class="mint-color">2.1.6</p>
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                  <div class="col-4 platform-box">
+                    <p class="pupple-color">2.1.5</p>
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                  <div class="col-4 platform-box">
+                    <p class="pupple-color">2.1.4-re.0</p>
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row w-100">
+              <div class="wrap-title col-12 text-center mt-3">
+                <h3>BEST HEIGHTS</h3>
+                <p>8 • 3% Peers at other heights</p>
+              </div>
+              <div class="col-12 flatform-wrap d-flex align-items-center text-center justify-content-between">
+                <div class="col-3 platform-box">
+                  <p class="mint-color">2.1.6</p>
+                  <div class="height-text-box d-flex align-items-center">
+                    <p>999 <span>Peers</span></p>
+                    <img src="../../resources/images/img-bar.png" alt="텍스트 간격 바">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+
+                </div>
+                <div class="col-3 platform-box">
+                  <p class="pupple-color">2.1.5</p>
+                  <div class="height-text-box d-flex align-items-center">
+                    <p>999 <span>Peers</span></p>
+                    <img src="../../resources/images/img-bar.png" alt="텍스트 간격 바">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                </div>
+                <div class="col-3 platform-box">
+                  <p class="pupple-color">2.1.5</p>
+                  <div class="height-text-box d-flex align-items-center">
+                    <p>999 <span>Peers</span></p>
+                    <img src="../../resources/images/img-bar.png" alt="텍스트 간격 바">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                </div>
+                <div class="col-3 platform-box">
+                  <p class="pupple-color">2.1.5</p>
+                  <div class="height-text-box d-flex align-items-center">
+                    <p>999 <span>Peers</span></p>
+                    <img src="../../resources/images/img-bar.png" alt="텍스트 간격 바">
+                    <p>999 <span>Peers</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab m-t-40">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">Connected Peers <span class="badge badge-pill badge-primary">9999</span></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">Disconnected Peers <span class="badge badge-pill badge-primary">9999</span></a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false">Statistics</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="tab-content">
+            <div class="tab-pane fade active show" id="t1" role="tabpanel">
+              <div class="container">
+                <div class="row align-items-center justify-content-between">
+
+
+                </div>
+
+
+
+              </div>
+              <table class="table table-top">
+                <thead>
+                  <tr>
+                    <th class="text-center">IP Address <img src="../../resources/images/btn-align-up.png" alt="정렬표시 방향 이미지"> </th>
+                    <th class="text-center">HTTP</th>
+                    <th class="text-center">WS</th>
+                    <th class="text-left">Hostname</th>
+                    <th class="text-center">Country</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Version</th>
+                    <th class="text-center">Platform</th>
+                    <th class="text-center">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">123.456.789.012</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">8001</td>
+                    <td class="text-left">static.123.456.789.012....</td>
+                    <td class="text-center d-flex justify-content-center">
+                      <div class="country-bg"></div>
+                    </td>
+                    <td class="text-center">
+                      <img src="../../resources/images/icon-status-fin.png" alt="체크 이미지">
+                    </td>
+                    <td class="text-center">2.1.1</td>
+                    <td class="text-center"><img src="../../resources/images/icon-status-platform.png" alt="플랫폼 이미지"> </td>
+                    <td class="text-center">12345678</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">123.456.789.012</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">8001</td>
+                    <td class="text-left">static.123.456.789.012....</td>
+                    <td class="text-center d-flex justify-content-center">
+                      <div class="country-bg"></div>
+                    </td>
+                    <td class="text-center">
+                      <img src="../../resources/images/icon-status-fin.png" alt="체크 이미지">
+                    </td>
+                    <td class="text-center">2.1.1</td>
+                    <td class="text-center"><img src="../../resources/images/icon-status-platform.png" alt="플랫폼 이미지"> </td>
+                    <td class="text-center">12345678</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+            <div class="tab-pane fade" id="t2" role="tabpanel">
+              <table class="table table-top">
+                <thead>
+                  <tr>
+                    <th class="text-center">IP Address <img src="../../resources/images/btn-align-up.png" alt="정렬표시 방향 이미지"> </th>
+                    <th class="text-center">HTTP</th>
+                    <th class="text-center">WS</th>
+                    <th class="text-left">Hostname</th>
+                    <th class="text-center">Country</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Version</th>
+                    <th class="text-center">Platform</th>
+                    <th class="text-center">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">123.456.789.012</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">8001</td>
+                    <td class="text-left">static.123.456.789.012....</td>
+                    <td class="text-center d-flex justify-content-center">
+                      <div class="country-bg"></div>
+                    </td>
+                    <td class="text-center">
+                      <img src="../../resources/images/icon-status-fin.png" alt="체크 이미지">
+                    </td>
+                    <td class="text-center">2.1.1</td>
+                    <td class="text-center"><img src="../../resources/images/icon-status-platform.png" alt="플랫폼 이미지"> </td>
+                    <td class="text-center">12345678</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">123.456.789.012</td>
+                    <td class="text-center">8000</td>
+                    <td class="text-center">8001</td>
+                    <td class="text-left">static.123.456.789.012....</td>
+                    <td class="text-center d-flex justify-content-center">
+                      <div class="country-bg"></div>
+                    </td>
+                    <td class="text-center">
+                      <img src="../../resources/images/icon-status-fin.png" alt="체크 이미지">
+                    </td>
+                    <td class="text-center">2.1.1</td>
+                    <td class="text-center"><img src="../../resources/images/icon-status-platform.png" alt="플랫폼 이미지"> </td>
+                    <td class="text-center">12345678</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="t3" role="tabpanel">
+              <div class="row justify-content-between">
+                <div class="col-6">
+                  <p class="list-title remove-margin">LATEST VOTES</p>
+                  <!-- //basic stats -->
+                  <table class="table table-bottom">
+                    <thead>
+                      <tr>
+                        <th class="text-left">Name</th>
+                        <th class="text-right">Value</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">
+                          Number of blocks with transactions within the last 8640 blocks of transactions within the last 8640 blocks
+                        </td>
+                        <td class="text-right">8000</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left">Total number of peers</td>
+                        <td class="text-right">8000</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Volume transferred within the last 17 minutes</td>
+                        <td class="text-right">536,723.84533602
+COSKRW</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- //CORE VER. DISTRIBUTION -->
+                  <table class="table table-bottom">
+                    <p class="list-title remove-margin">CORE VER. DISTRIBUTION</p>
+                    <thead>
+                      <tr>
+                        <th class="text-left">Version</th>
+                        <th class="text-right">Count</th>
+                        <th class="text-right">%</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">2.1.1</td>
+                        <td class="text-right">999</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left">2.1.1</td>
+                        <td class="text-right">999</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                  <!-- //PLATFORM DISTRIBUTION -->
+                  <table class="table table-bottom">
+                    <p class="list-title remove-margin">PLATFORM DISTRIBUTION</p>
+                    <thead>
+                      <tr>
+                        <th class="text-left">Platform</th>
+                        <th class="text-right">Count</th>
+                        <th class="text-right">%</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">Linux</td>
+                        <td class="text-right">999</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left">Linux</td>
+                        <td class="text-right">999</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-6">
+                  <p class="list-title remove-margin">OS DISTRIBUTION</p>
+                  <!-- //OS DISTRIBUTION -->
+                  <table class="table table-bottom">
+                    <thead>
+                      <tr>
+                        <th class="text-left">System</th>
+                        <th class="text-right">Count</th>
+                        <th class="text-right">%</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">Linux 4.19-ovh-xxxx-std-ipv6-64</td>
+                        <td class="text-right">99</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left">Linux 4.15</td>
+                        <td class="text-right">99</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Linux 4.15</td>
+                        <td class="text-right">99</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <!-- //HEIGHT DISTRIBUTION -->
+                  <table class="table table-bottom">
+                    <p class="list-title remove-margin">HEIGHT DISTRIBUTION</p>
+                    <thead>
+                      <tr>
+                        <th class="text-left">Height</th>
+                        <th class="text-right">Count</th>
+                        <th class="text-right">%</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">123456</td>
+                        <td class="text-right">99</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                      <tr>
+                        <td class="text-left">123456</td>
+                        <td class="text-right">99</td>
+                        <td class="text-right">99%</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-block">
+      <div id="footer">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <div class="logo"><span class="sr-only">COSBALL</span></div>
+            </div>
+            <div class="col-auto">
+              <div class="copyright">Copyright 2020 COSBALL Corp. ALL Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwlNqAEil52XRPHmSVb4Luk18qQG9GqcM&sensor=false&language=ko"></script>
+
+  <script>
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(37.2915450, 127.0430790); // 좌표값
+      var mapOptions = {
+        zoom: 14, // 지도 확대레벨 조정
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+      });
+    }
+    window.onload = initialize;
+  </script>
+
+
+  <script>
+    $(document).ready(function() {
+      $('#search-query').on('focus', function() {
+        $('#query-box1').addClass('show');
+      });
+      $('#btn-detail').on('click', function(e) {
+        e.preventDefault();
+        $('#query-box2').addClass('show');
+      });
+      $('.query-box .close').on('click', function() {
+        $(this).closest('.query-box').removeClass('show');
+      });
+
+      $('#header-search').on('click', function() {
+        $(this).closest('.search').find('.search-result').addClass('show');
+      });
+
+
+
+
+    });
+  </script>
+
+</body>
+
+</html>

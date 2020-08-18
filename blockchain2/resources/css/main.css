@@ -1,0 +1,28 @@
+.block-box {
+  width: 261px;
+  height: 200px;
+  border-radius: 6px;
+  border: solid 3px #e5e5e5;
+  background-color: #ffffff;
+  padding: 22px 20px;
+  margin: 0;
+}
+
+.more-transactions {
+  font-size: 14px;
+  text-align: right;
+  color: #666666;
+}
+.button{
+  height: 24px;
+  border-radius: 12px;
+  border:none;
+}
+.more-btn{
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #ffffff;
+  background-color:#454365;
+  margin-top: 12px;
+}

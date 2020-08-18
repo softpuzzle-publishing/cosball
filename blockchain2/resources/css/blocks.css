@@ -1,0 +1,51 @@
+/* ////전체 공용 */
+.list-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin: 40px 0 12px 0;
+}
+
+.title-box {
+  width: auto;
+  height: 27px;
+  border-radius: 13.5px;
+  background-color: #000000;
+  margin-left:8px;
+  padding : 0 14px;
+}
+.title-box p{
+    font-size: 16px;
+    color: #ffffff;
+}
+.title-box img {
+  margin: 0 6px;
+}
+
+
+
+/* ///block_id css */
+.not-found {
+  border-top: 1px solid #111;
+  padding: 32px 0;
+}
+
+.not-found p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.not-found p:nth-child(2) {
+  font-size: 13px;
+  color: #999999;
+}
+
+.table tr th{
+  /* width: 200px; */
+  font-size:12px;
+  color: #666;
+}
+.table-th{
+  width: 200px;
+}

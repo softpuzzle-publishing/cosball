@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>COSBALL</title>
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+            <div id="header">
+                <div class="header-top">
+                    <div class="container">
+                        <h1 class="logo"><a href=""><span class="sr-only">COSBALL</span></a></h1>
+                        <div class="search">
+                            <div class="search-input">
+                                <input type="text" class="form-control" placeholder="Find a transcation, delegate or block" id="header-search">
+                                <button type="submit" class="btn-submit"><i class="icon-search"></i><span class="sr-only">SEARCH</span></button>
+                            </div>
+                            <div class="search-result">
+                                <div class="box">
+                                    <ul>
+                                        <li>
+                                            <a href="#none">
+                                                <strong>Available params</strong>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto text-primary">abc123</div>
+                                                    <div class="col-auto text-gray">address</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <strong>Available params</strong>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto text-primary">abc123</div>
+                                                    <div class="col-auto text-gray">address</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">
+                                                <strong>Available params</strong>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto text-primary">abc123</div>
+                                                    <div class="col-auto text-gray">address</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- 검색결과 없음 -->
+                                        <li>
+                                            <strong class="text-primary">No matching records found!</strong>
+                                            <div class="row">
+                                                <div class="col text-gray">If you are searching for an address, it might be not initialized yet.</div>
+                                            </div>
+                                        </li>
+                                        <!-- //검색결과 없음 -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gnb">
+                            <ul>
+                                <li><a href=""><span>Transactions</span></a></li>
+                                <li><a href=""><span>Blocks</span></a></li>
+                                <li><a href=""><span>Delegates</span></a></li>
+                                <li><a href=""><span>Network</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-auto"><span>Height : </span>12,867,322</div>
+                            <div class="col-auto"><span>Supply : </span>12,867,322</div>
+                            <div class="col-auto"><span>COSKRW / BTC : </span>0.0012345</div>
+                            <div class="col-auto"><span>COSKRW / USD : </span>1.12345</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div class="container">
+                <div class="title-area row justify-content-between align-items-end">
+                    <div class="col-auto">
+                        <h2 class="title">Transactions</h2>
+                    </div>
+                    <div class="col-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item">Transactions</li>
+                                <li class="breadcrumb-item">12345678901234567890</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div id="content">
+                    <h3 class="user-id">12345678901234567890a</h3>
+                    <p class="user-account">Regular account</p>
+
+                    <div class="row">
+                        <div class="col-10">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-left">Owner</th>
+                                        <td class="text-right">12345678901234567890</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Address</th>
+                                        <td class="text-right"><a href="">12345678901234567890 <i class="icon-copy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Public Key</th>
+                                        <td class="text-right"><a href="">c7f7786a7da926011ad01234f9027396b0bbf5f9680faba4f2c42476341a22bb <i class="icon-copy"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Total balance</th>
+                                        <td class="text-right">123,456.12345678 COSKRW</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Transactions</th>
+                                        <td class="text-right">
+                                            <i class="icon-down"></i> 12345
+                                            <i class="icon-up ml-2"></i> 12345
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-2">
+                            <div class="qrcode">
+                                <img src="../../resources/images/boxed-bg.jpg" alt="QR CODE">
+                                <div class="mt-2">Sacn for Address</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab m-t-40">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-controls="t1" aria-selected="true">Tracsactions <span class="badge badge-pill badge-primary">9999</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-controls="t2" aria-selected="false">Details <span class="badge badge-pill badge-primary">9999</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" data-toggle="tab" href="#t3" role="tab" aria-controls="t3" aria-selected="false">Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="t1" role="tabpanel">
+                            <div class="search">
+                                <div class="search-input">
+                                    <input type="text" class="form-control" placeholder="Find transactions" id="search-query">
+                                    <button type="submit" class="btn-submit"><i class="icon-search"></i><span class="sr-only">SEARCH</span></button>
+                                    <a href="" class="question"><span>?</span></a>
+                                </div>
+                                <div class="query-box" id="query-box1">
+                                    <div class="box">
+                                        <ul>
+                                            <li>
+                                                <strong>Available params</strong>
+                                                <p>address, senderId, senderPublicKey, recipientId, recipientPublicKey, minAmount, maxAmount, type, height, blockId</p>
+                                            </li>
+                                            <li>
+                                                <strong>Transaction types</strong>
+                                                <p>0: Balance transfer, 1: Second signature creation, 2: Delegate registration, 3: Delegate vote, 4: Multi-signature creation, 5: DApp registration</p>
+                                            </li>
+                                            <li>
+                                                <strong>Examples</strong>
+                                                <p>address=12317412804123L <span class="text-dark">recipientPublicKey</span>=b550ede5...a26c78d8 <span class="text-dark">maxAmount</span>=1000.5 type=1recipientId=12317412804123L minAmount=1.25 height=2963014</p>
+                                            </li>
+                                        </ul>
+                                        <a href="#none" class="btn-detail" id="btn-detail">For detailed instruction click here</a>
+                                        <button type="button" class="close"><i class="icon-close"><span class="sr-only">close</span></i></button>
+                                    </div>
+                                </div>
+                                <div class="query-box" id="query-box2">
+                                    <div class="box">
+                                        <strong>Detailed instruction</strong>
+                                        <p>The table below describes all parameters that can be use in order to filter the transactions.</p>
+                                        <table class="table mt-3">
+                                            <thead>
+                                                <tr>
+                                                    <th>Param</th>
+                                                    <th>Name</th>
+                                                    <th>Example</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>abcde</td>
+                                                    <td>abcde</td>
+                                                    <td>12345678901234567890a</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>abcde</td>
+                                                    <td>abcde</td>
+                                                    <td>12345678901234567890a</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>abcde</td>
+                                                    <td>abcde</td>
+                                                    <td>12345678901234567890a</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button type="button" class="close"><i class="icon-close"><span class="sr-only">close</span></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-top">
+                                <div class="text-right">
+                                    <a href="#none" class="active">Show all</a>
+                                    <a href="#none">Transfers</a>
+                                    <a href="#none">Sent</a>
+                                    <a href="#none">Received</a>
+                                    <a href="#none">Voting</a>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Transaction ID</th>
+                                        <th class="text-center"><a href="#none">Date <i class="icon-arr-down"></i></a></th>
+                                        <th class="text-left">Sender</th>
+                                        <th class="text-left">Recipient</th>
+                                        <th class="text-right">Amount</th>
+                                        <th class="text-right">Fee</th>
+                                        <th class="text-right">Confirm.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-left"><a href="" class="text-success"><i class="icon-copy"></i> 12345678901234567890</a></td>
+                                        <td class="text-center">2020/07/22 13:15:34</td>
+                                        <td class="text-left">Binance</td>
+                                        <td class="text-left"><a href="" class="text-success">12345678901234567890</a></td>
+                                        <td class="text-right">1,999.0 COSKRW</td>
+                                        <td class="text-right">0.1 COSKRW</td>
+                                        <td class="text-right">
+                                            <span class="text-info">0.1 COSKRW</span>
+                                            <i class="icon-clock"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left"><a href="" class="text-success"><i class="icon-copy"></i> 12345678901234567890</a></td>
+                                        <td class="text-center">2020/07/22 13:15:34</td>
+                                        <td class="text-left">Binance</td>
+                                        <td class="text-left"><a href="" class="text-success">12345678901234567890</a></td>
+                                        <td class="text-right">1,999.0 COSKRW</td>
+                                        <td class="text-right">0.1 COSKRW</td>
+                                        <td class="text-right">
+                                            <span class="text-primary">Confirmed</span>
+                                            <i class="icon-check"></i>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!-- pagination -->
+                            <nav class="pagination-wrap">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#"><i class="icon-first"><span class="sr-only">처음</span></i></a>
+                                    </li>
+                                    <li class="page-item mr-3 disabled">
+                                        <a class="page-link" href="#"><i class="icon-prev"><span class="sr-only">이전</span></i></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item ml-3">
+                                        <a class="page-link" href="#"><i class="icon-next"><span class="sr-only">다음</span></i></a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="icon-last"><span class="sr-only">마지막</span></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- //pagination -->
+                        </div>
+                        <div class="tab-pane fade" id="t2" role="tabpanel">
+                        </div>
+                        <div class="tab-pane fade" id="t3" role="tabpanel">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-auto">
+                            <div class="logo"><span class="sr-only">COSBALL</span></div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="copyright">Copyright 2020 COSBALL Corp. ALL Rights Reserved.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#search-query').on('focus',function(){
+                $('#query-box1').addClass('show');
+            });
+            $('#btn-detail').on('click',function(e){
+                e.preventDefault();
+                $('#query-box2').addClass('show');
+            });
+            $('.query-box .close').on('click',function(){
+                $(this).closest('.query-box').removeClass('show');
+            });
+
+            $('#header-search').on('click',function(){
+                $(this).closest('.search').find('.search-result').addClass('show');
+            });
+        });
+    </script>
+</body>
+</html>

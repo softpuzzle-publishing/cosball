@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title>COSBALL</title>
+  <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+  <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../resources/css/style.css">
+      <link rel="stylesheet" href="../../resources/css/common.css">
+  <link rel="stylesheet" href="../../resources/css/main.css">
+
+  <!-- jquery -->
+  <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+  <!-- jquery ui -->
+  <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- bootstrap -->
+  <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ui 관련 -->
+  <script src="../../resources/js/ui.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header-block">
+      <!-- header include -->
+      <div id="header">
+        <div class="header-top">
+          <div class="container">
+            <h1 class="logo"><a href=""><span class="sr-only">COSBALL</span></a></h1>
+            <div class="search">
+              <div class="search-input">
+                <input type="text" class="form-control" placeholder="Find a transcation, delegate or block" id="header-search">
+                <button type="submit" class="btn-submit"><i class="icon-search"></i><span class="sr-only">SEARCH</span></button>
+              </div>
+              <div class="search-result">
+                <div class="box">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <strong>Available params</strong>
+                        <div class="row justify-content-between">
+                          <div class="col-auto text-primary">abc123</div>
+                          <div class="col-auto text-gray">address</div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- 검색결과 없음 -->
+                    <li>
+                      <strong class="text-primary">No matching records found!</strong>
+                      <div class="row">
+                        <div class="col text-gray">If you are searching for an address, it might be not initialized yet.</div>
+                      </div>
+                    </li>
+                    <!-- //검색결과 없음 -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="gnb">
+              <ul>
+                <li><a href=""><span>Transactions</span></a></li>
+                <li><a href=""><span>Blocks</span></a></li>
+                <li><a href=""><span>Delegates</span></a></li>
+                <li><a href=""><span>Network</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-auto"><span>Height : </span>12,867,322</div>
+              <div class="col-auto"><span>Supply : </span>12,867,322</div>
+              <div class="col-auto"><span>COSKRW / BTC : </span>0.0012345</div>
+              <div class="col-auto"><span>COSKRW / USD : </span>1.12345</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-block">
+      <div class="container">
+        <div class="title-area row justify-content-between align-items-end">
+          <div class="col-auto">
+            <h2 class="title-2">Lisk Blockchain Explorer</h2>
+          </div>
+          <div class="col-auto">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div id="content">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">DELEGATES</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="active-delegates">
+                  101 active delegates<br />
+                  of all 1858 delegates<br />
+                  <br />
+                  1757 inactive delegates
+                </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">PEERS</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="active-delegates">
+                  257 connected peers<br />
+                  0 disconnected peers<br />
+                  <br />
+                  257 peers in total
+                </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">LAST BLOCK</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="active-delegates">
+                  <span class="text-success">7800717663059898078</span><br />
+                  Forged by <span class="text-success">jong</span><br />
+                  <br />
+                  2 LSK forged<br />
+                  from 0 transactions
+                </p>
+              </div>
+              <div class="col-auto block-box">
+                <h3 class="block-box-text">LATEST BLOCKS</h3>
+                <div class="block-box-text-boder"></div>
+                <p class="active-delegates text-success">
+                  4474937619176525942<br />
+                  12515894397770022221<br />
+                  497716024904834762<br />
+                  6024463237904784190<br />
+                </p>
+                <button class="button more-btn">More blocks <img src="../../resources/images/icon-more-white.png" alt="더보기 화살표"></button>
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-content m-t-35">
+            <div class="tab-pane fade active show" id="t1" role="tabpanel">
+              <div class="search">
+
+                <div class="query-box" id="query-box1">
+                  <div class="box">
+                    <ul>
+                      <li>
+                        <strong>Available params</strong>
+                        <p>address, senderId, senderPublicKey, recipientId, recipientPublicKey, minAmount, maxAmount, type, height, blockId</p>
+                      </li>
+                      <li>
+                        <strong>Transaction types</strong>
+                        <p>0: Balance transfer, 1: Second signature creation, 2: Delegate registration, 3: Delegate vote, 4: Multi-signature creation, 5: DApp registration</p>
+                      </li>
+                      <li>
+                        <strong>Examples</strong>
+                        <p>address=12317412804123L <span class="text-dark">recipientPublicKey</span>=b550ede5...a26c78d8 <span class="text-dark">maxAmount</span>=1000.5 type=1recipientId=12317412804123L minAmount=1.25 height=2963014</p>
+                      </li>
+                    </ul>
+                    <a href="#none" class="btn-detail" id="btn-detail">For detailed instruction click here</a>
+                    <button type="button" class="close"><i class="icon-close"><span class="sr-only">close</span></i></button>
+                  </div>
+                </div>
+                <div class="query-box" id="query-box2">
+                  <div class="box">
+                    <strong>Detailed instruction</strong>
+                    <p>The table below describes all parameters that can be use in order to filter the transactions.</p>
+                    <table class="table mt-3">
+                      <thead>
+                        <tr>
+                          <th>Param</th>
+                          <th>Name</th>
+                          <th>Example</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>abcde</td>
+                          <td>abcde</td>
+                          <td>12345678901234567890a</td>
+                        </tr>
+                        <tr>
+                          <td>abcde</td>
+                          <td>abcde</td>
+                          <td>12345678901234567890a</td>
+                        </tr>
+                        <tr>
+                          <td>abcde</td>
+                          <td>abcde</td>
+                          <td>12345678901234567890a</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button type="button" class="close"><i class="icon-close"><span class="sr-only">close</span></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="table-title row align-items-center justify-content-between">
+                <div class="col-auto text-left">
+                  <p class="latest-transactions">LATEST TRANSACTIONS</p>
+                </div>
+                <div class="col-auto text-right align-items-center">
+                  <a href="#none" class="more-transactions">MORE TRANSACTIONS <img src="../../resources/images/icon-more-grey.png" alt="더보기 화살표"></a>
+                </div>
+              </div>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="text-left">Id</th>
+                    <th class="text-center"><a href="#none">Timestamp <i class="icon-arr-down"></i></a></th>
+                    <th class="text-left">Sender</th>
+                    <th class="text-left">Recipient</th>
+                    <th class="text-right">Amount</th>
+                    <th class="text-right">Fee</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left"><a href="" class="text-success">12345678901234567890</a></td>
+                    <td class="text-center">2020/07/22 13:15:34</td>
+                    <td class="text-left text-success">1234567890</td>
+                    <td class="text-left text-success"><a href="" class="text-success">12345678901234567890</a></td>
+                    <td class="text-right text-success">1,999.0 COSKRW</td>
+                    <td class="text-right text-success">0.1 COSKRW</td>
+                  </tr>
+                  <tr>
+                    <td class="text-left"><a href="" class="text-success">12345678901234567890</a></td>
+                    <td class="text-center">2020/07/22 13:15:34</td>
+                    <td class="text-left text-success">123456789</td>
+                    <td class="text-left text-success"><a href="" class="text-success">12345678901234567890</a></td>
+                    <td class="text-right text-success">1,999.0 COSKRW</td>
+                    <td class="text-right text-success">0.1 COSKRW</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+            <div class="tab-pane fade" id="t2" role="tabpanel">
+            </div>
+            <div class="tab-pane fade" id="t3" role="tabpanel">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer-block">
+      <div id="footer">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <div class="logo"><span class="sr-only">COSBALL</span></div>
+            </div>
+            <div class="col-auto">
+              <div class="copyright">Copyright 2020 COSBALL Corp. ALL Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('#search-query').on('focus', function() {
+        $('#query-box1').addClass('show');
+      });
+      $('#btn-detail').on('click', function(e) {
+        e.preventDefault();
+        $('#query-box2').addClass('show');
+      });
+      $('.query-box .close').on('click', function() {
+        $(this).closest('.query-box').removeClass('show');
+      });
+
+      $('#header-search').on('click', function() {
+        $(this).closest('.search').find('.search-result').addClass('show');
+      });
+    });
+  </script>
+</body>
+
+</html>
