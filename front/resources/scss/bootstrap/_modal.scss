@@ -11,6 +11,7 @@
   .modal {
     overflow-x: hidden;
     overflow-y: auto;
+    padding-right: 0 !important;
   }
 }
 
@@ -38,10 +39,6 @@
   margin: $modal-dialog-margin;
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 
   // When fading in the modal, animate it to slide down
   .modal.fade & {
@@ -219,7 +216,7 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
-    //margin: $modal-dialog-margin-y-sm-up auto;
+    margin: $modal-dialog-margin-y-sm-up auto;
   }
 
   .modal-dialog-scrollable {

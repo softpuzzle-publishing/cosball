@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+
+
+    <!-- jquery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <!-- header include -->
+        </div>
+
+        <div id="center-container">
+            <div class="center-content-wrap">
+                <div class="center-content-body">
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-block">
+            <!-- footer include -->
+        </div>
+    </div>
+
+    <!-- modal : 배송지변경 -->
+    <div class="modal" tabindex="-1" role="dialog" id="shipping_change" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">배송지변경</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-title">배송지정보</div>
+                    <table class="table" summary="배송지정보">
+                        <caption>배송지정보</caption>
+                        <colgroup>
+                            <col style="width:22%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>주소명칭</th>
+                                <td><input type="text" class="form-control w-auto" value="집"></td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>받는 분</th>
+                                <td>
+                                    <input type="text" class="form-control d-inline-block w-auto" value="홍길동">
+                                    <small class="d-inline-block ml-1 text-gray"><span id="byteCount">0</span> / 25자</small>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>주소</th>
+                                <td>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control w-50 mr-2" placeholder="" value="1234567">
+                                        <button class="btn btn-outline-dark">우편번호검색</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="서울시 영등포구 양평동 2가 37-3">
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" class="form-control" placeholder="" value="투웨이퍼스트 1104동">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span class="text-danger mr-1">*</span>휴대폰</th>
+                                <td><input type="text" class="form-control w-auto" value="01011112222"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer pt-0">
+                    <div class="btn-area">
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-dark btn-block" data-dismiss="modal">닫기</button>
+                        </div>
+                        <div class="col-6 col-md-auto">
+                            <button class="btn btn-lg btn-primary btn-block">변경</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#shipping_change").modal("show");
+    </script>
+</body>
+</html>

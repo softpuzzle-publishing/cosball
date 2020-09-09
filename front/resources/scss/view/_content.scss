@@ -151,6 +151,10 @@ body.center-body{padding-top: 0;background: transparent;}
 .view-tit .tit {font-size:1.375em;font-weight:500;}
 .view-tit .date {font-size:1.125em;color:#666;}
 .view-cont {margin-top:1em;text-align:center;}
+.view-file{
+    font-size: 1.125em;margin-top: 1em;
+    i{margin-right: 5px;}
+}
 .table-util {padding:13px 10px;}
 @media (max-width:767px) {
     .table-util{padding: 10px 0 8px;}
@@ -375,10 +379,10 @@ body.center-body{padding-top: 0;background: transparent;}
 .product-detail .sum .price {margin-left:6px;font-size:1.75em;font-weight:600;color:#ff5252;}
 .product-detail .btn-area {margin-top:4.688em;}
 .detail-tab {margin-top:6em;}
-.tab-content .detail-info {margin-top:2.5em;text-align:center;}
-.tab-content .precaution {margin-top:3.75em;}
-.tab-content .product-info {margin-top:5em;}
-.tab-content .buy-info {margin-top:2.5em;}
+.detail-info {margin-top:2.5em;text-align:center;}
+.precaution {margin-top:3.75em;}
+.product-info {margin-top:5em;}
+.buy-info {margin-top:5em;}
 .precaution {position:relative;overflow:hidden;border:1px solid #111;border-radius:8px;padding-left:150px;}
 .precaution span {display:flex;align-items:center;position:absolute;left:0;top:0;width:150px;height:100%;padding-left:20px;font-size:1.25em;color:#fff;background:#111;}
 .precaution span img {margin-right:6px;}
@@ -392,11 +396,13 @@ body.center-body{padding-top: 0;background: transparent;}
 .buy-bottom .toggler::before{content: '';display: block;background: url('../images/icon-arrow-up.svg') no-repeat 50% 50%;background-size: contain;width: 18px;height: 10px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%) rotate(0);transition: all .15s .05s;}
 .buy-bottom .d-flex {justify-content:space-between;padding-top:2em;}
 .buy-bottom .d-flex>p {width:260px;font-size:1.375em;}
-.buy-bottom .d-flex .sum-box {display:flex;justify-content:space-between;align-items:center;}
-.buy-bottom .d-flex .sum-box .calc {margin:0 3.25em;}
-.buy-bottom .d-flex .sum-box .exch {color:#999;}
-.buy-bottom .d-flex .sum-box .price {font-size:1.25em;color:#333;margin-left: 2px;}
-.buy-bottom .d-flex .sum-box .sum .price {font-size:1.375em;color:#ff5252;}
+.buy-bottom .d-flex .sum-box {display:flex;justify-content:space-between;align-items:center;
+    .default{margin-right: 3.25em;}
+    .calc {margin:0 3.25em;}
+    .exch {color:#999;}
+    .price {font-size:1.25em;color:#333;margin-left: 2px;}
+    .sum .price {font-size:1.375em;color:#ff5252;}
+}
 .buy-bottom .btn-area {justify-content:center;padding-bottom:2.75em;}
 html.is-bottom-floating .buy-bottom{bottom: 0;transform:translateY(0);}
 html.is-bottom-floating.is-bottom-floating-fold .buy-bottom{transform: translateY(calc(100% - 10px));}
@@ -442,7 +448,6 @@ html.is-bottom-floating.is-bottom-floating-fold #footer-block{padding-bottom: 0 
 
 /* 주문결제 */
 .write-type td {padding:7px 1.25rem;}
-.write-type .byte {color:#999;}
 
 /* 나의 배송 주소록 */
 .my-address-list {border-top:1px solid #000;border-bottom:1px solid #eee;}
@@ -462,8 +467,11 @@ html.is-bottom-floating.is-bottom-floating-fold #footer-block{padding-bottom: 0 
     .product-detail>.img {width:44%;height:auto;}
     .product-detail>.detail {width:52%;}
     .buy-bottom .d-flex>p {width:30%;}
-    .buy-bottom .d-flex .sum-box {margin-left:1em;}
-    .buy-bottom .d-flex .sum-box .calc {margin:0 1.5em;}
+    .buy-bottom .d-flex .sum-box {
+        margin-left:1em;
+        .calc {margin:0 1.5em;}
+    }
+    .buy-bottom .d-flex
     .cart-list .my_picture .txt {margin:10px 0 0;}
     .profile-sec{margin-left: -10px;margin-right: -10px;}
     .profile-sec li{padding-left: 10px;padding-right: 10px;}
@@ -480,12 +488,14 @@ html.is-bottom-floating.is-bottom-floating-fold #footer-block{padding-bottom: 0 
     .product-detail .btn-area{margin-top: 2em;}
     .buy-bottom .d-flex {flex-direction:column;border: 1px solid #ccc;padding: .75rem;margin-top: 1rem;}
     .buy-bottom .d-flex>p {width:auto;font-size: 15px;}
-    .buy-bottom .d-flex .sum-box {justify-content:flex-end;width:100%;margin-left:0;flex-wrap: wrap;}
-    .buy-bottom .d-flex .sum-box > .default{display: inline-block;width: 50%;}
-    .buy-bottom .d-flex .sum-box > .spinner-area{display: inline-block;width: 50%;text-align: right;}
-    .buy-bottom .d-flex .sum-box > .sum{width: 100%;text-align: right;margin-top: 10px;}
-    .buy-bottom .d-flex .sum-box > .calc{display: none;}
-    .buy-bottom .d-flex .sum-box .sum .price{font-weight: 700;}
+    .buy-bottom .d-flex .sum-box {
+        justify-content:flex-end;width:100%;margin-left:0;flex-wrap: wrap;
+        > .default{display: inline-block;width: 50%;margin-right: 0;}
+        > .spinner-area{display: inline-block;width: 50%;text-align: right;}
+        > .sum{width: 100%;text-align: right;margin-top: 10px;}
+        > .calc{display: none;}
+        .sum .price{font-weight: 700;}
+    }
     .buy-bottom .btn-area{padding-bottom: 1rem;margin-top: 1rem;justify-content: space-between;}
     .precaution{padding: 0;}
     .precaution span{position: static;display: block;width: auto;padding: 5px 15px;}

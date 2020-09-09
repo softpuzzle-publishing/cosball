@@ -55,12 +55,10 @@
   background-color: #fff;
   left: 0;
   top: 0;
-  -webkit-transition: padding 0.3s ease-in-out;
   transition: padding 0.3s ease-in-out;
   padding-top: 15px;
   padding-bottom: 15px;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .is-title-fixed .content-header h1 {
@@ -108,8 +106,6 @@
 }
 
 .step ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -168,19 +164,10 @@ input[type=password] {
 }
 
 .error {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 100%;
 }

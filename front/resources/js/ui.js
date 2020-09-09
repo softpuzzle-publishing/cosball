@@ -224,7 +224,6 @@
             }else{
                 $('html').removeClass('is-header-hidden');
             }
-            console.log($('.tab .nav').offset().top);
             if(scrollTop > tabTop){
                 $('html').addClass('is-tab-floating');
             }else{
@@ -234,7 +233,6 @@
         toggle: function(){
             $('.buy-bottom .toggler').on('click',function(e){
                 e.preventDefault();
-                console.log(1);
                 if($('html').hasClass('is-bottom-floating-fold')){
                     $('#footer-block').css('padding-bottom','0 !important');
                     $('html').removeClass('is-bottom-floating-fold');
@@ -350,6 +348,20 @@
                 $(this).siblings('.spinner-increment').prop('disabled',false);
                 $(this).siblings('.spinner-decrement').prop('disabled',false);
             }
+        });
+
+        $('.detail-tab .tab').css('height',$('.detail-tab .nav').outerHeight());
+        $('.detail-tab .nav a').on('click',function(e){
+            if($('body').hasClass('is-scrolled')){
+
+            }
+            e.preventDefault();
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            var myScrollTop = $($(this).attr('href')).offset().top - 100;
+            $('html, body').animate({
+                scrollTop: myScrollTop
+            }, 250);
         });
     });
 })(jQuery);
