@@ -3090,6 +3090,11 @@ body.center-body {
   border-bottom: 1px solid #d8d8d8;
 }
 
+.product-detail .pay-box span {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
 .product-detail .d-flex {
   justify-content: space-between;
   align-items: center;
@@ -3099,7 +3104,7 @@ body.center-body {
 .product-detail .d-flex > * {
   display: flex;
   align-items: center;
-  height: 40px;
+  min-height: 40px;
 }
 
 .product-detail .d-flex span {
@@ -3548,7 +3553,7 @@ html.is-bottom-floating.is-bottom-floating-fold #footer-block {
     flex-direction: column;
   }
   .product-detail .d-flex > * {
-    height: 36px;
+    min-height: 36px;
   }
   .product-detail > .img {
     width: auto;
