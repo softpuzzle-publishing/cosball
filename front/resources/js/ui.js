@@ -156,14 +156,16 @@
                 if(Init.breakpoint){
 
                 }else{
-                    e.preventDefault();
                     console.log('mobile');
-                    if(!$(this).closest('.dep1').hasClass('active')){
-                        $(this).closest('.dep1').siblings().removeClass('active');
-                        $(this).closest('.dep1').addClass('active');
-                    }
-                    else{
-                        $(this).closest('.dep1').removeClass('active');
+                    if($(this).closest('nav').is('#gnb-mypage')){
+                        e.preventDefault();
+                        if(!$(this).closest('.dep1').hasClass('active')){
+                            $(this).closest('.dep1').siblings().removeClass('active');
+                            $(this).closest('.dep1').addClass('active');
+                        }
+                        else{
+                            $(this).closest('.dep1').removeClass('active');
+                        }
                     }
                 }
             });

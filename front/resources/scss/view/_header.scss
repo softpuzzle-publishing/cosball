@@ -242,7 +242,7 @@ html.open-submenu{
             display: block;border-bottom: 1px solid #f4f4f4;
             > a{
                 padding: 0 !important;font-size: 15px;position: relative;font-weight: 500;
-                &::before{content: '';display: block;width: 8px;height: 8px;border-top: 1px solid #999;border-right: 1px solid #999;transform: rotate(135deg);position: absolute;right: 2px;top: 50%;margin-top: -4px;transition:all .15s .1s;}
+                /* &::before{content: '';display: block;width: 8px;height: 8px;border-top: 1px solid #999;border-right: 1px solid #999;transform: rotate(135deg);position: absolute;right: 2px;top: 50%;margin-top: -4px;transition:all .15s .1s;} */
                 span{padding: .75rem 0;}
             }
             &.active{
@@ -250,6 +250,7 @@ html.open-submenu{
                     color: $dark;
                     &::before{transform: rotate(315deg);margin-top: -2px;}
                 }
+                .sub-layer{display: none;}
             }
             &.current{
                 > a{color: $primary;}
@@ -305,7 +306,11 @@ html.open-submenu{
     .gnb-menu .dep1.no-sub > a::before { display:none; }
 
     #gnb-mypage { display:block; left:-100%; z-index:101; padding-top:163px; }
-    #gnb-mypage.active { left:0; }
+    #gnb-mypage.active { left:0;
+        .gnb-menu .dep1 > a::before{content: '';display: block;width: 8px;height: 8px;border-top: 1px solid #999;border-right: 1px solid #999;transform: rotate(135deg);position: absolute;right: 2px;top: 50%;margin-top: -4px;transition:all .15s .1s;}
+        .gnb-menu .dep1.active .sub-layer{display: block;}
+        .gnb-menu .dep1.active > a::before{transform: rotate(315deg);margin-top: -2px;}
+    }
 
     .gnb-mypage-util { background:#f7f7f7; border-bottom:1px solid #f4f4f4; }
     .gnb-mypage-util .my-close { height:56px; padding:0 18px; }
