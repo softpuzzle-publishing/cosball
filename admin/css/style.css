@@ -1,0 +1,331 @@
+.btn-top {
+  position: fixed;
+  right: -80px;
+  bottom: 10px;
+  z-index: 999;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.btn-top a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  background-color: #c131df;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.btn-top.active {
+  right: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .btn-top {
+    bottom: 15px;
+  }
+  .btn-top a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .btn-top.active {
+    right: 15px;
+  }
+}
+
+.is-title-fixed body {
+  padding-top: 66px;
+}
+
+.is-title-fixed .content-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1037;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  transition: padding 0.3s ease-in-out;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.is-title-fixed .content-header h1 {
+  padding-left: .5rem;
+}
+
+@media (min-width: 768px) {
+  .is-title-fixed .content-header {
+    padding-left: 260px !important;
+  }
+  .is-title-fixed .sidebar-collapse .content-header {
+    padding-left: 4.6rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .is-title-fixed .sidebar-collapse .content-header {
+    padding-left: 4.6rem;
+  }
+  .is-title-fixed .content-header {
+    padding-left: 260px;
+  }
+}
+
+.accessibility-nav {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+}
+
+.accessibility-nav a {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  text-align: center;
+}
+
+.accessibility-nav a:hover,
+.accessibility-nav a:focus,
+.accessibility-nav a:active {
+  background: #318de7;
+  padding: .5em;
+  height: auto;
+  color: #fff;
+}
+
+.step ol {
+  display: flex;
+}
+
+.step li {
+  width: 25%;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.step li span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.step li strong {
+  font-size: 16px;
+}
+
+.dep1,
+.dep2,
+.dep3 {
+  display: none;
+}
+
+.content-header .breadcrumb-item {
+  font-size: 13px;
+}
+
+.form-inline {
+  min-height: calc(2.15rem + 2px);
+}
+
+.min-height-auto {
+  min-height: auto;
+}
+
+input[type=password] {
+  font-family: 'Nanum Gothic';
+}
+
+[data-event=datepicker] {
+  background-image: url("../images/calendar-alt-solid.svg");
+  background-repeat: no-repeat;
+  background-position: center right .75rem;
+  background-size: auto 16px;
+  padding-right: 1.9rem;
+}
+
+.custom-control.without-label {
+  margin-right: -0.5rem;
+  margin-bottom: 0;
+}
+
+.search-simple {
+  margin-top: 2rem;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.error .num {
+  font-size: 120px;
+  color: #c131df;
+}
+
+.error em {
+  font-style: normal;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.error p {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.error .btn {
+  width: 180px;
+  margin-top: 80px;
+}
+
+#modalPreview .modal-body img {
+  max-height: 630px;
+}
+
+.nav-sidebar > .nav-item .nav-icon {
+  display: inline-block;
+}
+
+.nav-sidebar > .nav-item .nav-icon::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-size: contain !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball1::before {
+  background: url("../images/ball1.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball2::before {
+  background: url("../images/ball2.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball3::before {
+  background: url("../images/ball3.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball4::before {
+  background: url("../images/ball4.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball5::before {
+  background: url("../images/ball5.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball6::before {
+  background: url("../images/ball6.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball7::before {
+  background: url("../images/ball7.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball8::before {
+  background: url("../images/ball8.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball9::before {
+  background: url("../images/ball9.png") 50% 50% no-repeat;
+}
+
+.nav-sidebar > .nav-item .nav-icon.ball10::before {
+  background: url("../images/ball10.png") 50% 50% no-repeat;
+}
+
+.table-top {
+  margin-bottom: 1rem;
+}
+
+.text-icon .fa::before,
+.text-icon .far::before,
+.text-icon .fas::before {
+  vertical-align: middle;
+}
+
+.noti strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.noti p {
+  margin-bottom: 4px;
+  font-size: 95%;
+}
+
+.otp {
+  margin: 0;
+  padding: 0;
+}
+
+.otp li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.otp li + li {
+  margin-top: 25px;
+}
+
+.my-tabs {
+  margin-bottom: 20px;
+}
+
+.my-tabs .nav-link {
+  font-size: 15px;
+  padding: .5rem 2rem;
+}
+
+.my-tabs .nav-link.active {
+  font-weight: 700;
+}
+
+.survey > .col-auto {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.survey > .col {
+  border-left: 1px solid #ddd;
+  padding-left: 20px;
+}
+
+.survey + .survey {
+  border-top: 1px solid #ddd;
+}
+
+.survey + .survey > .col {
+  padding-top: .9rem;
+}
+
+.badge.lang {
+  min-width: 32px;
+}
+
+.fa-backspace {
+  font-size: 20px !important;
+  color: #444;
+}
+
+.handle i {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
