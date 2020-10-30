@@ -746,12 +746,10 @@ mt-1 : { margin-top : 1px; }
 .table.table-center th, .table.table-center td { text-align: center; }
 
 @media (max-width: 1199.98px) { .table th, .table td { padding: 1rem; font-size: 0.875rem; }
-  .table thead th { padding: 1rem; white-space: nowrap; } }
+  .table thead th { padding: 1rem; } }
 
 @media (max-width: 991.98px) { .table th, .table td { padding: .5rem; font-size: 0.8125rem; }
   .table thead th { padding-top: .75rem; padding-bottom: .75rem; } }
-
-@media (max-width: 767.98px) { .table th { white-space: nowrap; } }
 
 @media (max-width: 360px) { .table th, .table td { padding: .5rem .4rem; font-size: 0.75rem; }
   .table thead th { padding: .75rem .4rem; } }

@@ -50,7 +50,8 @@
       padding: 1rem;font-size: 0.875rem;
     }
     thead th{
-      padding: 1rem;white-space: nowrap;
+      padding: 1rem;
+      // white-space: nowrap;
     }
   }
 }
@@ -70,7 +71,7 @@
 @include media-breakpoint-down(sm) {
   .table {
     th{
-      white-space: nowrap;
+      // white-space: nowrap;
     }
   }
 }
