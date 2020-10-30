@@ -231,6 +231,7 @@
             }else{
                 $('html').removeClass('is-tab-floating');
             }
+           
         },
         toggle: function(){
             $('.buy-bottom .toggler').on('click',function(e){
@@ -398,3 +399,4 @@ function byteCheck(obj, maxByte, textTarget){
         $(textTarget).text(rbyte);
     }
 }
+

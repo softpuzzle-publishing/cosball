@@ -172,7 +172,7 @@
 @include media-breakpoint-down(md) {
     .category{
         margin: 0 -3px;
-        .item{padding: 0 3px;margin-bottom: 6px;flex: 0 0 25%;max-width: 25%;}
+        .item{padding: 0 3px;margin-bottom: 6px;flex: 0 0 33.3%;max-width: 33.3%;}
         .box{
             height: 40px;
             a{font-size: 13px;padding: 0 5px;}

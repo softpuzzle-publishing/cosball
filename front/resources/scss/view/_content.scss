@@ -1,6 +1,6 @@
 .modal-full{
-    .modal-dialog{margin-left: 3rem;margin-right: 3rem;max-width:inherit}
-    .modal-content{background: transparent;border: 0;border-radius: 0;}
+    .modal-dialog{max-width:100%;margin-left: 3rem;margin-right: 3rem;max-width:inherit}
+    .modal-content{ max-width:1180px; background: transparent;border: 0;border-radius: 0;margin:3rem auto;}
     .modal-header{
         padding: 0;border-radius: 0;border: 0;
         .close{padding: 0;width: 60px;height: 60px;margin: 0 -60px 0 auto;background: #000;color: #fff;opacity: .75;transform: none;}
@@ -8,12 +8,12 @@
         .close:not(:disabled):not(.disabled):focus{opacity: 1;}
         &::after{display: none;}
     }
-    .modal-body{padding: 0;border-radius: 0;}
+    .modal-body{padding: 0;border-radius: 0; max-height:100%;}
     .modal-dialog{margin-top: 0;}
 }
 @include media-breakpoint-up(xl) {
     .modal-full{
-        .modal-dialog{max-width: 1180px;margin-left: auto;margin-right: auto;}
+        .modal-dialog{margin-left: auto;margin-right: auto;}
     }
 }
 @include media-breakpoint-down(sm) {
