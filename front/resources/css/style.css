@@ -279,7 +279,7 @@ html.open-submenu #header { background: white; }
 
 .ballcode .copy { width: 35px; height: 22px; border-radius: 2px; border: solid 1px #999999; background-color: #fafafb; padding: 0; margin-left: 6px; }
 
-.quick { width: 120px; height: 120px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 20%; right: 10%; z-index: 100; }
+.quick { width: 120px; height: 120px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 10%; right: 5%; z-index: 100; }
 
 #footer { background: #000; text-align: center; padding: 44px 0; }
 
@@ -305,9 +305,9 @@ html.open-submenu #header { background: white; }
   #footer .menu li { margin: 0 12px; margin-top: 3px; }
   #footer .menu a { font-size: 13px; }
   #footer .info { font-size: 12px; }
-  .quick { width: 80px; height: 80px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 240px; right: 100px; } }
+  .quick { width: 80px; height: 80px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 10%; right: 5%; } }
 
-@media (max-width: 767.98px) { .quick { width: 70px; height: 70px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 100px; right: 20px; } }
+@media (max-width: 767.98px) { .quick { width: 70px; height: 70px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 5%; right: 5%; } }
 
 #skip_navi { position: fixed; left: 0; top: -999px; display: block; padding: 10px 20px; font-size: 16px; color: #000; background: #f55454; }
 

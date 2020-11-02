@@ -26,24 +26,27 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header-block">
-            <!-- header include -->
-        </div>
         <div id="container-block">
             <div class="center-content-wrap">
                 <div class="center-content-body">
                     <div class="d-flex justify-content-center position-relative">
-                        <div class="spinner-border" role="status">
-                          <span class="sr-only">Loading...</span>
+                        <div class="spinner-border loading-bar" role="status">
+                            <span class="sr-only">Loading...</span>
                         </div>
                     </div>
+                    <button type="button" onclick="showLoading();">show</button>
+                    <button type="button" onclick="hideLoading();">hide</button>
                 </div>
             </div>
         </div>
-        <div id="footer-block">
-            <!-- footer include -->
-        </div>
     </div>
-
+<script>
+    function showLoading(){
+        $('.loading-bar').show();
+    }
+    function hideLoading(){
+        $('.loading-bar').hide();
+    }
+</script>
 </body>
 </html>
