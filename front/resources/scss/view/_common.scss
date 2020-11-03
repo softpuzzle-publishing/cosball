@@ -274,3 +274,17 @@ html.is-tab-floating .tab .nav{position: fixed;left: 0;top: 0;width: 100%;backgr
         p{font-size: 0.9375rem;}
     }
 }
+.loading-wrap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1056;
+    background-color: rgba(0,0,0,0.7);
+    .loading-bar{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

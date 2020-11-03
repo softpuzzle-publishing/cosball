@@ -45,6 +45,21 @@ input[type=password] {font-family: 'Nanum Gothic';}
     .btn{width: 180px;margin-top: 80px;}
 }
 
+.loading-wrap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1056;
+    background-color: rgba(0,0,0,0.7);
+    .loading-bar{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 #modalPreview .modal-body img{max-height: 630px}
 
 .nav-sidebar > .nav-item .nav-icon{display: inline-block;
@@ -105,3 +120,4 @@ input[type=password] {font-family: 'Nanum Gothic';}
 .fa-backspace{font-size: 20px !important;color: #444;}
 
 .handle i{cursor: pointer;}
+
