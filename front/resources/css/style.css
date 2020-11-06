@@ -281,6 +281,8 @@ html.open-submenu #header { background: white; }
 
 .quick { width: 120px; height: 120px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 10%; right: 5%; z-index: 100; }
 
+.quick.active { bottom: 25%; -webkit-transition: .5s; transition: .5s; }
+
 #footer { background: #000; text-align: center; padding: 44px 0; }
 
 #footer .logo { margin-bottom: 35px; }
@@ -305,9 +307,11 @@ html.open-submenu #header { background: white; }
   #footer .menu li { margin: 0 12px; margin-top: 3px; }
   #footer .menu a { font-size: 13px; }
   #footer .info { font-size: 12px; }
-  .quick { width: 80px; height: 80px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 10%; right: 5%; } }
+  .quick { width: 80px; height: 80px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 10%; right: 5%; }
+  .quick.active { bottom: 25%; } }
 
-@media (max-width: 767.98px) { .quick { width: 70px; height: 70px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 5%; right: 5%; } }
+@media (max-width: 767.98px) { .quick { width: 70px; height: 70px; background-image: url("../../resources/images/quick.png"); background-repeat: no-repeat; background-size: contain; display: block; position: fixed; bottom: 5%; right: 5%; }
+  .quick.active { bottom: 45%; } }
 
 #skip_navi { position: fixed; left: 0; top: -999px; display: block; padding: 10px 20px; font-size: 16px; color: #000; background: #f55454; }
 
@@ -735,7 +739,7 @@ body.center-body { padding-top: 0; background: transparent; }
 
 .product-list li .cate { margin-top: 11px; font-size: 12px; font-weight: 500; color: #999; }
 
-.product-list li .tit { overflow: hidden; margin: 5px 0; text-overflow: ellipsis; white-space: nowrap; font-size: 22px; font-weight: 500; }
+.product-list li .tit { overflow: hidden; margin: 5px 0; line-height: 1.2; height: 2.4em; font-size: 22px; font-weight: 500; }
 
 .product-list li .price { font-size: 14px; color: #999; }
 
@@ -967,7 +971,7 @@ body.center-body { padding-top: 0; background: transparent; }
 
 .product-detail .detail .badge { display: inline-block; }
 
-.product-detail .tit { margin-bottom: 6px; font-size: 1.75em; font-weight: 500; list-style: height 1.3em; }
+.product-detail .tit { margin-bottom: 6px; font-size: 1.75em; font-weight: 500; line-height: 1.2; height: 2.4em; overflow: hidden; }
 
 .product-detail .name-hash { margin-top: 6px; color: #999; line-height: 1.5; }
 

@@ -399,4 +399,10 @@ function byteCheck(obj, maxByte, textTarget){
         $(textTarget).text(rbyte);
     }
 }
-
+$(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        $('.quick').addClass('active');
+    }else{
+        $('.quick').removeClass('active');
+    }
+ });

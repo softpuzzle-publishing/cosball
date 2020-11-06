@@ -9,10 +9,10 @@
     bottom:10%;
     right:5%;
     z-index:100;
-    // &.bottom{
-    //     bottom:20%;
-    //     right:10%;
-    // }
+    &.active{
+        bottom:25%;
+        transition: .5s;
+    }
 }
 #footer{
     background: #000;text-align: center;padding: 44px 0;
@@ -60,6 +60,9 @@
         position:fixed;
         bottom:10%;
         right:5%;
+        &.active{
+            bottom:25%;
+        }
     }
 }
 
@@ -74,5 +77,8 @@
         position:fixed;
         bottom:5%;
         right:5%;
+        &.active{
+            bottom:45%;
+        }
     }
 }
