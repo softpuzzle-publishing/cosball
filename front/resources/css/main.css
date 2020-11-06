@@ -12,7 +12,7 @@
 
 
 /*main-slide*/
-.main-slide { overflow:hidden; position:relative; }
+.main-slide { overflow:hidden; position:relative;height: 780px;}
 .main-slide .main-slide-bg { min-height:780px;background-repeat: no-repeat;background-position: 50% 50%;background-size: cover;}
 .main-slide .main_copy_wrap { width:100%; position:absolute; left:0; top:240px; /*display:flex; align-content:center;*/ }
 .main-slide .main_copy { width:1180px; margin:auto; }
@@ -121,7 +121,7 @@ font-size:18px; font-weight:300; letter-spacing:-0.07px; text-align:center; colo
 .slide_common .swiper-slide img { max-width:100%; position:relative; z-index:1; display:block; margin:0 auto; }
 
 .slide_common .product_desc { text-align:center; margin-top:30px; }
-.slide_common .product_desc h5 { font-size:28px; font-weight:500; line-height:normal; color:#111; }
+.slide_common .product_desc h5 { font-size:28px; font-weight:500; color:#111; line-height: 1.2; height: 2.4em;overflow: hidden;}
 .slide_common .product_desc p { font-size:16px; font-weight:300; line-height:1.5; letter-spacing:normal; color:#666; margin-top:5px; padding:0 30px; }
 .slide_common a:hover { text-decoration:none; }
 
@@ -266,6 +266,7 @@ transform:rotate(-41deg); transition: all .5s; }
     .main-title-area .desc { font-size:13px; line-height:1.2; letter-spacing:-0.5px; }
 
     /*main-slide*/
+    .main-slide{height: 520px;}
     .main-slide .main-slide-bg { min-height: calc(100vh - 56px);display: flex;align-items: center;}
     .main-slide .main_copy_wrap { position: static;}
     .main-slide .main_copy { width:auto; padding:0 20px; }
