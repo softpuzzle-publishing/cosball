@@ -1,21 +1,5 @@
-.quick{
-    width: 120px;
-    height: 120px;
-    background-image: url('../../resources/images/quick.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    display:block;
-    position:fixed;
-    bottom:10%;
-    right:5%;
-    z-index:100;
-    &.active{
-        bottom:25%;
-        transition: .5s;
-    }
-}
 #footer{
-    background: #000;text-align: center;padding: 44px 0;
+    background: #000;text-align: center;padding: 44px 0;position: relative;
     .logo{
         margin-bottom: 35px;
         img{height: 20px;vertical-align: top;}
@@ -50,35 +34,42 @@
             font-size: 12px;
         }
     }
+}
+
+.quick{
+    width: 148px;
+    height: 148px;
+    background-image: url('../../resources/images/quick.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display:block;
+    position:fixed;
+    bottom:100px;
+    right:5%;
+    z-index:100;
+    transition: .3s ease-in-out;
+    &.active{
+        position: absolute;
+        bottom: auto;
+        top: -170px;
+    }
+}
+@include media-breakpoint-down(lg) {
     .quick{
-        width: 80px;
-        height: 80px;
-        background-image: url('../../resources/images/quick.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        display:block;
-        position:fixed;
-        bottom:10%;
-        right:5%;
+        width: 100px;height: 100px;
         &.active{
-            bottom:25%;
+            top: -120px;
         }
     }
 }
-
-@include media-breakpoint-down(sm){
+@include media-breakpoint-down(md) {
     .quick{
         width: 70px;
         height: 70px;
-        background-image: url('../../resources/images/quick.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        display:block;
-        position:fixed;
-        bottom:5%;
-        right:5%;
+        right: 15px;
+        bottom:15px;
         &.active{
-            bottom:45%;
+            top: -80px;
         }
     }
 }

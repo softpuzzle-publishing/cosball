@@ -49,6 +49,15 @@ body{
         padding-top: 56px;
         font-size: 0.8125rem;
     }
+
+    .custom-control-input:focus ~ .custom-control-label::before,
+    .ui-button:focus,
+    button:focus,
+    input:focus,
+    .btn:focus,
+    .form-control:focus{
+        outline: none !important;box-shadow: none !important;
+    }
 }
 
 .content-top-padding{padding-top: 70px;}

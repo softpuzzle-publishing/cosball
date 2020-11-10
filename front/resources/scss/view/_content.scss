@@ -392,7 +392,7 @@ body.center-body{padding-top: 0;background: transparent;}
 .table-view .table th {color:#999;background:none;}
 .table-view .table th,
 .table-view .table td {border-bottom-color:#d8d8d8;}
-.buy-bottom {border-top:2px solid #682dd2;background:#f7f7f7;position: fixed;width: 100%;left: 0;bottom: -100%;transition:all .3s .1s;}
+.buy-bottom {border-top:2px solid #682dd2;background:#f7f7f7;position: fixed;width: 100%;left: 0;bottom: -100%;z-index: 1;transition:all .3s .1s;}
 .buy-bottom.hide{transform: translate(0,calc(100% - 2px));}
 .buy-bottom .toggler{width: 150px;height: 30px;border: 2px solid #682dd2;border-bottom: 0;position: absolute;top: -30px;left: 50%;margin-left: -75px;background: #f7f7f7;border-radius: 8px 8px 0 0;display: block;}
 .buy-bottom .toggler::before{content: '';display: block;background: url('../images/icon-arrow-up.svg') no-repeat 50% 50%;background-size: contain;width: 18px;height: 10px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%) rotate(0);transition: all .15s .05s;}
