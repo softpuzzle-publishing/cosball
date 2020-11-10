@@ -47,7 +47,6 @@
     bottom:100px;
     right:5%;
     z-index:100;
-    transition: .3s ease-in-out;
     &.active{
         position: absolute;
         bottom: auto;
@@ -69,7 +68,9 @@
         right: 15px;
         bottom:15px;
         &.active{
-            top: -80px;
+            top: -15px;
+            transition: .2s .1s ease-in-out;
+            transform: translateY(-60px);
         }
     }
 }

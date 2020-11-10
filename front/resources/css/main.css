@@ -271,7 +271,7 @@ transform:rotate(-41deg); transition: all .5s; }
     /*main-slide*/
     .main-slide{height: 520px;}
     .main-slide .main-slide-bg { height: 100%;display: flex;align-items: center;}
-    .main-slide .main_copy_wrap {top:40px;}
+    .main-slide .main_copy_wrap {top:60px;}
     .main-slide .main_copy { width:auto; padding:0 20px 60px; }
     .main-slide .min_txt { font-size:20px; }
     .main-slide h5 { font-size:24px;font-weight: 500;}

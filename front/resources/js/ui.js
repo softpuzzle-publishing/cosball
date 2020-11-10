@@ -399,8 +399,13 @@ function byteCheck(obj, maxByte, textTarget){
         $(textTarget).text(rbyte);
     }
 }
-$(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+
+//footer kakao icon
+
+  $(window).scroll(function() {
+    
+
+    if($(window).scrollTop() + $(window).height() >= $(document).height() - $('#footer').height() ) {
         $('.quick').addClass('active');
     }else{
         $('.quick').removeClass('active');
