@@ -121,3 +121,15 @@ input[type=password] {font-family: 'Nanum Gothic';}
 
 .handle i{cursor: pointer;}
 
+.exchange{
+    th{width:15%;text-align:right; color:#000; font-weight: bold;}
+    .country-head{margin-top:20px;
+        span{font-size:15px; font-weight: bold;}
+    }
+    .country{margin:10px 0 30px 0;}
+
+    .manual-head{margin-top: 20px;
+        span{font-size:15px; font-weight: bold;}
+    }
+    .manual{margin:10px 0 30px 0;}
+}

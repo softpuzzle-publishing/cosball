@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>코즈볼 통합관리자</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/css/reset.css">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/adminlte.css">
+    <link rel="stylesheet" href="../../resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/moment/moment.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+</head>
+
+<body class="sidebar-mini layout-fixed layout-navbar-fixed">
+    <div class="wrapper">
+
+        <div id="header-include">
+            <!-- header include -->
+        </div>
+
+        <div class="body-container">
+            <div id="aside-include">
+                <!-- aside include -->
+            </div>
+
+            <div class="content-wrapper">
+                <div id="menutree">
+                    <span data-depth1 hidden>토큰 관리</span>
+                    <span data-depth2 hidden>토큰교환현황</span>
+                </div>
+
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row align-items-end justify-content-between">
+                            <div class="col-auto">
+                                <h1 class="m-0" id="page-title"></h1> <!-- title -->
+                            </div>
+                            <div class="col-auto">
+                                <!-- <button type="button" class="btn btn-secondary">저장</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">여성</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-center table-hover table-bordered table-valign-middle exchange">
+                                        <caption>스킨톤 - 여성</caption>
+                                        <tbody>
+                                            <tr>
+                                                <th>아이디</th>
+                                                <td class="text-left">1</td>
+                                                <th>Account ID</th>
+                                                <td class="text-left">2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>원 토큰 종류</th>
+                                                <td class="text-left">1</td>
+                                                <th>교환된 토큰 종류</th>
+                                                <td class="text-left">2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>우너 토큰 수량</th>
+                                                <td class="text-left">1</td>
+                                                <th>교환된 토큰 수량</th>
+                                                <td class="text-left">2</td>
+                                            </tr>
+                                            <tr>
+                                                <th>수수료</th>
+                                                <td colspan="3" class="text-left">2020-01-01 10:00:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>번호</th>
+                                                <td colspan="3">
+                                                    <div class="d-flex align-items-center justify-content-between country-head">
+                                                        <span><i class="fas fa-chevron-right"></i> 국가 환율</span>
+                                                        <span>※ 기준일시 : 2020.01.01 20:00:00</span>
+                                                    </div>
+                                                    <table class="w-100 country">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th colspan="4" class="text-center">국가 환율</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th class="text-center">KRW</th>
+                                                                <th class="text-center">USD</th>
+                                                                <th class="text-center">CNY</th>
+                                                                <th class="text-center">JPY</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">1096.59</td>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-center">6.53</td>
+                                                                <td class="text-center">103.48</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="d-flex align-items-center justify-content-between manual-head">
+                                                        <span><i class="fas fa-chevron-right"></i> 수동 환율</span>
+                                                        <span>※ 기준일시 : 2020.01.01 20:00:00</span>
+                                                    </div>
+                                                    <table class="w-100 manual">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th class="text-center">COSBALL</th>
+                                                                <th class="text-center">KRW</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-center">600</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>처리완료일시</th>
+                                                <td colspan="3" class="text-left">2020-01-01 10:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+
+        <div id="footer-include">
+            <!-- footer include -->
+        </div>
+
+    </div>
+    <!-- ./wrapper -->
+
+
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>
