@@ -298,6 +298,8 @@ html.open-submenu #header { background: white; }
 
 #footer .info span + span::before { content: '|'; margin: 0 8px; }
 
+#footer .container { max-width: 1300px; }
+
 @media (max-width: 991.98px) { #footer { padding: 40px 0; }
   #footer .logo { margin-bottom: 25px; }
   #footer .logo img { height: 15px; }
