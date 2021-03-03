@@ -1429,9 +1429,9 @@ html.is-bottom-floating.is-bottom-floating-fold #footer-block { padding-bottom: 
 
 ._1hiMWemA._23U_6TM_:after { position: absolute; z-index: 1; content: ""; display: block; width: 100%; height: 1px; bottom: 0; background-color: rgba(0, 0, 0, 0.05); }
 
-[data-useragent*="rv:11"] body, [data-useragent*="MSIE 8"] body { padding-top: 249px; }
+[data-useragent*="rv:11"] body, [data-useragent*="MSIE"] body { padding-top: 249px; }
 
-[data-useragent*="rv:11"] #header, [data-useragent*="MSIE 8"] #header { top: 49px; }
+[data-useragent*="rv:11"] #header, [data-useragent*="MSIE"] #header { top: 49px; }
 
-[data-useragent*="rv:11"] ._1hiMWemA, [data-useragent*="MSIE 8"] ._1hiMWemA { display: block; }
+[data-useragent*="rv:11"] ._1hiMWemA, [data-useragent*="MSIE"] ._1hiMWemA { display: block; }
 /*# sourceMappingURL=style.css.map */
