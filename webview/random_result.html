@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>코즈볼</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        *{box-sizing: border-box;}
+        body{margin: 0;font-size: 16px;}
+        p{margin: 0;}
+        a{text-decoration: none;}
+        .row{display: flex;flex-wrap: wrap;}
+        .justify-content-between{justify-content: space-between;}
+        .align-items-center{align-items: center;}
+        .order{position: relative;padding: 50px 0;}
+        .order .close{position: absolute;right: 20px;top: 20px;}
+        .order .close a{display: block;width: 20px;height: 20px;background: url('images/ic_close_close.svg') no-repeat 50% 50%;background-size: contain;}
+        .col{flex-basis: 0;flex-grow: 1;max-width: 100%;padding-left: 5px;padding-right: 5px;}
+        .col-auto{flex: 0 0 auto;width: auto;max-width: 100%;padding-left: 5px;padding-right: 5px;}
+        .col-6{flex: 0 0 50%;max-width: 50%;padding-left: 5px;padding-right: 5px;}
+        .col-12{flex: 0 0 100%;max-width: 100%;border-bottom:1px solid #ddd;height:150px;display:flex;flex-flow:wrap;align-items: center;justify-content: center;}
+        .ball{width:30px;height:30px;margin:0 3px;}
+        .ball input[type="checkbox"]{position: absolute;z-index: -1; opacity: 0;}
+        input[type="checkbox"]:not(:checked) + label{background-color:#ddd !important; width:30px;height:30px;border:1px solid #ddd;display: inline-block; border-radius: 50%;} 
+        input[type="checkbox"]:checked + label{width:30px;height:30px;display: inline-block; border-radius: 50%;}
+        .confirm{width:100%; text-align: right;margin-top:20px; padding: 0 10px;}
+        .btn{width:100px;height:45px;border:1px solid #000;display:inline-block;text-align:center;line-height:40px; background-color: #000;color:#fff;}
+    </style>
+</head>
+<body>
+    <div class="order">
+        <div class="close">
+            <a href="#none"><span class="sr-only"></span></a>
+        </div>
+        <div class="order-body">
+            <div class="receipt">
+                <div class="row justify-content-between">
+                 
+                    <div class="col-12">
+                        <div class="ball">
+                            <input type="checkbox" id="ball_1" disabled checked>
+                            <label for="ball_1" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_2" disabled>
+                            <label for="ball_2" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_3" disabled>
+                            <label for="ball_3" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_4" disabled>
+                            <label for="ball_4" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_5" disabled>
+                            <label for="ball_5" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_6" disabled>
+                            <label for="ball_6" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_7" disabled>
+                            <label for="ball_7" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_8" disabled>
+                            <label for="ball_8" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_9" disabled>
+                            <label for="ball_9" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_10" disabled>
+                            <label for="ball_10" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_11" disabled checked>
+                            <label for="ball_11" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_12" disabled>
+                            <label for="ball_12" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_13" disabled>
+                            <label for="ball_13" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_14" disabled>
+                            <label for="ball_14" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_15" disabled>
+                            <label for="ball_15" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_16" disabled>
+                            <label for="ball_16" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_17" disabled>
+                            <label for="ball_17" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_18" disabled checked>
+                            <label for="ball_18" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_19" disabled>
+                            <label for="ball_19" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_20" disabled>
+                            <label for="ball_20" style="background-color:red"></label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ball">
+                            <input type="checkbox" id="ball_21" disabled>
+                            <label for="ball_21" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_22" disabled>
+                            <label for="ball_22" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_23" disabled>
+                            <label for="ball_23" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_24" disabled>
+                            <label for="ball_24" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_25" disabled>
+                            <label for="ball_25" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_26" disabled>
+                            <label for="ball_26" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_27" disabled>
+                            <label for="ball_27" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_28" disabled>
+                            <label for="ball_28" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_29" disabled>
+                            <label for="ball_29" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_30" disabled>
+                            <label for="ball_30" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_31" disabled>
+                            <label for="ball_31" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_32" disabled>
+                            <label for="ball_32" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_33" disabled>
+                            <label for="ball_33" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_34" disabled>
+                            <label for="ball_34" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_35" disabled checked>
+                            <label for="ball_35" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_36" disabled>
+                            <label for="ball_36" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_37" disabled>
+                            <label for="ball_37" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_38" disabled>
+                            <label for="ball_38" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_39" disabled>
+                            <label for="ball_39" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_40" disabled checked>
+                            <label for="ball_40" style="background-color:red"></label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ball">
+                            <input type="checkbox" id="ball_41" disabled>
+                            <label for="ball_41" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_42" disabled>
+                            <label for="ball_42" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_43" disabled checked>
+                            <label for="ball_43" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_44" disabled>
+                            <label for="ball_44" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_45" disabled>
+                            <label for="ball_45" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_46" disabled>
+                            <label for="ball_46" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_47" disabled>
+                            <label for="ball_47" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_48" disabled checked>
+                            <label for="ball_48" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_49" disabled>
+                            <label for="ball_49" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_50" disabled>
+                            <label for="ball_50" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_51" disabled checked>
+                            <label for="ball_51" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_52" disabled>
+                            <label for="ball_52" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_53" disabled>
+                            <label for="ball_53" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_54" disabled>
+                            <label for="ball_54" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_55" disabled>
+                            <label for="ball_55" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_56" disabled>
+                            <label for="ball_56" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_57" disabled>
+                            <label for="ball_57" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_58" disabled>
+                            <label for="ball_58" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_59" disabled>
+                            <label for="ball_59" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_60" disabled>
+                            <label for="ball_60" style="background-color:red"></label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="ball">
+                            <input type="checkbox" id="ball_61" disabled>
+                            <label for="ball_61" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_62" disabled>
+                            <label for="ball_62" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_63" disabled>
+                            <label for="ball_63" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_64" disabled>
+                            <label for="ball_64" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_65" disabled>
+                            <label for="ball_65" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_66" disabled>
+                            <label for="ball_66" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_67" disabled>
+                            <label for="ball_67" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_68" disabled>
+                            <label for="ball_68" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_69" disabled>
+                            <label for="ball_69" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_70" disabled>
+                            <label for="ball_70" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_71" disabled>
+                            <label for="ball_71" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_72" disabled>
+                            <label for="ball_72" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_73" disabled>
+                            <label for="ball_73" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_74" disabled>
+                            <label for="ball_74" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_75" disabled>
+                            <label for="ball_75" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_76" disabled>
+                            <label for="ball_76" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_77" disabled>
+                            <label for="ball_77" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_78" disabled>
+                            <label for="ball_78" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_79" disabled>
+                            <label for="ball_79" style="background-color:red"></label>
+                        </div>
+                        <div class="ball">
+                            <input type="checkbox" id="ball_80" disabled>
+                            <label for="ball_80" style="background-color:red"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm">
+                <a href="#none" class="btn">확인</a>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
