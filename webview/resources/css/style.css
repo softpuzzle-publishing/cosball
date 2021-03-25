@@ -1,0 +1,66 @@
+* { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); user-select: none; -webkit-touch-callout: none; }
+
+.cosball-game { max-width: 768px; margin: 0 auto; }
+
+.cosball-game.before { background: #f5f5f5 url("../images/img_coin_top.png") 50% 0 no-repeat; background-size: contain; }
+
+.cosball-game.after { background: #f5f5f5 url("../images/img_img_nocoin_top.png") 50% 0 no-repeat; background-size: contain; }
+
+.cosball-game .button .btn { font-size: 1rem; padding: 18px 1rem; }
+
+.cosball-game > .container { padding-left: 20px; padding-right: 20px; }
+
+.game-header { position: relative; text-align: center; }
+
+.game-header h1 { text-align: center; line-height: 1; padding-top: 80px; margin-bottom: 12px; }
+
+.game-header strong { color: #333; line-height: 34px; font-size: 26px; }
+
+.game-header .desc { text-align: center; line-height: 20px; font-size: 14px; color: #666; }
+
+.game-header .info { position: absolute; right: 0; top: 20px; }
+
+.after .game-header h1 { padding-top: 40px; }
+
+.after .game-header h1 img { height: 14px; }
+
+.game-body { background: #fbfbfb; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); text-align: center; padding: 20px 10px; }
+
+.game-body h2 { color: #682dd2; font-weight: 400; font-size: 14px; letter-spacing: -0.05em; }
+
+.ball-group .ball-name { font-weight: 400; margin-bottom: 10px; }
+
+.ball-group .ball-name span::before, .ball-group .ball-name span::after { content: ''; display: inline-block; width: 30px; height: 1px; background: #dedede; vertical-align: middle; margin: 0 8px; }
+
+.ball { width: 40px; height: 40px; display: inline-block; vertical-align: top; }
+
+.ball input { position: absolute; z-index: -1; opacity: 0; }
+
+.ball label { width: 40px; height: 40px; display: inline-block; border-radius: 50%; line-height: 40px; color: #fff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+
+.ball input.fail + label { opacity: 0.3; }
+
+.ball input:not(:checked):not(.fail):not(.success) + label { background-color: #ddd !important; border: 1px solid #ddd; }
+
+.balls { display: flex; flex-wrap: wrap; justify-content: space-between; width: 300px; margin: 0 auto; }
+
+.balls .ball { margin: 5px; }
+
+.lucky-ball { padding: 0; text-align: center; margin: 1rem 0; }
+
+.lucky-ball .box { border-radius: 50rem; background: #1e2640; color: #fff; }
+
+.lucky-ball .ball { background: url("../images/img_big_ball_none.svg") no-repeat 0 0; background-size: contain; }
+
+.lucky-ball .row { width: 240px; margin: 0 auto; height: 64px; }
+
+.lucky-ball .col-auto { font-size: 16px; }
+
+.text-box { background: url("../images/img_img_coin_btm_normal.png") no-repeat 50% 100%; background-size: contain; min-height: 180px; padding: 20px; }
+
+.text-box .box { background: #fbfbfb; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); text-align: center; padding: 30px 20px; }
+
+.text-box strong { color: #682dd2; font-size: 20px; font-weight: 700; display: block; margin-bottom: 1rem; }
+
+.text-box p { color: #666; font-size: 12px; }
+/*# sourceMappingURL=style.css.map */
