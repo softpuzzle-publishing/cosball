@@ -37,9 +37,10 @@
 .ball{
     width:40px;height:40px;display: inline-block;vertical-align: top;
     input{position: absolute;z-index: -1; opacity: 0;}
-    label{width:40px;height:40px;display: inline-block; border-radius: 50%;line-height: 40px;color: #fff;text-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-    input.fail + label{opacity: 0.3;}
-    input:not(:checked):not(.fail):not(.success) + label{background-color:#ddd !important;border:1px solid #ddd;}
+    label{width:40px;height:40px;display: inline-block; border-radius: 50%;line-height: 37px;color: #fff;text-shadow: 0 2px 4px rgba(0,0,0,0.1);background-image: url(../images/img_symbol_color.svg);background-position: 45% 50%;background-repeat: no-repeat;color: transparent;border:2px solid #ddd;}
+    input.fail + label{opacity: 0.3;color: #fff;}
+    input.success + label{color: #fff;}
+    input:not(:checked):not(.fail):not(.success) + label{background:#ddd !important;border-color: #ddd !important;color: #fff !important;}
 }
 .balls{
     display: flex;flex-wrap: wrap;justify-content: space-between;width: 300px;margin: 0 auto;
@@ -49,7 +50,9 @@
 .lucky-ball{
     padding: 0;text-align: center;margin: 1rem 0;
     .box{border-radius: 50rem;background: #1e2640;color: #fff;}
-    .ball{background: url('../images/img_big_ball_none.svg') no-repeat 0 0;background-size: contain;}
+    .ball{
+        label{color: #fff !important;font-size: 15px;}
+    }
     .row{width: 240px;margin: 0 auto;height: 64px;}
     .col-auto{font-size: 16px;}
 }
