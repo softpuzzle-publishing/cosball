@@ -1,9 +1,10 @@
 .cosball-game{
     max-width: 768px;margin: 0 auto;
-    &.before{background: #f5f5f5 url('../images/img_coin_top.png') 50% 0 no-repeat;background-size: contain;}
-    &.after{background: #f5f5f5 url('../images/img_img_nocoin_top.png') 50% 0 no-repeat;background-size: contain;}
+    &.before{background: #f5f5f5 url('../images/img_coin_top.png') 50% 0 no-repeat;background-size: contain;padding-bottom: 140px;}
+    &.after{background: #f5f5f5 url('../images/img_img_nocoin_top.png') 50% 0 no-repeat;background-size: contain;padding-bottom: 0;}
     .button{
         .btn{font-size: 1rem;padding: 18px 1rem;}
+        .btn:disabled{opacity: 1;background-color: #af91e4;border-color: #af91e4;}
     }
     > .container{padding-left: 20px;padding-right: 20px;}
 }
@@ -58,8 +59,16 @@
 }
 
 .text-box{
-    background: url('../images/img_img_coin_btm_normal.png') no-repeat 50% 100%;background-size: contain;min-height: 180px;padding: 20px;
+    background: url('../images/img_img_coin_btm_normal.png') no-repeat 50% 100%;background-size: contain;padding: 20px;
     .box{background: #fbfbfb;border-radius: 8px;box-shadow: 0 3px 6px rgba(0,0,0,0.1);text-align: center;padding: 30px 20px;}
     strong{color: $primary;font-size: 20px;font-weight: 700;display: block;margin-bottom: 1rem;}
-    p{color: #666;font-size: 12px;}
+    p{color: #666;font-size: 12px;margin-bottom: 0;}
+    .more{font-size: 13px;color: #ff49d5;}
+
+    .before &{
+        padding: 0;box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        .box{padding: 0 .5rem;background: #f8f7f9;height: 60px;display: flex;align-items: center;justify-content: center;text-align: center;}
+    }
 }
+
+.fixed-area{position: fixed;bottom: 0;left: 0;width: 100%;border-top: 1px solid #eee;}
